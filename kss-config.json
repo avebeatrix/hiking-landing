@@ -1,0 +1,13 @@
+{
+    "title": "Hiking landing",
+    "source": [
+        "./scss"
+    ],
+    "destination": "styleguide/",
+    "css": [
+        "./css/styles.css"
+    ],
+    "js": [
+        "./js/main.js"
+    ]
+}
