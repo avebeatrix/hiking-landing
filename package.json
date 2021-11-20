@@ -1,0 +1,19 @@
+{
+  "name": "hiking-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "kss --config kss-config.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "kss": "^3.0.1"
+  },
+  "dependencies": {
+    "reseter.css": "^2.0.0"
+  }
+}
