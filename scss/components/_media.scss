@@ -1,6 +1,118 @@
+/*
+Logo
+
+Markup:
+<div class="logo">Hiking Life</div>
+
+Styleguide Media.Logo
+*/
 .logo {
+    display:block;
+    font-family: 'Open Sans';
+    padding-left: calc(#{$logo-width} + 0.5em);
+    color: $main-color;
 
+    &::before{
+        content: url('data:image/svg+xml; utf8, #{$logo-url}');
+        position: absolute;
+        width: $logo-width;
+        height: $logo-height;        
+        left: 0;
+        margin-top:-0.25em;
+    }
 }
-.wave {
 
+/*
+Back Image
+
+Markup:
+<div class="back-image {{modifier_class}}" style="background-image:url('/i/main.jpg');">Text...</div>
+
+.back-image_wavy-gray - gray wavy
+.back-image_wavy-gray-diagonal - gray diagonal wavy
+.back-image_wavy-green - green wavy
+.back-image_dual-green - green with two corner waves
+.back-image_tinted-purple - purple tinted
+.back-image_tinted-blue - blue tinted
+
+Styleguide Media.Back Image
+*/
+@mixin absolute{
+    &{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 100%;        
+        z-index: 1;
+    }
+}
+.back-image{
+    background-size: cover;
+    background-position: center center;
+    min-height: 1000px;
+    position:relative;
+    
+    &_wavy-gray{        
+        &::before{
+            @include absolute;
+            background-image: url($wave-gray-url), url($wave-gray-url);
+            background-repeat: no-repeat, no-repeat;
+            background-position: center $wave-distance, center top;                         
+        }
+    }
+    &_wavy-gray-diagonal{        
+        &::before{
+            @include absolute;
+            background-image: url($wave-gray-diagonal-url);
+            background-repeat: no-repeat;
+            background-position: left top;                                    
+        }
+        &::after{
+            @include absolute;
+            background-image: url($wave-gray-diagonal-url);
+            background-repeat: no-repeat;
+            background-position: left $wave-distance;                            
+        }
+    }
+    &_wavy-green{        
+        &::before{
+            @include absolute;
+            background-image: url($wave-green-gray-url), url($wave-green-url);
+            background-repeat: no-repeat, no-repeat;
+            background-position: center $wave-distance, center top;              
+        }
+    }    
+    &_dual-green{
+        background: $dark-green-color;
+        background-image: none !important;        
+        &::before{
+            @include absolute;
+            background-image: url($green-corner-url);
+            background-repeat: no-repeat;
+            background-position: right top;             
+        }
+        &::after{
+            @include absolute;
+            background-image: url($green-corner-url);
+            background-repeat: no-repeat;
+            background-position: right top;     
+            transform: rotate(180deg);       
+        }
+    }    
+    &_tinted-purple{        
+        &::before{
+            @include absolute;
+            background: $tint-color;
+            opacity: $tint-opacity;
+        }
+    }
+    &_tinted-blue{
+        &::before{
+            @include absolute;
+            background: $main-color;
+            opacity: $tint-opacity;
+        }
+    }
 }

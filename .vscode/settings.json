@@ -2,6 +2,7 @@
     "liveSassCompile.settings.excludeList": [
         "**/node_modules/**",
         ".vscode/**",
-        ".scss/_**"
+        ".scss/_**",
+        ".styleguide/**"
       ]
 }
