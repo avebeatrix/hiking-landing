@@ -2,7 +2,7 @@
 Logo
 
 Markup:
-<div class="logo">Hiking Life</div>
+<div class="logo">Hiking <strong>Life</strong></div>
 
 Styleguide Media.Logo
 */
@@ -37,17 +37,6 @@ Markup:
 
 Styleguide Media.Back Image
 */
-@mixin absolute{
-    &{
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        height: 100%;        
-        z-index: 1;
-    }
-}
 .back-image{
     background-size: cover;
     background-position: center center;

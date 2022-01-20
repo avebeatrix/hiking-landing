@@ -1,8 +1,121 @@
+/*
+Navigation
+
+Markup:
+<div class="main-nav">
+    <input class="main-nav__toogle" type="checkbox" />   
+    <span></span>
+    <span></span>
+    <span></span>        
+    <ul class="main-nav__list">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Info</a></li>
+      <li><a href="#">Contact</a></li> 
+    </ul>    
+</div>
+
+Styleguide Navigation.Main Menu
+*/
 .main-nav{
-    .main-nav__toogle {
+    display: block;
+    position: relative;    
+    
+    z-index: 1;
+    
+    -webkit-user-select: none;
+    user-select: none;
+    
+    span{
+        display: block;
+        width: 42px;
+        height: 4px;
+        margin-bottom: 8px;
+        position: relative;
+        
+        background: $main-color;
+        border-radius: 3px;
+        
+        z-index: 1;
+        
+        transform-origin: 4px 0px;
+        
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+
+        &:first-child{
+            transform-origin: 0% 0%;
+        }
+        &:nth-last-child(2)
+        {
+          transform-origin: 0% 100%;
+        }
+    }
+
+    &__toogle {        
+        display: block;
+        width: 42px;
+        height: 42px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        
+        cursor: pointer;
+        
+        opacity: 0; /* hide this */
+        z-index: 2; /* and place it over the hamburger */
+        
+        -webkit-touch-callout: none;
+
+        &:checked ~ span{
+            opacity: 1;
+            transform: rotate(45deg) translate(-2px, -1px);            
+            &:nth-last-child(3)
+            {
+              opacity: 0;
+              transform: rotate(0deg) scale(0.2, 0.2);
+            }
+            &:nth-last-child(2)
+            {
+              transform: rotate(-45deg) translate(0, -1px);
+            }
+        }
+        &:checked ~ ul
+        {
+          transform: none;
+        }
         
     }
-    .main-nav__menu {
+    &__list {
+        position: absolute;       
+        width: 30em;
+        margin: -50px 0 0 calc(-30em + 40px);
+        padding: 50px;
+        padding-top: 125px;
+        
+        background-color: $main-back-color;
 
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;      
+        
+        transform-origin: 0% 0%;
+        transform: translate(calc(100% + 40px), 0);
+        
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+        li{
+            padding: 10px 0;
+            font-size: 22px;
+            a{
+                text-decoration: none;                               
+                transition: color .5s ease;
+                color: rgba($main-color, .6);
+                &:hover{
+                    color:$main-color;
+                    text-decoration: underline;
+                }
+            }
+        }        
     }
 }

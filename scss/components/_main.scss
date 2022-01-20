@@ -1,6 +1,12 @@
 body{
     background-color: #fbfbf5;
 }
+a{
+    color:$main-color;
+    &:hover{
+        
+    }
+}
 .container{
     
 }

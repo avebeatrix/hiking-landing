@@ -3,6 +3,8 @@ $images-path:'/i';
 $main-color: #32455f;
 $main-color-val: str-slice(#{$main-color}, 2);
 
+$main-back-color:#fbfbf5;
+
 $dark-green-color: #4a4e3f;
 
 $logo-width: 35px;
@@ -20,3 +22,7 @@ $tint-color: #564b67;
 $tint-opacity:74%;
 
 $green-corner-url:'#{$images-path}/top-right-shape.png';  
+
+$search-url: '#{$images-path}/search.png';
+
+$input-text-height: 2.5em;

@@ -1,3 +1,22 @@
-.search-form {
+/*
+Search
 
+Markup:
+<div class="search-form"><form><input type="text"/></form</div>
+
+Styleguide Form.Search
+*/
+.search-form {
+    input[type="text"] {
+        height: $input-text-height;
+        line-height: $input-text-height;
+        border-radius: $input-text-height;
+        box-shadow:  inset 0 0.5em 0.5em 0 #ddd;
+        background-image: url($search-url);
+        background-repeat: no-repeat;
+        background-position: right 1em center;
+        width: 10em;
+        border:none;
+        padding:0 3em 0 1em;
+    }
 }
