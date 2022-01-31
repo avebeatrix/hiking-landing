@@ -328,27 +328,147 @@ template {
 
 body {
   background-color: #fbfbf5;
+  overflow-x: hidden;
 }
 
 a {
   color: #32455f;
 }
 
-.wrapper {
-  margin: 0 auto;
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.promo-main {
+  margin-top: -150px;
+}
+
+.container {
+  width: 100%;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: -1em;
+}
+
+.col {
+  margin: 0 1em;
+}
+
+/*
+Text Input
+
+Markup:
+<form>
+    <div class="form-field text-field">
+        <input class="text-field__text" type="text" value="Without icon"/>        
+    </div>
+    <div class="form-field text-field">
+        <input class="text-field__text text-field__text_has-icon" type="text" value="With Icon"/>
+        <button class="text-field__icon text-field__icon_search">Search</button>
+    </div>
+</form>
+
+Styleguide Form.Elements
+*/
+.text-field {
+  position: relative;
+}
+
+.text-field__text {
+  height: 2.5em;
+  line-height: 2.5em;
+  border-radius: 2.5em;
+  -webkit-box-shadow: inset 0 0.5em 0.5em 0 #ddd;
+          box-shadow: inset 0 0.5em 0.5em 0 #ddd;
+  width: 100%;
+  border: none;
+  padding: 0 1em;
+}
+
+.text-field__text_has-icon {
+  padding-right: 3.5em;
+}
+
+.text-field__icon {
+  position: absolute;
+  z-index: 1;
+  right: 1em;
+  height: 100%;
+}
+
+.text-field__icon_search {
+  text-indent: -9999px;
+  width: 2em;
+  background-image: url("/i/search.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.form-field + .form-field {
+  margin-top: 2em;
 }
 
 /*
 Header
 
 Markup:
-<header class="header">Header</header>
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="logo"><a href="#">Hiking <strong>Life</strong></a></div>
+            </div>
+            <div class="col">
+                <div class="search-form">
+                    <form>
+                        <div class="text-field">
+                            <input class="text-field__text text-field__text_has-icon" type="text"/>
+                            <button class="text-field__icon text-field__icon_search">Search</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="main-nav">
+                    <input class="main-nav__toogle" type="checkbox" />   
+                    <span></span>
+                    <span></span>
+                    <span></span>        
+                    <ul class="main-nav__list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Info</a></li>
+                        <li><a href="#">Contact</a></li> 
+                    </ul>    
+                </div>
+            </div>                        
+        </div>
+    </div>
+</header>
 
 Styleguide Header
 */
 .header {
-  position: fixed;
-  color: red;
+  padding: 2em 0;
+  z-index: 100;
+  position: relative;
+}
+
+.header .row {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .row .col {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -374,6 +494,7 @@ Markup:
 Styleguide Navigation.Main Menu
 */
 .main-nav {
+  margin-left: 1em;
   display: block;
   position: relative;
   z-index: 1;
@@ -449,10 +570,10 @@ Styleguide Navigation.Main Menu
 
 .main-nav__list {
   position: absolute;
-  width: 30em;
-  margin: -50px 0 0 calc(-30em + 40px);
-  padding: 50px;
-  padding-top: 125px;
+  width: 300px;
+  margin: -50px 0 0 calc(-300px + 40px);
+  padding: 2em;
+  padding-top: 4em;
   background-color: #fbfbf5;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
@@ -496,6 +617,12 @@ Styleguide Media.Logo
   font-family: 'Open Sans';
   padding-left: calc(35px + 0.5em);
   color: #32455f;
+  position: relative;
+  white-space: nowrap;
+}
+
+.logo a {
+  text-decoration: none;
 }
 
 .logo::before {
@@ -523,9 +650,10 @@ Markup:
 Styleguide Media.Back Image
 */
 .back-image {
-  background-size: cover;
-  background-position: center center;
-  min-height: 1000px;
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  min-height: 720px;
   position: relative;
 }
 
@@ -663,23 +791,20 @@ Styleguide Media.Back Image
 }
 
 /*
-Search
+Search Form
 
 Markup:
-<div class="search-form"><form><input type="text"/></form</div>
+<div class="search-form">
+    <form>
+        <div class="text-field">
+            <input class="text-field__text text-field__text_has-icon" type="text"/>
+            <button class="text-field__icon text-field__icon_search">Search</button>
+        </div>
+    </form>
+</div>
 
 Styleguide Form.Search
 */
-.search-form input[type="text"] {
-  height: 2.5em;
-  line-height: 2.5em;
-  border-radius: 2.5em;
-  -webkit-box-shadow: inset 0 0.5em 0.5em 0 #ddd;
-          box-shadow: inset 0 0.5em 0.5em 0 #ddd;
-  background-image: url("/i/search.png");
-  background-repeat: no-repeat;
-  background-position: right 1em center;
-  width: 10em;
-  border: none;
-  padding: 0 3em 0 1em;
+.search-form {
+  max-width: 10em;
 }

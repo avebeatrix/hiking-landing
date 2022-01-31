@@ -2,13 +2,49 @@
 Header
 
 Markup:
-<header class="header">Header</header>
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="logo"><a href="#">Hiking <strong>Life</strong></a></div>
+            </div>
+            <div class="col">
+                <div class="search-form">
+                    <form>
+                        <div class="text-field">
+                            <input class="text-field__text text-field__text_has-icon" type="text"/>
+                            <button class="text-field__icon text-field__icon_search">Search</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="main-nav">
+                    <input class="main-nav__toogle" type="checkbox" />   
+                    <span></span>
+                    <span></span>
+                    <span></span>        
+                    <ul class="main-nav__list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Info</a></li>
+                        <li><a href="#">Contact</a></li> 
+                    </ul>    
+                </div>
+            </div>                        
+        </div>
+    </div>
+</header>
 
 Styleguide Header
 */
-.header { 
-    position: fixed;
-    color:red;
-    
-    display:flex;
+.header {  
+    padding:2em 0;
+    z-index:100;
+    position:relative;
+    .row{
+        justify-content: space-between;
+        align-items:center;
+        .col{
+            display:flex;
+        }
+    }    
 }

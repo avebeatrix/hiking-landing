@@ -1,0 +1,49 @@
+/*
+Text Input
+
+Markup:
+<form>
+    <div class="form-field text-field">
+        <input class="text-field__text" type="text" value="Without icon"/>        
+    </div>
+    <div class="form-field text-field">
+        <input class="text-field__text text-field__text_has-icon" type="text" value="With Icon"/>
+        <button class="text-field__icon text-field__icon_search">Search</button>
+    </div>
+</form>
+
+Styleguide Form.Elements
+*/
+.text-field{
+    position:relative;
+    &__text {
+        height: $input-text-height;
+        line-height: $input-text-height;
+        border-radius: $input-text-height;
+        box-shadow:  inset 0 0.5em 0.5em 0 #ddd;
+        
+        width: 100%;
+        border:none;
+        padding:0 $text-field-paddings;   
+        &_has-icon{
+            padding-right:$text-field-paddings*3.5;
+        }     
+    }   
+    &__icon{
+        position: absolute;
+        z-index:1;
+        right:$text-field-paddings;
+        height:100%;
+        &_search{
+            text-indent: -9999px;
+            width:$text-field-paddings*2;            
+            background-image: url($search-url);
+            background-repeat: no-repeat;
+            background-position: center center;          
+        }
+    }
+}
+
+.form-field + .form-field {
+    margin-top: $field-interval;
+}

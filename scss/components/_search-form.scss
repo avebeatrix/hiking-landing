@@ -1,22 +1,18 @@
 /*
-Search
+Search Form
 
 Markup:
-<div class="search-form"><form><input type="text"/></form</div>
+<div class="search-form">
+    <form>
+        <div class="text-field">
+            <input class="text-field__text text-field__text_has-icon" type="text"/>
+            <button class="text-field__icon text-field__icon_search">Search</button>
+        </div>
+    </form>
+</div>
 
 Styleguide Form.Search
 */
-.search-form {
-    input[type="text"] {
-        height: $input-text-height;
-        line-height: $input-text-height;
-        border-radius: $input-text-height;
-        box-shadow:  inset 0 0.5em 0.5em 0 #ddd;
-        background-image: url($search-url);
-        background-repeat: no-repeat;
-        background-position: right 1em center;
-        width: 10em;
-        border:none;
-        padding:0 3em 0 1em;
-    }
+.search-form {    
+    max-width: 10em;
 }

@@ -18,3 +18,8 @@
         z-index: 1;
     }
 }
+@mixin dont-text-decoration-a{
+    a{
+        text-decoration: none;
+    }
+}

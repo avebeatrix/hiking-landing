@@ -11,6 +11,10 @@ Styleguide Media.Logo
     font-family: 'Open Sans';
     padding-left: calc(#{$logo-width} + 0.5em);
     color: $main-color;
+    position:relative;
+    white-space: nowrap;
+
+    @include dont-text-decoration-a;
 
     &::before{
         content: url('data:image/svg+xml; utf8, #{$logo-url}');
@@ -38,10 +42,12 @@ Markup:
 Styleguide Media.Back Image
 */
 .back-image{
-    background-size: cover;
-    background-position: center center;
-    min-height: 1000px;
+    background-size: contain;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    min-height: 720px;
     position:relative;
+    
     
     &_wavy-gray{        
         &::before{

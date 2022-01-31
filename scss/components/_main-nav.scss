@@ -18,6 +18,7 @@ Markup:
 Styleguide Navigation.Main Menu
 */
 .main-nav{
+    margin-left:$grid-col-between;
     display: block;
     position: relative;    
     
@@ -87,12 +88,13 @@ Styleguide Navigation.Main Menu
         }
         
     }
+  
     &__list {
         position: absolute;       
-        width: 30em;
-        margin: -50px 0 0 calc(-30em + 40px);
-        padding: 50px;
-        padding-top: 125px;
+        width: $main-nav-list-width;        
+        margin: -50px 0 0 calc(-#{$main-nav-list-width} + 40px);
+        padding: 2em;
+        padding-top: 4em;
         
         background-color: $main-back-color;
 

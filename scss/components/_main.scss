@@ -1,5 +1,6 @@
 body{
     background-color: #fbfbf5;
+    overflow-x:hidden;
 }
 a{
     color:$main-color;
@@ -7,6 +8,13 @@ a{
         
     }
 }
-.container{
-    
+
+button{
+    padding:0;
+    border:none;
+    background-color: transparent;
+    cursor:pointer;
+}
+.promo-main{
+    margin-top:-150px;
 }
