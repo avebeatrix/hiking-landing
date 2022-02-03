@@ -3,48 +3,70 @@ Header
 
 Markup:
 <header class="header">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="logo"><a href="#">Hiking <strong>Life</strong></a></div>
-            </div>
-            <div class="col">
-                <div class="search-form">
-                    <form>
-                        <div class="text-field">
-                            <input class="text-field__text text-field__text_has-icon" type="text"/>
-                            <button class="text-field__icon text-field__icon_search">Search</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="main-nav">
-                    <input class="main-nav__toogle" type="checkbox" />   
-                    <span></span>
-                    <span></span>
-                    <span></span>        
-                    <ul class="main-nav__list">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Info</a></li>
-                        <li><a href="#">Contact</a></li> 
-                    </ul>    
-                </div>
-            </div>                        
-        </div>
-    </div>
-</header>
+      <div class="container">
+          <div class="row">
+              <div class="col">
+                  <a class="logo" href="#">Hiking <strong>Life</strong></a>
+              </div>
+              <div class="col">
+                  <div class="search-form header__search-form">
+                      <form>
+                          <div class="text-field">
+                              <input placeholder="Search" class="text-field__text text-field__text_has-icon" type="text"/>
+                              <button class="text-field__icon text-field__icon_search">Search</button>
+                          </div>
+                      </form>
+                  </div>
+                  <div class="main-nav">
+                      <input class="main-nav__toogle" type="checkbox" />   
+                      <span></span>
+                      <span></span>
+                      <span></span>        
+                      <ul class="main-nav__list">
+                        <li><a href="#" data-title="Home">Home</a></li>
+                        <li><a href="#" data-title="About">About</a></li>
+                        <li><a href="#" data-title="Info">Info</a></li>
+                        <li><a href="#" data-title="Contact">Contact</a></li> 
+                      </ul>    
+                  </div>
+              </div>                        
+          </div>
+      </div>
+  </header>
 
 Styleguide Header
 */
 .header {  
     padding:2em 0;
     z-index:100;
-    position:relative;
+    position:relative;    
     .row{
         justify-content: space-between;
-        align-items:center;
+        align-items:center;        
         .col{
-            display:flex;
+            display:flex;           
         }
-    }    
+    }  
+    &__search-form{
+        max-width: 10em;
+        @include forLargeScreens(980) {     
+            max-width: 20em;
+        }
+    } 
+    @include forLargeScreens(768) {     
+        .row{
+            .col{
+                &:first-child{
+                    flex:0 0 120px;
+                }
+                &:last-child{
+                    flex:1;
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                    display:flex;
+                }               
+            }
+        }
+    } 
+    
 }

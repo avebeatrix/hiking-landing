@@ -23,3 +23,7 @@
         text-decoration: none;
     }
 }
+
+@mixin forLargeScreens($media) {
+    @media (min-width: $media/16+em) { @content; }
+}

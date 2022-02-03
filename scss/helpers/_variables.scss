@@ -7,6 +7,8 @@ $main-back-color:#fbfbf5;
 
 $dark-green-color: #4a4e3f;
 
+$main-color-darker:mix(black,$main-back-color, 3%);
+
 $logo-width: 35px;
 $logo-height: 60px;
 
@@ -16,7 +18,10 @@ $wave-gray-url: '#{$images-path}/shape.png';
 $wave-gray-diagonal-url: '#{$images-path}/shape-diagonal.png';
 $wave-green-url: '#{$images-path}/shape-green.png';
 $wave-green-gray-url: '#{$images-path}/shape3.png';
-$wave-distance: -50px;
+
+$wave-distance: 25;
+$wave-distance-desktop: 40;
+
 
 $tint-color: #564b67;
 $tint-opacity:74%;
