@@ -15,7 +15,7 @@
     "kss": "^3.0.1"
   },
   "dependencies": {
-    "@font/nunito": "^1.0.3",
+    "@fontsource/nunito": "^4.5.4",
     "npm-font-open-sans": "^1.1.0",
     "reseter.css": "^2.0.0"
   }
