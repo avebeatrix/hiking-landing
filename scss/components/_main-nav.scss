@@ -2,7 +2,7 @@
 Navigation
 
 Markup:
-<div class="main-nav">
+<nav class="main-nav">
     <input class="main-nav__toogle" type="checkbox" />   
     <span></span>
     <span></span>
@@ -13,7 +13,7 @@ Markup:
       <li><a href="#" data-title="Info">Info</a></li>
       <li><a href="#" data-title="Contact">Contact</a></li> 
     </ul>    
-</div>
+</nav>
 
 Styleguide Navigation.Main Menu
 */

@@ -12,8 +12,8 @@ Markup:
                   <div class="search-form header__search-form">
                       <form>
                           <div class="text-field">
-                              <input placeholder="Search" class="text-field__text text-field__text_has-icon" type="text"/>
-                              <button class="text-field__icon text-field__icon_search">Search</button>
+                              <input tabindex="6" placeholder="Search" class="text-field__text text-field__text_has-icon" type="text"/>
+                              <button tabindex="7" class="text-field__icon text-field__icon_search" type="submit">Search</button>
                           </div>
                       </form>
                   </div>
@@ -42,16 +42,14 @@ Styleguide Header
     position:relative;    
     .row{
         justify-content: space-between;
-        align-items:center;        
+        align-items:center;  
+        gap: 1em;      
         .col{
             display:flex;           
         }
     }  
     &__search-form{
-        max-width: 10em;
-        @include forLargeScreens(980) {     
-            max-width: 20em;
-        }
+        max-width: 10em;        
     } 
     @include forLargeScreens(768) {     
         .row{
@@ -66,6 +64,11 @@ Styleguide Header
                     display:flex;
                 }               
             }
+        }
+    }
+    @include forLargeScreens(980) {  
+        &__search-form{
+            max-width: 20em;
         }
     } 
     

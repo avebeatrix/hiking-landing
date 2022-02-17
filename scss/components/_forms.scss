@@ -3,12 +3,9 @@ Text Input
 
 Markup:
 <form>
-    <div class="form-field text-field">
-        <input class="text-field__text" type="text" value="Without icon"/>        
-    </div>
-    <div class="form-field text-field">
-        <input class="text-field__text text-field__text_has-icon" type="text" value="With Icon"/>
-        <button class="text-field__icon text-field__icon_search">Search</button>
+    <div class="text-field">
+        <input tabindex="6" placeholder="Search" class="text-field__text text-field__text_has-icon" type="text"/>
+        <button tabindex="7" class="text-field__icon text-field__icon_search" type="submit">Search</button>
     </div>
 </form>
 

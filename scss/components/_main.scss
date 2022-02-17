@@ -16,8 +16,7 @@ button{
     cursor:pointer;
 }
 .promo-main{
-    margin-top:-20px;
-    @include forLargeScreens(980) {       
-        margin-top:-100px;
-    }
+    margin-top:-10vw;
+    padding-top:10vw;
+    
 }

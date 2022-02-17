@@ -1,13 +1,14 @@
 .container {      
-    width:100%;
-    padding: 0 1em;
+    width:100%;    
     max-width: 1600px;
     margin:0 auto;
+    position:relative;
+    padding:0 1em;
 }
 .row{    
-    display: flex; 
-    margin: 0 -$grid-col-between;   
+    display: flex;    
+    position:relative;
 }
 .col{
-    margin:0 $grid-col-between;
+    
 }

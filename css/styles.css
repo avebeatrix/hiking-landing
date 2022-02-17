@@ -1,3 +1,4 @@
+@import url(d:\CSS\hiking-landing\node_modules\@font\nunito\index.css);
 *,
 *::before,
 *::after {
@@ -343,31 +344,23 @@ button {
 }
 
 .promo-main {
-  margin-top: -20px;
-}
-
-@media (min-width: 61.25em) {
-  .promo-main {
-    margin-top: -100px;
-  }
+  margin-top: -10vw;
+  padding-top: 10vw;
 }
 
 .container {
   width: 100%;
-  padding: 0 1em;
   max-width: 1600px;
   margin: 0 auto;
+  position: relative;
+  padding: 0 1em;
 }
 
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: -1em;
-}
-
-.col {
-  margin: 0 1em;
+  position: relative;
 }
 
 /*
@@ -375,12 +368,9 @@ Text Input
 
 Markup:
 <form>
-    <div class="form-field text-field">
-        <input class="text-field__text" type="text" value="Without icon"/>        
-    </div>
-    <div class="form-field text-field">
-        <input class="text-field__text text-field__text_has-icon" type="text" value="With Icon"/>
-        <button class="text-field__icon text-field__icon_search">Search</button>
+    <div class="text-field">
+        <input tabindex="6" placeholder="Search" class="text-field__text text-field__text_has-icon" type="text"/>
+        <button tabindex="7" class="text-field__icon text-field__icon_search" type="submit">Search</button>
     </div>
 </form>
 
@@ -438,8 +428,8 @@ Markup:
                   <div class="search-form header__search-form">
                       <form>
                           <div class="text-field">
-                              <input placeholder="Search" class="text-field__text text-field__text_has-icon" type="text"/>
-                              <button class="text-field__icon text-field__icon_search">Search</button>
+                              <input tabindex="6" placeholder="Search" class="text-field__text text-field__text_has-icon" type="text"/>
+                              <button tabindex="7" class="text-field__icon text-field__icon_search" type="submit">Search</button>
                           </div>
                       </form>
                   </div>
@@ -475,6 +465,7 @@ Styleguide Header
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 1em;
 }
 
 .header .row .col {
@@ -485,12 +476,6 @@ Styleguide Header
 
 .header__search-form {
   max-width: 10em;
-}
-
-@media (min-width: 61.25em) {
-  .header__search-form {
-    max-width: 20em;
-  }
 }
 
 @media (min-width: 48em) {
@@ -516,11 +501,17 @@ Styleguide Header
   }
 }
 
+@media (min-width: 61.25em) {
+  .header__search-form {
+    max-width: 20em;
+  }
+}
+
 /*
 Navigation
 
 Markup:
-<div class="main-nav">
+<nav class="main-nav">
     <input class="main-nav__toogle" type="checkbox" />   
     <span></span>
     <span></span>
@@ -531,7 +522,7 @@ Markup:
       <li><a href="#" data-title="Info">Info</a></li>
       <li><a href="#" data-title="Contact">Contact</a></li> 
     </ul>    
-</div>
+</nav>
 
 Styleguide Navigation.Main Menu
 */
@@ -780,7 +771,7 @@ a.logo {
 Back Image
 
 Markup:
-<div class="back-image {{modifier_class}}" style="background-image:url('/i/main.jpg');">Text...</div>
+<div class="back-image {{modifier_class}}" style="background-image:url('/i/main.jpg');min-height:500px">Text...</div>
 
 .back-image_wavy-gray - gray wavy
 .back-image_wavy-gray-diagonal - gray diagonal wavy
@@ -800,10 +791,10 @@ Styleguide Media.Back Image
 }
 
 .back-image_wavy-gray::before {
-  background-image: url("/i/shape.png"), url("/i/shape.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: center top, center 25px;
-  background-size: 130%, 130%;
+  background-image: url("/i/shape.svg");
+  background-repeat: no-repeat;
+  background-position: center 25px;
+  background-size: 130%;
 }
 
 .back-image_wavy-gray::before {
@@ -813,7 +804,32 @@ Styleguide Media.Back Image
   right: 0;
   top: 0;
   height: 100%;
-  z-index: 1;
+}
+
+.back-image_wavy-gray::before {
+  -webkit-filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.2));
+}
+
+.back-image_wavy-gray::after {
+  background-image: url("/i/shape.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 130%;
+}
+
+.back-image_wavy-gray::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.back-image_wavy-gray::after {
+  -webkit-filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.2));
 }
 
 .back-image_wavy-gray-diagonal::before {
@@ -829,7 +845,6 @@ Styleguide Media.Back Image
   right: 0;
   top: 0;
   height: 100%;
-  z-index: 1;
 }
 
 .back-image_wavy-gray-diagonal::after {
@@ -845,7 +860,6 @@ Styleguide Media.Back Image
   right: 0;
   top: 0;
   height: 100%;
-  z-index: 1;
 }
 
 .back-image_wavy-green::before {
@@ -861,7 +875,6 @@ Styleguide Media.Back Image
   right: 0;
   top: 0;
   height: 100%;
-  z-index: 1;
 }
 
 .back-image_dual-green {
@@ -882,7 +895,6 @@ Styleguide Media.Back Image
   right: 0;
   top: 0;
   height: 100%;
-  z-index: 1;
 }
 
 .back-image_dual-green::after {
@@ -900,7 +912,6 @@ Styleguide Media.Back Image
   right: 0;
   top: 0;
   height: 100%;
-  z-index: 1;
 }
 
 .back-image_tinted-purple::before {
@@ -915,7 +926,6 @@ Styleguide Media.Back Image
   right: 0;
   top: 0;
   height: 100%;
-  z-index: 1;
 }
 
 .back-image_tinted-blue::before {
@@ -930,16 +940,18 @@ Styleguide Media.Back Image
   right: 0;
   top: 0;
   height: 100%;
-  z-index: 1;
 }
 
 @media (min-width: 48em) {
   .back-image {
     min-height: calc(1.2*(20vw + 200px));
-    background-size: contain;
+    background-size: 100% auto;
   }
   .back-image_wavy-gray::before {
-    background-position: center top, center 40px;
+    background-position: center 40px;
+  }
+  .back-image_wavy-gray::after {
+    background-position: center top;
   }
 }
 
@@ -966,3 +978,19 @@ Styleguide Media.Back Image
     min-height: calc((20vw + 550px));
   }
 }
+
+/*
+Search Form
+
+Markup:
+<div class="search-form">
+    <form>
+        <div class="text-field">
+            <input class="text-field__text text-field__text_has-icon" type="text"/>
+            <button class="text-field__icon text-field__icon_search">Search</button>
+        </div>
+    </form>
+</div>
+
+Styleguide Form.Search
+*/
