@@ -376,6 +376,26 @@ template {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* bebas-neue-latin-ext-400-normal*/
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("/fonts/bebas-neue/files/bebas-neue-latin-ext-400-normal.woff2") format("woff2"), url("/fonts/bebas-neue/files/bebas-neue-all-400-normal.woff") format("woff");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* bebas-neue-latin-400-normal*/
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("/fonts/bebas-neue/files/bebas-neue-latin-400-normal.woff2") format("woff2"), url("/fonts/bebas-neue/files/bebas-neue-all-400-normal.woff") format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 body {
   background-color: #fbfbf5;
   overflow-x: hidden;
@@ -393,8 +413,18 @@ button {
 }
 
 .promo-main {
-  margin-top: -10vw;
-  padding-top: 10vw;
+  margin-top: -7em;
+  padding-top: 9em;
+}
+
+@media (min-width: 48em) {
+  .promo-main {
+    margin-top: -10vw;
+    padding-top: 10vw;
+  }
+  .promo-main.back-image_wavy-gray {
+    padding-top: calc(10vw);
+  }
 }
 
 .container {
@@ -403,6 +433,12 @@ button {
   margin: 0 auto;
   position: relative;
   padding: 0 1em;
+}
+
+@media (min-width: 48em) {
+  .container {
+    padding: 0 2em;
+  }
 }
 
 .row {
@@ -418,8 +454,7 @@ Text Input
 Markup:
 <form>
     <div class="text-field">
-        <input tabindex="6" placeholder="Search" class="text-field__text text-field__text_has-icon" type="text"/>
-        <button tabindex="7" class="text-field__icon text-field__icon_search" type="submit">Search</button>
+        <input tabindex="6" placeholder="Text" class="text-field__text" type="text"/>       
     </div>
 </form>
 
@@ -430,9 +465,9 @@ Styleguide Form.Elements
 }
 
 .text-field__text {
-  height: 2.5em;
-  line-height: 2.5em;
-  border-radius: 2.5em;
+  height: 3em;
+  line-height: 3em;
+  border-radius: 3em;
   -webkit-box-shadow: inset 0 0.5em 0.5em 0 #ddd;
           box-shadow: inset 0 0.5em 0.5em 0 #ddd;
   width: 100%;
@@ -528,6 +563,9 @@ Styleguide Header
 }
 
 @media (min-width: 48em) {
+  .header {
+    padding: 3em 0;
+  }
   .header .row .col:first-child {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 120px;
@@ -547,6 +585,9 @@ Styleguide Header
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -585,6 +626,7 @@ Styleguide Navigation.Main Menu
    -ms-user-select: none;
        user-select: none;
   font-family: 'Nunito';
+  margin-top: 7px;
 }
 
 .main-nav span {
@@ -672,7 +714,7 @@ Styleguide Navigation.Main Menu
 
 .main-nav__list li {
   padding: 10px 0;
-  font-size: 1.25em;
+  font-size: 1.5em;
 }
 
 .main-nav__list li a {
@@ -730,7 +772,7 @@ Styleguide Navigation.Main Menu
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    margin: 0 calc(1em + 5vw);
+    margin: 0 1em;
   }
   .main-nav span {
     display: none;
@@ -746,8 +788,9 @@ Styleguide Navigation.Main Menu
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 0;
     -webkit-transform: none;
             transform: none;
@@ -755,9 +798,16 @@ Styleguide Navigation.Main Menu
   .main-nav__list li {
     padding: 0;
     line-height: 1.75;
+    margin: 0 0.25em;
   }
   .main-nav__list li a {
     color: #32455f;
+  }
+}
+
+@media (min-width: 61.25em) {
+  .main-nav__list li {
+    margin: 0 4vw;
   }
 }
 
@@ -804,12 +854,12 @@ Styleguide Media.Logo
 
 @media (min-width: 48em) {
   .logo {
-    font-size: 1.5em;
-    padding-left: calc(52.5px + 0.5em);
+    font-size: 2em;
+    padding-left: calc(70px + 0.5em);
   }
   .logo::before {
-    width: 52.5px;
-    height: 90px;
+    width: 70px;
+    height: 120px;
   }
 }
 
@@ -837,17 +887,15 @@ Styleguide Media.Back Image
   background-repeat: no-repeat;
   min-height: calc(100vw + 2em);
   position: relative;
-  background-size: 250%;
+  background-size: cover;
+  z-index: 0;
 }
 
-.back-image_wavy-gray::before {
-  background-image: url("/i/shape.svg");
-  background-repeat: no-repeat;
-  background-position: center 25px;
-  background-size: 130%;
+.back-image::before {
+  z-index: -1;
 }
 
-.back-image_wavy-gray::before {
+.back-image::before {
   content: '';
   position: absolute;
   left: 0;
@@ -856,19 +904,11 @@ Styleguide Media.Back Image
   height: 100%;
 }
 
-.back-image_wavy-gray::before {
-  -webkit-filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.2));
-          filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.2));
+.back-image::after {
+  z-index: -1;
 }
 
-.back-image_wavy-gray::after {
-  background-image: url("/i/shape.svg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 130%;
-}
-
-.back-image_wavy-gray::after {
+.back-image::after {
   content: '';
   position: absolute;
   left: 0;
@@ -877,9 +917,29 @@ Styleguide Media.Back Image
   height: 100%;
 }
 
-.back-image_wavy-gray::after {
-  -webkit-filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.2));
-          filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.2));
+.back-image__title {
+  position: relative;
+}
+
+.back-image__title::before {
+  background-color: rgba(251, 251, 245, 0.9);
+  z-index: -1;
+}
+
+.back-image__title::before {
+  content: '';
+  position: absolute;
+  left: -0.5em;
+  right: -0.5em;
+  top: -0.5em;
+  width: calc(100% + 1em);
+  height: calc(100% + 1em);
+}
+
+@media (min-width: 48em) {
+  .back-image__title::before {
+    display: none;
+  }
 }
 
 .back-image_wavy-gray-diagonal::before {
@@ -888,43 +948,16 @@ Styleguide Media.Back Image
   background-position: left top;
 }
 
-.back-image_wavy-gray-diagonal::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 100%;
-}
-
 .back-image_wavy-gray-diagonal::after {
   background-image: url("/i/shape-diagonal.png");
   background-repeat: no-repeat;
   background-position: left top;
-}
-
-.back-image_wavy-gray-diagonal::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 100%;
 }
 
 .back-image_wavy-green::before {
   background-image: url("/i/shape3.png"), url("/i/shape-green.png");
   background-repeat: no-repeat, no-repeat;
   background-position: center top, center 25px;
-}
-
-.back-image_wavy-green::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 100%;
 }
 
 .back-image_dual-green {
@@ -938,15 +971,6 @@ Styleguide Media.Back Image
   background-position: right top;
 }
 
-.back-image_dual-green::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 100%;
-}
-
 .back-image_dual-green::after {
   background-image: url("/i/top-right-shape.png");
   background-repeat: no-repeat;
@@ -955,27 +979,9 @@ Styleguide Media.Back Image
           transform: rotate(180deg);
 }
 
-.back-image_dual-green::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 100%;
-}
-
 .back-image_tinted-purple::before {
   background: #564b67;
   opacity: 74%;
-}
-
-.back-image_tinted-purple::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 100%;
 }
 
 .back-image_tinted-blue::before {
@@ -983,49 +989,25 @@ Styleguide Media.Back Image
   opacity: 74%;
 }
 
-.back-image_tinted-blue::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 100%;
-}
-
 @media (min-width: 48em) {
   .back-image {
-    min-height: calc(1.2*(20vw + 200px));
+    min-height: calc((53vw));
     background-size: 100% auto;
+  }
+  .back-image_wavy-gray::before, .back-image_wavy-gray::after {
+    background-image: url("/i/shape.svg");
+    background-repeat: no-repeat;
+    background-size: 130%;
+  }
+  .back-image_wavy-gray::before, .back-image_wavy-gray::after {
+    -webkit-filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.1));
   }
   .back-image_wavy-gray::before {
     background-position: center 40px;
   }
   .back-image_wavy-gray::after {
     background-position: center top;
-  }
-}
-
-@media (min-width: 61.25em) {
-  .back-image {
-    min-height: calc(1.15*(15vw + 300px));
-  }
-}
-
-@media (min-width: 64em) {
-  .back-image {
-    min-height: calc(1.15*(18vw + 320px));
-  }
-}
-
-@media (min-width: 86.25em) {
-  .back-image {
-    min-height: calc((20vw + 450px));
-  }
-}
-
-@media (min-width: 100em) {
-  .back-image {
-    min-height: calc((20vw + 550px));
   }
 }
 
@@ -1036,7 +1018,7 @@ Markup:
 <div class="search-form">
     <form>
         <div class="text-field">
-            <input class="text-field__text text-field__text_has-icon" type="text"/>
+            <input placeholder="Search" class="text-field__text text-field__text_has-icon" type="text"/>
             <button class="text-field__icon text-field__icon_search">Search</button>
         </div>
     </form>
@@ -1044,3 +1026,66 @@ Markup:
 
 Styleguide Form.Search
 */
+.h1 {
+  font-size: 3rem;
+}
+
+@media (min-width: 64em) {
+  .h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 100em) {
+  .h1 {
+    font-size: 6.25rem;
+  }
+}
+
+.h2 {
+  font-size: 2rem;
+}
+
+@media (min-width: 64em) {
+  .h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 100em) {
+  .h2 {
+    font-size: 4.67rem;
+  }
+}
+
+/*
+Titles
+
+Markup:
+<div class="title {{modifier_class}} h1">
+    <div class="title__main">Discover your<br/>next Hike</div>
+    <div class="title__subtitle">Edge of the world</div> 
+</div>
+
+.title_main-color - main color
+
+Styleguide Typography.Titles
+*/
+.title {
+  font-family: 'Bebas Neue';
+  line-height: 1;
+  display: inline-block;
+}
+
+.title__subtitle {
+  font-size: 0.5em;
+  letter-spacing: 4px;
+}
+
+.title__main + .title__subtitle {
+  margin: 0.25em 0;
+}
+
+.title_main-color {
+  color: #32455f;
+}

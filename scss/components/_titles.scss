@@ -1,0 +1,47 @@
+.h1{
+    font-size: 3rem;
+    @include forLargeScreens(1024) {        
+        font-size: 4rem;
+    }
+    @include forLargeScreens(1600) { 
+        font-size: 6.25rem;
+    }
+}
+.h2{
+    font-size:2rem;
+    @include forLargeScreens(1024) {        
+        font-size:3rem;
+    }
+    @include forLargeScreens(1600) { 
+        font-size: 4.67rem;
+    }
+}
+/*
+Titles
+
+Markup:
+<div class="title {{modifier_class}} h1">
+    <div class="title__main">Discover your<br/>next Hike</div>
+    <div class="title__subtitle">Edge of the world</div> 
+</div>
+
+.title_main-color - main color
+
+Styleguide Typography.Titles
+*/
+.title {    
+    font-family: 'Bebas Neue'; 
+    line-height:1;    
+    display:inline-block;    
+    
+    &__subtitle{
+        font-size: 0.5em;
+        letter-spacing:4px;       
+    }   
+    &__main + &__subtitle{ 
+        margin:0.25em 0;
+    }
+    &_main-color{
+        color:$main-color;        
+    }         
+} 

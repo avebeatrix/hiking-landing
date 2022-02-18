@@ -17,6 +17,17 @@
         height: 100%;                
     }
 }
+@mixin absolute-wider{
+    &{
+        content: '';
+        position: absolute;
+        left: -0.5em;
+        right: -0.5em;
+        top: -0.5em;
+        width: calc(100% + 1em); 
+        height: calc(100% + 1em);                
+    }
+}
 @mixin dont-text-decoration-a{
     a{
         text-decoration: none;
@@ -28,6 +39,6 @@
 }
 @mixin wave-shadow{
     &{
-        filter: drop-shadow( 0 20px 10px rgba(0, 0, 0, .2));
+        filter: drop-shadow( 0 20px 10px rgba(0, 0, 0, .1));
     }
 }

@@ -33,11 +33,11 @@ Styleguide Media.Logo
         }
     }
     @include forLargeScreens(768) {   
-        font-size: 1.5em;
-        padding-left: calc(#{$logo-width*1.5} + 0.5em);
+        font-size: 2em;
+        padding-left: calc(#{$logo-width*2} + 0.5em);
         &::before{
-            width: $logo-width*1.5;
-            height: $logo-height*1.5;    
+            width: $logo-width*2;
+            height: $logo-height*2;    
         }
     }
 }
@@ -65,43 +65,44 @@ Styleguide Media.Back Image
     background-repeat: no-repeat;  
     min-height:calc(100vw + 2em);
     position:relative;
-    background-size: 250%;       
-    
-    &_wavy-gray{        
-        &::before{
-            @include absolute;
-            @include wave-shadow;
-            background-image: url($wave-gray-url);
-            background-repeat: no-repeat;                       
-            background-position: center $wave-distance+px;
-            background-size: 130%;                     
-        }    
-        &::after{
-            @include absolute;
-            @include wave-shadow;
-            background-image: url($wave-gray-url);
-            background-repeat: no-repeat;           
-            background-position: center top;
-            background-size: 130%;           
-        }      
+    background-size: cover;      
+    z-index:0; 
+    &::before{
+        @include absolute;
+        z-index:-1;
     }
-    &_wavy-gray-diagonal{        
+    &::after{
+        @include absolute;
+        z-index:-1;
+    }   
+    &__title{
+        position:relative;
         &::before{
-            @include absolute;
+            @include absolute-wider;       
+            background-color: transparentize($main-back-color, .1);
+            z-index:-1;        
+        }
+        @include forLargeScreens(768) {       
+            &::before{
+                display:none;
+            }
+        }
+    } 
+    
+    &_wavy-gray-diagonal{        
+        &::before{         
             background-image: url($wave-gray-diagonal-url);
             background-repeat: no-repeat;
             background-position: left top;                                    
         }
-        &::after{
-            @include absolute;
+        &::after{           
             background-image: url($wave-gray-diagonal-url);
             background-repeat: no-repeat;
             background-position: left top;                            
         }
     }
     &_wavy-green{        
-        &::before{
-            @include absolute;
+        &::before{          
             background-image: url($wave-green-gray-url), url($wave-green-url);
             background-repeat: no-repeat, no-repeat;
             background-position: center top, center $wave-distance+px;       
@@ -110,14 +111,12 @@ Styleguide Media.Back Image
     &_dual-green{
         background: $dark-green-color;
         background-image: none !important;        
-        &::before{
-            @include absolute;
+        &::before{            
             background-image: url($green-corner-url);
             background-repeat: no-repeat;
             background-position: right top;             
         }
-        &::after{
-            @include absolute;
+        &::after{           
             background-image: url($green-corner-url);
             background-repeat: no-repeat;
             background-position: right top;     
@@ -125,46 +124,35 @@ Styleguide Media.Back Image
         }
     }    
     &_tinted-purple{        
-        &::before{
-            @include absolute;
+        &::before{           
             background: $tint-color;
             opacity: $tint-opacity;
         }
     }
     &_tinted-blue{
-        &::before{
-            @include absolute;
+        &::before{           
             background: $main-color;
             opacity: $tint-opacity;
         }
     }
-
-    @include forLargeScreens(380) {       
-        
-    }
+  
     @include forLargeScreens(768) {               
-        min-height: calc(1.2*(20vw + 200px));
+        min-height: calc((53vw));
         background-size: 100% auto;
-        
-        &_wavy-gray{        
-            &::before{                
-                background-position: center $wave-distance-desktop+px;  
-            }
-            &::after{
-                background-position: center top;  
-            }
+               
+        &_wavy-gray{  
+            &::before,  &::after{
+                @include wave-shadow;
+                background-image: url($wave-gray-url);
+                background-repeat: no-repeat;                                       
+                background-size: 130%;  
+            }        
+            &::before{                           
+                background-position: center $wave-distance-desktop+px;                     
+            }    
+            &::after{                          
+                background-position: center top;            
+            }      
         }
-    }  
-    @include forLargeScreens(980) {       
-        min-height: calc(1.15*(15vw + 300px));
-    }
-    @include forLargeScreens(1024) {        
-        min-height: calc(1.15*(18vw + 320px));
-    }
-    @include forLargeScreens(1380) {        
-        min-height: calc((20vw + 450px));           
-    }
-    @include forLargeScreens(1600) { 
-        min-height: calc((20vw + 550px));
-    }
+    }       
 }

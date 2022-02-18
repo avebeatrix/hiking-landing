@@ -16,7 +16,14 @@ button{
     cursor:pointer;
 }
 .promo-main{
-    margin-top:-10vw;
-    padding-top:10vw;
-    
+    margin-top: -7em;
+    padding-top: 9em;
+   
+    @include forLargeScreens(768) {      
+        margin-top:-10vw;
+        padding-top:10vw;
+        &.back-image_wavy-gray{
+            padding-top: calc(10vw);    
+        }
+    }            
 }

@@ -28,6 +28,7 @@ Styleguide Navigation.Main Menu
     user-select: none;
 
     font-family: 'Nunito';
+    margin-top: 7px;
     
     span{
         display: block;
@@ -110,7 +111,7 @@ Styleguide Navigation.Main Menu
 
         li{
             padding: 10px 0;
-            font-size: 1.25em;
+            font-size: 1.5em;
             a{
                 text-decoration: none;                                              
                 color: rgba($main-color, .6);
@@ -153,7 +154,8 @@ Styleguide Navigation.Main Menu
 
     @include forLargeScreens(768) {   
         flex:1;
-        margin:0 calc(1em + 5vw);
+        margin:0 1em;
+        
         span{
           display:none;
         }  
@@ -167,16 +169,24 @@ Styleguide Navigation.Main Menu
           margin:0;
           
           display:flex;
-          justify-content: space-around;
+          justify-content: center;
           padding:0;      
           transform: none;  
           li{
             padding:0;
             line-height: 1.75;
+            margin:0 0.25em;
             a{
               color:$main-color;
             }
           }       
         }
     }   
+    @include forLargeScreens(980) {       
+      &__list {
+        li{
+          margin:0 4vw;
+        }
+      }
+    }
 }
