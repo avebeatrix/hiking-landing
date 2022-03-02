@@ -8,10 +8,10 @@ Markup:
     <span></span>
     <span></span>        
     <ul class="main-nav__list">
-      <li><a href="#" data-title="Home">Home</a></li>
-      <li><a href="#" data-title="About">About</a></li>
-      <li><a href="#" data-title="Info">Info</a></li>
-      <li><a href="#" data-title="Contact">Contact</a></li> 
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Info</a></li>
+      <li><a href="#">Contact</a></li> 
     </ul>    
 </nav>
 
@@ -112,40 +112,14 @@ Styleguide Navigation.Main Menu
         li{
             padding: 10px 0;
             font-size: 1.5em;
+            flex:1;            
             a{
                 text-decoration: none;                                              
-                color: rgba($main-color, .6);
-                position: relative;
-                transition: 0.24s;
-                font-weight: 300;
-                &:after{                  
-                    content: attr(data-title);
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    display: flex;
-                    justify-content: center;
-                    text-align: center;
-                    align-items: center;
-                    color: transparent;
-                    font-weight: 900;
-                    transition: 0.24s;
-                    transform: scale(0.9);
-                    transform-origin: center center;    
-                                 
-                }
+                color:$main-color;                 
+                font-weight: 300;               
                 &:hover{                   
-                    color: transparent;
-                    &:after{
-                      color:$main-color;
-                      font-weight: 900;
-                      transform: scale(1);
-                      text-decoration:underline;
-                      text-underline-offset: 7px;
-                      text-decoration-thickness: 2px;
-                    }
+                    font-weight:bold;
+                    text-decoration: underline;
                 }
 
             }
@@ -176,9 +150,7 @@ Styleguide Navigation.Main Menu
             padding:0;
             line-height: 1.75;
             margin:0 0.25em;
-            a{
-              color:$main-color;
-            }
+            text-align:center;           
           }       
         }
     }   
