@@ -1,0 +1,20 @@
+/*
+Corner
+
+Markup:
+<div class="corner-bl">Edge of the world</div> 
+
+Styleguide Decorative.Corner
+*/
+.corner{
+    display:inline-block;
+    position:relative;
+   
+    &-bl{
+        @include corner;
+        &::before{            
+            border-left:solid 2px currentColor;
+            border-bottom:solid 2px currentColor;
+        }
+    }
+}
