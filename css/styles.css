@@ -405,6 +405,10 @@ a {
   color: #32455f;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
 button {
   padding: 0;
   border: none;
@@ -427,6 +431,14 @@ button {
   }
 }
 
+.info-tile {
+  padding: 1em 0;
+}
+
+.info-tile__h2 {
+  margin: 1em 0;
+}
+
 .container {
   width: 100%;
   max-width: 1600px;
@@ -446,83 +458,6 @@ button {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-}
-
-/*
-Corner
-
-Markup:
-<div class="corner-bl">Edge of the world</div> 
-
-Styleguide Decorative.Corner
-*/
-.corner {
-  display: inline-block;
-  position: relative;
-}
-
-.corner-bl::before {
-  position: absolute;
-  content: "";
-  width: 1em;
-  height: 1em;
-  left: -0.5em;
-  bottom: -0.25em;
-}
-
-.corner-bl::before {
-  border-left: solid 2px currentColor;
-  border-bottom: solid 2px currentColor;
-}
-
-/*
-Text Input
-
-Markup:
-<form>
-    <div class="text-field">
-        <input tabindex="6" placeholder="Text" class="text-field__text" type="text"/>       
-    </div>
-</form>
-
-Styleguide Form.Elements
-*/
-.text-field {
-  position: relative;
-}
-
-.text-field__text {
-  height: 3em;
-  line-height: 3em;
-  border-radius: 3em;
-  -webkit-box-shadow: inset 0 0.5em 0.5em 0 #ddd;
-          box-shadow: inset 0 0.5em 0.5em 0 #ddd;
-  width: 100%;
-  border: none;
-  padding: 0 1em;
-}
-
-.text-field__text_has-icon {
-  padding-right: 3.5em;
-}
-
-.text-field__icon {
-  position: absolute;
-  z-index: 1;
-  right: 1em;
-  height: 100%;
-}
-
-.text-field__icon_search {
-  text-indent: -9999px;
-  width: 2em;
-  background-image: url("/i/search.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.form-field + .form-field {
-  margin-top: 2em;
 }
 
 /*
@@ -625,6 +560,56 @@ Styleguide Header
 }
 
 /*
+Text Input
+
+Markup:
+<form>
+    <div class="text-field">
+        <input tabindex="6" placeholder="Text" class="text-field__text" type="text"/>       
+    </div>
+</form>
+
+Styleguide Form.Elements
+*/
+.text-field {
+  position: relative;
+}
+
+.text-field__text {
+  height: 3em;
+  line-height: 3em;
+  border-radius: 3em;
+  -webkit-box-shadow: inset 0 0.5em 0.5em 0 #ddd;
+          box-shadow: inset 0 0.5em 0.5em 0 #ddd;
+  width: 100%;
+  border: none;
+  padding: 0 1em;
+}
+
+.text-field__text_has-icon {
+  padding-right: 3.5em;
+}
+
+.text-field__icon {
+  position: absolute;
+  z-index: 1;
+  right: 1em;
+  height: 100%;
+}
+
+.text-field__icon_search {
+  text-indent: -9999px;
+  width: 2em;
+  background-image: url("/i/search.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.form-field + .form-field {
+  margin-top: 2em;
+}
+
+/*
 Navigation
 
 Markup:
@@ -649,9 +634,9 @@ Styleguide Navigation.Main Menu
   position: relative;
   z-index: 1;
   -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-family: 'Nunito';
   margin-top: 7px;
 }
@@ -908,6 +893,7 @@ Styleguide Media.Back Image
 
 .back-image__title {
   position: relative;
+  margin: 0.25em 0;
 }
 
 .back-image__title::before {
@@ -923,12 +909,6 @@ Styleguide Media.Back Image
   top: -0.5em;
   width: calc(100% + 1em);
   height: calc(100% + 1em);
-}
-
-@media (min-width: 48em) {
-  .back-image__title::before {
-    display: none;
-  }
 }
 
 .back-image_wavy-gray-diagonal::before {
@@ -998,6 +978,9 @@ Styleguide Media.Back Image
   .back-image_wavy-gray::after {
     background-position: center top;
   }
+  .back-image__title::before {
+    display: none;
+  }
 }
 
 /*
@@ -1033,6 +1016,13 @@ Styleguide Form.Search
 
 .h2 {
   font-size: 2rem;
+  letter-spacing: 3px;
+}
+
+@media (min-width: 48em) {
+  .h2 {
+    letter-spacing: 7px;
+  }
 }
 
 @media (min-width: 64em) {
@@ -1064,11 +1054,17 @@ Styleguide Typography.Titles
   font-family: 'Bebas Neue';
   line-height: 1;
   display: inline-block;
+  position: relative;
 }
 
 .title__subtitle {
   font-size: 0.5em;
   letter-spacing: 4px;
+  display: block;
+}
+
+.title__main {
+  display: block;
 }
 
 .title__main + .title__subtitle {
@@ -1077,4 +1073,118 @@ Styleguide Typography.Titles
 
 .title_main-color {
   color: #32455f;
+}
+
+.title_underlined {
+  margin-bottom: 1.5em;
+}
+
+.title_underlined::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2em;
+  border-bottom: 9px solid currentColor;
+  bottom: -0.5em;
+}
+
+/*
+Corner
+
+Markup:
+<div class="corner-bl">Edge of the world</div> 
+
+Styleguide Decorative.Corner
+*/
+.corner {
+  display: inline-block;
+  position: relative;
+}
+
+.corner-bl::before {
+  position: absolute;
+  content: "";
+  width: 1em;
+  height: 1em;
+  left: -0.5em;
+  bottom: -0.25em;
+}
+
+.corner-bl::before {
+  border-left: solid 2px currentColor;
+  border-bottom: solid 2px currentColor;
+}
+
+.day-card {
+  padding: 2em;
+  -webkit-box-shadow: 0 5px 10px #aaa;
+          box-shadow: 0 5px 10px #aaa;
+  border-radius: 5px;
+}
+
+/*
+Icons
+
+Markup:
+<span class="icon icon_rounded {{modifier_class}}">icon rounded</span>  
+
+.icon_mountains - mountains
+.icon_man - man
+.icon_backpack - backpack
+
+Styleguide Decorative.Icons
+*/
+.icon {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: block;
+  text-indent: -99999999px;
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.icon::after {
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
+.icon::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.icon_rounded {
+  border-radius: 50%;
+  background-color: #32455f;
+}
+
+.icon_rounded::after {
+  -webkit-mask-size: 70%;
+          mask-size: 70%;
+  background-color: #fff;
+  -webkit-mask-position: 50% 50%;
+          mask-position: 50% 50%;
+}
+
+.icon_mountains::after {
+  -webkit-mask-image: url("/i/icon-mountains.svg");
+          mask-image: url("/i/icon-mountains.svg");
+}
+
+.icon_backpack::after {
+  -webkit-mask-image: url("/i/icon-backpack.svg");
+          mask-image: url("/i/icon-backpack.svg");
+}
+
+.icon_man::after {
+  -webkit-mask-image: url("/i/icon-man.svg");
+          mask-image: url("/i/icon-man.svg");
 }

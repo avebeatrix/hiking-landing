@@ -1,5 +1,5 @@
 .h1{
-    font-size: 3rem;
+    font-size: 3rem;    
     @include forLargeScreens(1024) {        
         font-size: 4rem;
     }
@@ -8,7 +8,11 @@
     }
 }
 .h2{
-    font-size:2rem;
+    font-size:2rem;   
+    letter-spacing: 3px; 
+    @include forLargeScreens(768) {  
+        letter-spacing: 7px; 
+    }
     @include forLargeScreens(1024) {        
         font-size:3rem;
     }
@@ -33,15 +37,31 @@ Styleguide Typography.Titles
     font-family: 'Bebas Neue'; 
     line-height:1;    
     display:inline-block;    
+    position:relative;
     
     &__subtitle{
         font-size: 0.5em;
-        letter-spacing:4px;       
+        letter-spacing:4px;   
+        display:block;    
     }   
+    &__main{
+        display:block;    
+    }
     &__main + &__subtitle{ 
         margin:0.25em 0;
     }
     &_main-color{
         color:$main-color;        
     }         
+    &_underlined{
+        margin-bottom:1.5em;
+        &::after{
+            content:"";
+            position: absolute;
+            display:block;
+            width:2em;
+            border-bottom: 9px solid currentColor;
+            bottom: -0.5em;
+        }
+    }
 } 

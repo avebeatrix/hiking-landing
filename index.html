@@ -1,56 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World! Site Title</title>    
-    <link href="/css/styles.css" type="text/css" rel="stylesheet" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-          <div class="row">
-              <div class="col">
-                  <a tabindex="1" class="logo" href="#">Hiking <strong>Life</strong></a>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World! Site Title</title>
+  <link href="/css/styles.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <a tabindex="1" class="logo" href="#">Hiking <strong>Life</strong></a>
+        </div>
+        <div class="col">
+          <div class="search-form header__search-form">
+            <form>
+              <div class="text-field">
+                <input tabindex="6" placeholder="Search" class="text-field__text text-field__text_has-icon"
+                  type="text" />
+                <button tabindex="7" class="text-field__icon text-field__icon_search" type="submit">Search</button>
               </div>
-              <div class="col">
-                  <div class="search-form header__search-form">
-                      <form>
-                          <div class="text-field">
-                              <input tabindex="6" placeholder="Search" class="text-field__text text-field__text_has-icon" type="text"/>
-                              <button tabindex="7" class="text-field__icon text-field__icon_search" type="submit">Search</button>
-                          </div>
-                      </form>
-                  </div>
-                  <nav class="main-nav">
-                      <input class="main-nav__toogle" type="checkbox" />   
-                      <span></span>
-                      <span></span>
-                      <span></span>        
-                      <ul class="main-nav__list">
-                        <li><a tabindex="2" href="#">Home</a></li>
-                        <li><a tabindex="3" href="#">About</a></li>
-                        <li><a tabindex="4" href="#">Info</a></li>
-                        <li><a tabindex="5" href="#">Contact</a></li> 
-                      </ul>    
-                  </nav>
-              </div>                        
+            </form>
           </div>
+          <nav class="main-nav">
+            <input class="main-nav__toogle" type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="main-nav__list">
+              <li><a tabindex="2" href="#">Home</a></li>
+              <li><a tabindex="3" href="#">About</a></li>
+              <li><a tabindex="4" href="#">Info</a></li>
+              <li><a tabindex="5" href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
+    </div>
   </header>
   <main>
     <div class="promo-main back-image back-image_wavy-gray" style="background-image:url('/i/main.jpg');">
       <div class="container">
         <div class="row">
-          <div class="title title_main-color h1 back-image__title">
-            <div class="title__main">Discover your<br/>next Hike</div>
-            <div class="title__subtitle corner-bl">Edge of the world</div> 
+          <h1 class="title title_main-color h1 back-image__title">
+            <span class="title__main">Discover your<br />next Hike</span>
+            <span class="title__subtitle corner-bl">Edge of the world</span>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="info-tile">
+      <div class="container">
+        <div class="row">
+          <h2 class="title title_main-color title_underlined h2 info-tile__h2">
+            HOW TO RECOVER FROM <br/>
+            A HIKE
+          </h2>
+        </div>
+        <div class="row">
+          <div class="day-card">
+            <h3>Day 1</h3>
+            <div class="row">
+              <ul>
+                <li>Dolor sit amet consectetur</li>
+                <li>Adipiscing elit aptent </li>
+                <li>Torquent, interdum</li>
+              </ul>
+              <span class="icon icon_rounded icon_mountains">mountains</span>              
+            </div>
+            <h4>Lorem Ipsum Consectetur<br/>
+              <time datetime="2020-09-21">21.09.20</time></h4>
+            <time datetime="15:30">15.30 hs.</time>
+            <div class="hardness" data-hardness="3">hardness: 3/5</div>
           </div>
         </div>
-
       </div>
     </div>
   </main>
-  
-  </body>
+
+</body>
+
 </html>

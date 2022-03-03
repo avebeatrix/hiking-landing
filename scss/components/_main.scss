@@ -8,6 +8,9 @@ a{
         
     }
 }
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+}
 button{
     padding:0;
     border:none;
@@ -25,4 +28,10 @@ button{
             padding-top: calc(10vw);    
         }
     }            
+}
+.info-tile{
+    padding:1em 0;
+    &__h2{
+        margin:1em 0;
+    }
 }

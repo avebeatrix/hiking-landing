@@ -77,16 +77,12 @@ Styleguide Media.Back Image
     }   
     &__title{
         position:relative;
+        margin: 0.25em 0;
         &::before{
             @include absolute-wider;       
             background-color: transparentize($main-back-color, .1);
             z-index:-1;        
-        }
-        @include forLargeScreens(768) {       
-            &::before{
-                display:none;
-            }
-        }
+        }      
     } 
     
     &_wavy-gray-diagonal{        
@@ -153,6 +149,12 @@ Styleguide Media.Back Image
             &::after{                          
                 background-position: center top;            
             }      
+        }
+
+        &__title{
+            &::before{
+                display:none;
+            }
         }
     }       
 }

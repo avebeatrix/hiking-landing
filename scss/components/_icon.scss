@@ -1,0 +1,51 @@
+/*
+Icons
+
+Markup:
+<span class="icon icon_rounded {{modifier_class}}">icon rounded</span>  
+
+.icon_mountains - mountains
+.icon_man - man
+.icon_backpack - backpack
+
+Styleguide Decorative.Icons
+*/
+.icon{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;  
+    display:block;
+    text-indent: -99999999px;
+    position:relative;
+    width: $icon-big-size;
+    height: $icon-big-size;
+    &::after{
+        @include absolute-full;
+        background-color:currentColor; 
+        mask-repeat: no-repeat;       
+    }
+    &_rounded{        
+        border-radius: 50%;
+        background-color: $main-color;               
+        &::after{
+            mask-size: 70%; 
+            background-color:#fff;   
+            mask-position: 50% 50%;  
+        }      
+    }
+    &_mountains{ 
+        &::after{                            
+            mask-image:url($icon-mountains-url);                                 
+        }                 
+    }
+    &_backpack{ 
+        &::after{                            
+            mask-image:url($icon-backpack-url);                                 
+        }                 
+    }
+    &_man{ 
+        &::after{                            
+            mask-image:url($icon-man-url);                                 
+        }                 
+    }
+}

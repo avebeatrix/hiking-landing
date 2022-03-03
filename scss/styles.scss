@@ -4,16 +4,21 @@
 @import './_typography.scss';
 @import './components/_main.scss';
 @import './components/_grid.scss';
-@import './components/_corner.scss';
-@import './components/_forms.scss';
 @import './components/_header.scss';
 @import './components/_footer.scss';
+@import './components/_forms.scss';
 @import './components/_button.scss';
 @import './components/_main-nav.scss';
 @import './components/_media.scss';
-@import './components/_product.scss';
 @import './components/_search-form.scss';
 @import './components/_titles.scss';
+
+@import './components/_corner.scss';
+
+//not critical
+@import './components/_day-card.scss';
+@import './components/_icon.scss';
+@import './components/_product.scss';
 @import './components/_place.scss';
 @import './components/_event.scss';
 @import './components/_step.scss';
