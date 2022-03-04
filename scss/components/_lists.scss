@@ -1,0 +1,21 @@
+.dashed-ul{
+    margin-left:1em;
+    list-style-type: none;
+    font-family: 'Raleway';
+    font-size:1rem;
+    li{
+        position:relative;
+        margin:1em 0;
+        &::before{
+            content:"-";
+            position:absolute;
+            left:-1em;         
+        }
+    }      
+    @include forLargeScreens(1024) {        
+        
+    }
+    @include forLargeScreens(1600) { 
+        font-size:1.25rem;
+    } 
+}

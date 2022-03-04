@@ -1,0 +1,58 @@
+{
+  "_from": "@fontsource/raleway",
+  "_id": "@fontsource/raleway@4.5.3",
+  "_inBundle": false,
+  "_integrity": "sha512-wJ8Rm8k5MuSnfERuL5Q1bd8Z80o3uWpC1vUmZAxcLXAY9IxnfGqZjZJ1Jd2lY1u5NaEo+zXCvHEViAIv6b1jEg==",
+  "_location": "/@fontsource/raleway",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@fontsource/raleway",
+    "name": "@fontsource/raleway",
+    "escapedName": "@fontsource%2fraleway",
+    "scope": "@fontsource",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@fontsource/raleway/-/raleway-4.5.3.tgz",
+  "_shasum": "0a4477e037dbd9a4a26c1c9db3aa2bf93722b499",
+  "_spec": "@fontsource/raleway",
+  "_where": "D:\\CSS\\hiking-landing",
+  "author": {
+    "name": "Lotus",
+    "email": "declininglotus@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/fontsource/fontsource/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Self-host the Raleway font in a neatly bundled NPM package.",
+  "homepage": "https://github.com/fontsource/fontsource/tree/master/packages/raleway#readme",
+  "keywords": [
+    "fontsource",
+    "font",
+    "font family",
+    "google fonts",
+    "Raleway",
+    "raleway"
+  ],
+  "license": "MIT",
+  "main": "index.css",
+  "name": "@fontsource/raleway",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fontsource/fontsource.git",
+    "directory": "packages/raleway"
+  },
+  "version": "4.5.3"
+}

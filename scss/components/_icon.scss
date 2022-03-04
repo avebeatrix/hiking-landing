@@ -30,9 +30,15 @@ Styleguide Decorative.Icons
         &::after{
             mask-size: 70%; 
             background-color:#fff;   
-            mask-position: 50% 50%;  
-        }      
+            mask-position: 50% 50%;              
+        }  
+        &.icon_backpack{
+            &::after{
+                mask-size: 50%; 
+            }            
+        }
     }
+   
     &_mountains{ 
         &::after{                            
             mask-image:url($icon-mountains-url);                                 

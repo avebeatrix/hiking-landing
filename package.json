@@ -14,9 +14,7 @@
     "gulp": "^4.0.2",
     "kss": "^3.0.1"
   },
-  "dependencies": {
-    "@fontsource/bebas-neue": "^4.5.1",
-    "@fontsource/nunito": "^4.5.4",
+  "dependencies": {  
     "npm-font-open-sans": "^1.1.0",
     "reseter.css": "^2.0.0"
   }

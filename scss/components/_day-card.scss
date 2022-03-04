@@ -2,4 +2,35 @@
     padding:2em;
     box-shadow: 0 5px 10px #aaa;
     border-radius:5px;
+    color:$main-color; 
+    width:100%;      
+    & + & {
+        margin-top:2em;
+    }   
+    &__day-time{
+        font-family: 'Bebas Neue';        
+        display:block;
+    }       
+    &__description{       
+        letter-spacing: 2px;
+        flex:1;
+        width:auto;    
+        padding-right:1em;   
+        font-weight: bold;   
+    }
+    &__icon{
+        margin:0 auto;
+    }
+    @include forLargeScreens(980) {  
+        flex:1;    
+        width:auto;
+        & + & {
+            margin-left: 5vw;
+            margin-top:0;
+        } 
+        &__description{
+            flex:1;
+            width:auto;
+        }
+    }
 }
