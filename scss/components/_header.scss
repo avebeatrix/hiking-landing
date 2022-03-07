@@ -45,7 +45,10 @@ Styleguide Header
         align-items:center;  
         gap: 1em;      
         .col{
-            display:flex;           
+            display:flex;   
+            &:last-child{
+                flex-direction: row-reverse;
+            }        
         }
     }  
     &__search-form{
@@ -60,7 +63,7 @@ Styleguide Header
                 }
                 &:last-child{
                     flex:1;
-                    flex-direction: row-reverse;
+                    flex-direction: row;
                     justify-content: space-between;
                     display:flex;
                     align-items: center;

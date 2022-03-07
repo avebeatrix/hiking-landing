@@ -575,6 +575,13 @@ Styleguide Header
   display: flex;
 }
 
+.header .row .col:last-child {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
 .header__search-form {
   max-width: 10em;
 }
@@ -593,9 +600,9 @@ Styleguide Header
         -ms-flex: 1;
             flex: 1;
     -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -687,7 +694,7 @@ Styleguide Navigation.Main Menu
   margin-left: 1em;
   display: block;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -725,7 +732,7 @@ Styleguide Navigation.Main Menu
 
 .main-nav__toogle {
   display: block;
-  width: 42px;
+  width: 52px;
   height: 42px;
   position: absolute;
   top: -7px;
@@ -855,6 +862,10 @@ Styleguide Media.Logo
   color: #32455f;
   position: relative;
   white-space: nowrap;
+}
+
+.logo span {
+  font-weight: bold;
 }
 
 .logo a {
@@ -1211,6 +1222,17 @@ Styleguide Decorative.Corner
 
 .day-card__icon {
   margin: 0 auto;
+}
+
+.day-card__meta {
+  padding: 2em 0 0 0;
+  border-top: solid 1px #32455f;
+  margin: 2em 0 0 0;
+}
+
+.day-card__day-time {
+  font-size: 1.5em;
+  margin: 0.5em 0;
 }
 
 @media (min-width: 61.25em) {

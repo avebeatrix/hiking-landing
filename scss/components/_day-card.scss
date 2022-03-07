@@ -21,6 +21,15 @@
     &__icon{
         margin:0 auto;
     }
+    &__meta{
+        padding:2em 0 0 0;
+        border-top:solid 1px $main-color;
+        margin:2em 0 0 0;
+    }
+    &__day-time{
+        font-size:1.5em;
+        margin:0.5em 0;
+    }
     @include forLargeScreens(980) {  
         flex:1;    
         width:auto;

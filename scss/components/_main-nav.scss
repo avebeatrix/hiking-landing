@@ -22,7 +22,7 @@ Styleguide Navigation.Main Menu
     display: block;
     position: relative;    
     
-    z-index: 1;
+    z-index: 2;
        
     user-select: none;
 
@@ -58,7 +58,7 @@ Styleguide Navigation.Main Menu
 
     &__toogle {        
         display: block;
-        width: 42px;
+        width: 52px;
         height: 42px;
         position: absolute;
         top: -7px;

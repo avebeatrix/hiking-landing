@@ -13,30 +13,29 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <a tabindex="1" class="logo" href="#">Hiking <strong>Life</strong></a>
+          <a class="logo" href="#" alt="Hiking Life Logo">Hiking <span>Life</span></a>
         </div>
         <div class="col">
-          <div class="search-form header__search-form">
-            <form>
-              <div class="text-field">
-                <input tabindex="6" placeholder="Search" class="text-field__text text-field__text_has-icon"
-                  type="text" />
-                <button tabindex="7" class="text-field__icon text-field__icon_search" type="submit">Search</button>
-              </div>
-            </form>
-          </div>
-          <nav class="main-nav">
-            <input class="main-nav__toogle" type="checkbox" />
+          <nav class="main-nav" >
+            <input class="main-nav__toogle" type="checkbox" aria-label="Main navigation switcher"/>
             <span></span>
             <span></span>
             <span></span>
-            <ul class="main-nav__list">
-              <li><a tabindex="2" href="#">Home</a></li>
-              <li><a tabindex="3" href="#">About</a></li>
-              <li><a tabindex="4" href="#">Info</a></li>
-              <li><a tabindex="5" href="#">Contact</a></li>
+            <ul class="main-nav__list" aria-label="Main Navigation">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Info</a></li>
+              <li><a href="#">Contact</a></li>
             </ul>
           </nav>
+          <div class="search-form header__search-form">
+            <form role="search">
+              <div class="text-field">
+                <input aria-label="Search" placeholder="Search" class="text-field__text text-field__text_has-icon" type="text" />
+                <button class="text-field__icon text-field__icon_search" type="submit">Search</button>
+              </div>
+            </form>
+          </div>          
         </div>
       </div>
     </div>
@@ -74,10 +73,13 @@
               
               <span class="icon day-card__icon icon_rounded icon_mountains">mountains</span>              
             </div>
-            <h4 class="h4 title">Lorem Ipsum Consectetur<br/>
-              <time datetime="2020-09-21">21.09.20</time></h4>
-            <time class="day-card__day-time" datetime="15:30">15.30 hs.</time>
-            <div class="indicator" data-indicator-value="5">hardness: 5/5</div>
+            <div class="day-card__meta">
+              <h4 class="h3 title">Lorem Ipsum Consectetur<br/>
+                <time datetime="2020-09-21">21.09.20</time></h4>
+              <time class="day-card__day-time" datetime="15:30">15.30 hs.</time>
+              <div class="indicator" data-indicator-value="5">hardness: 5/5</div>
+            </div>
+            
           </div>
           <div class="day-card">
             <h3 class="h3 title">Day 2.</h3>
@@ -91,10 +93,13 @@
               </div>
               <span class="icon day-card__icon icon_rounded icon_backpack">mountains</span>              
             </div>
-            <h4 class="h4 title">Lorem Consec Ipsum<br/>
-              <time datetime="2020-09-28">28.09.20</time></h4>
-            <time class="day-card__day-time" datetime="16:00">16.00 hs.</time>
-            <div class="indicator" data-indicator-value="3">hardness: 3/5</div>
+            <div class="day-card__meta">
+              <h4 class="h3 title">Lorem Consec Ipsum<br/>
+                <time datetime="2020-09-28">28.09.20</time></h4>
+              <time class="day-card__day-time" datetime="16:00">16.00 hs.</time>
+              <div class="indicator" data-indicator-value="3">hardness: 3/5</div>
+            </div>
+            
           </div>
         </div>
       </div>

@@ -13,6 +13,9 @@ Styleguide Media.Logo
     color: $main-color;
     position:relative;
     white-space: nowrap;    
+    span{
+        font-weight: bold;
+    }
 
     @include dont-text-decoration-a;
 
