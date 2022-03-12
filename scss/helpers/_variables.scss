@@ -43,3 +43,9 @@ $icon-mountains-url: '#{$images-path}/icon-mountains.svg';
 $icon-backpack-url: '#{$images-path}/icon-backpack.svg';
 $icon-man-url: '#{$images-path}/icon-man.svg';
 $icon-big-size: 140px;
+
+$indicator-radius: 4;
+$indicator-stroke-width: 1;
+$indicator-gap: 5;
+$indicator-cell-width: ($indicator-radius + $indicator-gap + 2 * $indicator-stroke-width) * 2;
+$indicator-url: '<svg height="#{$indicator-cell-width}" width="#{$indicator-cell-width}" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle cx="#{$indicator-radius + 2 * $indicator-stroke-width}" cy="#{$indicator-radius + 2 * $indicator-stroke-width}" r="#{$indicator-radius}" stroke="%23#{$main-color-val}" fill="transparent" stroke-width="#{$indicator-stroke-width}"></circle></svg>';

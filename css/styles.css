@@ -1349,3 +1349,23 @@ Styleguide Decorative.Icons
   -webkit-mask-image: url("/i/icon-man.svg");
           mask-image: url("/i/icon-man.svg");
 }
+
+.indicator {
+  display: inline-block;
+  width: 110px;
+  text-indent: -9999px;
+  position: relative;
+  -webkit-mask: url('data:image/svg+xml; utf8, <svg height="22" width="22" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="4" stroke="%2332455f" fill="transparent" stroke-width="1"></circle></svg>') repeat-x;
+          mask: url('data:image/svg+xml; utf8, <svg height="22" width="22" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="4" stroke="%2332455f" fill="transparent" stroke-width="1"></circle></svg>') repeat-x;
+  background-color: #32455f;
+}
+
+.indicator::after {
+  content: '';
+  position: absolute;
+  width: attr(data-indicator-value);
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: red;
+}

@@ -1,3 +1,18 @@
 .indicator{
+    display: inline-block;
+    width: #{$indicator-cell-width * 5}px;
+    text-indent: -9999px;
+    position:relative;
     
+    mask: url('data:image/svg+xml; utf8, #{$indicator-url}')  repeat-x;;   
+    background-color: $main-color;
+    &::after{
+        content:'';
+        position:absolute;
+        width: attr(data-indicator-value);
+        height:100%;
+        top:0;
+        left:0;
+        background:red;
+    }
 }
