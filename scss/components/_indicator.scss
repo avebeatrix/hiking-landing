@@ -26,16 +26,19 @@ $indicator-cell-width: ($indicator-radius + $indicator-gap + 2 * $indicator-stro
 .indicator{
     display: inline-block;
     width: #{$indicator-cell-width * $indicator-max}px;
-    text-indent: -9999px;
+    text-indent: #{$indicator-cell-width * $indicator-max}px;    
+    margin-right:30px;
     position:relative;    
-    background: url('data:image/svg+xml; utf8, #{indicator-url()}')  repeat-x;    
+    background: url('data:image/svg+xml; utf8, #{indicator-url()}') 0 -100% repeat-x;    
+    font-family: 'Raleway';
+    font-weight:bold;
     &::after{        
         content:'';
         position:absolute;        
         height:100%;
         top:0;
         left:0;
-        background: url('data:image/svg+xml; utf8, #{indicator-url(str-slice($indicator-color, 2))}')  repeat-x;  
+        background: url('data:image/svg+xml; utf8, #{indicator-url(str-slice($indicator-color, 2))}') 0 -100% repeat-x;  
     }
     &_fill{
         @for $i from 1 through $indicator-max {

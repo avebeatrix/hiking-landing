@@ -20,6 +20,7 @@ $wave-distance-desktop: 40;
 
 
 $tint-color: #564b67;
+$highlight-color:saturate($tint-color, 30%);
 $tint-opacity:74%;
 
 $green-corner-url:'#{$images-path}/top-right-shape.png';  

@@ -46,10 +46,8 @@
     &::before{
         position:absolute;
         content:"";        
-        width:1em;
-        height:1em;
-        left: -0.5em;
-        bottom: -0.25em;
+        width:2rem;
+        height:2rem;        
     }
 }
 @mixin absolute-full{

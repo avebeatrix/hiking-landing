@@ -12,6 +12,16 @@ Markup:
 Styleguide Typography.H1-6
 */
 .h1{
+    font-size: 3.25rem;   
+    letter-spacing: 6px;  
+    @include forLargeScreens(1024) {        
+        font-size: 6rem;
+    }
+    @include forLargeScreens(1600) { 
+        font-size: 8rem;
+    }
+}
+.h2{
     font-size: 3rem;    
     @include forLargeScreens(1024) {        
         font-size: 4rem;
@@ -20,7 +30,7 @@ Styleguide Typography.H1-6
         font-size: 6.25rem;
     }
 }
-.h2{
+.h3{
     font-size:2rem;   
     letter-spacing: 3px; 
     @include forLargeScreens(768) {  
@@ -33,14 +43,14 @@ Styleguide Typography.H1-6
         font-size: 4.67rem;
     }
 }
-.h3{
+.h4{
     font-size:1.75rem;  
     letter-spacing: 3px; 
     @include forLargeScreens(1600) {        
         font-size:2.5rem;  
     } 
 }
-.h4{
+.h5{
 
 }
 /*
@@ -59,7 +69,8 @@ Styleguide Typography.Titles
 .title {    
     font-family: 'Bebas Neue'; 
     line-height:1;      
-    position:relative;
+    position:relative;   
+    display: inline-block;
     
     &__subtitle{
         font-size: 0.5em;
@@ -71,6 +82,7 @@ Styleguide Typography.Titles
     }
     &__main + &__subtitle{ 
         margin:0.25em 0;
+        display: block;
     }
     &_main-color{
         color:$main-color;        
@@ -84,6 +96,9 @@ Styleguide Typography.Titles
             width:2em;
             border-bottom: 9px solid currentColor;
             bottom: -0.5em;
+            .align-right &{
+                right:0;
+            }
         }
     }
 } 

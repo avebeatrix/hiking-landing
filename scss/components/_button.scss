@@ -1,3 +1,28 @@
 .button{
+    display:inline-block;    
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Raleway';
+    font-weight: 700;
+    padding:0.25em 2em;
+    letter-spacing: 3px;  
+    transition: all .1s linear;
+    &_color-back{
+        background-color: $main-back-color;
+        color:$main-color;        
+    }
+    .align-right &{
+        margin-right:-1em;
+    }
+    &:hover{
+        color:$highlight-color;
+        font-weight:900;   
+    }
+    &:active{
+        transform: scale(.96);            
+    }
     
+}
+.button-more{
+    border-radius: 1em;
 }

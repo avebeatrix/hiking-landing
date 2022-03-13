@@ -6,6 +6,7 @@ Markup:
 
 Styleguide Decorative.Corner
 */
+$corner-line-width: 2px;
 .corner{
     display:inline-block;
     position:relative;
@@ -13,8 +14,32 @@ Styleguide Decorative.Corner
     &-bl{
         @include corner;
         &::before{            
-            border-left:solid 2px currentColor;
-            border-bottom:solid 2px currentColor;
+            border-left:solid $corner-line-width currentColor;
+            border-bottom:solid $corner-line-width currentColor;
+            left: -0.5rem;
+            bottom: -0.5rem;
+        }
+    }
+    &-tr{
+        @include corner;
+        &::before{            
+            border-right:solid $corner-line-width currentColor;
+            border-top:solid $corner-line-width currentColor;
+            right: -0.5rem;
+            top: -1.5rem;
+        }
+    }
+    @include forLargeScreens(768) {  
+        &-bl{
+            &::before{  
+                left: -1.25rem;   
+            }
+        }
+        &-tr{
+            &::before{ 
+                right: -1.25rem;    
+            }
+
         }
     }
 }
