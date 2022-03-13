@@ -1,18 +1,49 @@
+/*
+Indicator
+
+Markup:
+<div class="indicator {{modifier_class}}">hardness: n/5</div>
+
+.indicator_fill-20 - man
+.indicator_fill-40 - backpack
+.indicator_fill-60 - mountains
+.indicator_fill-80 - man
+.indicator_fill-100 - backpack
+
+Styleguide Indicator
+*/
+$indicator-max: 5;
+$indicator-radius: 4;
+$indicator-stroke-width: 1;
+$indicator-gap: 5;
+$indicator-color: #{$main-color};
+
+$indicator-cell-width: ($indicator-radius + $indicator-gap + 2 * $indicator-stroke-width) * 2;
+@function indicator-url($indicator-fill-color: 'transparent') {     
+    @return '<svg height="#{$indicator-cell-width}" width="#{$indicator-cell-width}" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle cx="#{$indicator-radius + 2 * $indicator-stroke-width}" cy="#{$indicator-radius + 2 * $indicator-stroke-width}" r="#{$indicator-radius}" stroke="%23#{str-slice($indicator-color, 2)}" fill="#{$indicator-fill-color}" stroke-width="#{$indicator-stroke-width}"></circle></svg>';  
+}
+
 .indicator{
     display: inline-block;
-    width: #{$indicator-cell-width * 5}px;
+    width: #{$indicator-cell-width * $indicator-max}px;
     text-indent: -9999px;
-    position:relative;
-    
-    mask: url('data:image/svg+xml; utf8, #{$indicator-url}')  repeat-x;;   
-    background-color: $main-color;
-    &::after{
+    position:relative;    
+    background: url('data:image/svg+xml; utf8, #{indicator-url()}')  repeat-x;    
+    &::after{        
         content:'';
-        position:absolute;
-        width: attr(data-indicator-value);
+        position:absolute;        
         height:100%;
         top:0;
         left:0;
-        background:red;
+        background: url('data:image/svg+xml; utf8, #{indicator-url(str-slice($indicator-color, 2))}')  repeat-x;  
+    }
+    &_fill{
+        @for $i from 1 through $indicator-max {
+            &-#{($i / $indicator-max) * 100}{
+                &::after{
+                    width:percentage($i / $indicator-max)
+                }
+            }         
+        }        
     }
 }

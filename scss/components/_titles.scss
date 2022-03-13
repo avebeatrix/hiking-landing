@@ -1,3 +1,16 @@
+/*
+H1-6
+
+Markup:
+<div class="h1">H1</div>
+<div class="h2">H2</div>
+<div class="h3">H3</div>
+<div class="h4">H4</div>
+<div class="h5">H5</div>
+<div class="h6">H6</div>
+
+Styleguide Typography.H1-6
+*/
 .h1{
     font-size: 3rem;    
     @include forLargeScreens(1024) {        
@@ -36,17 +49,16 @@ Titles
 Markup:
 <div class="title {{modifier_class}} h1">
     <div class="title__main">Discover your<br/>next Hike</div>
-    <div class="title__subtitle">Edge of the world</div> 
+    <div class="title__subtitle">Edge of the world</div>     
 </div>
 
-.title_main-color - main color
+.title_underlined - underlined
 
 Styleguide Typography.Titles
 */
 .title {    
     font-family: 'Bebas Neue'; 
-    line-height:1;    
-    display:inline-block;    
+    line-height:1;      
     position:relative;
     
     &__subtitle{

@@ -8,8 +8,12 @@ Markup:
 .icon_man - man
 .icon_backpack - backpack
 
-Styleguide Decorative.Icons
+Styleguide Icons
 */
+$icon-mountains-url: '#{$images-path}/icon-mountains.svg';
+$icon-backpack-url: '#{$images-path}/icon-backpack.svg';
+$icon-man-url: '#{$images-path}/icon-man.svg';
+$icon-big-size: 140px;
 .icon{
     background-repeat: no-repeat;
     background-position: center center;
