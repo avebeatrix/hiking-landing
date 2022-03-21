@@ -1,28 +1,38 @@
+/*
+Button
+
+Markup:
+<a href="#" class="button {{modifier_class}}">see more</a>
+
+.button-rounded - rounded
+
+Styleguide Button
+*/
 .button{
     display:inline-block;    
     text-decoration: none;
     text-transform: uppercase;
-    font-family: 'Raleway';
+    font-family: 'Nunito';
     font-weight: 700;
-    padding:0.25em 2em;
+    padding:0.25em 2em;   
+    text-align: center;
     letter-spacing: 3px;  
-    transition: all .1s linear;
-    &_color-back{
-        background-color: $main-back-color;
-        color:$main-color;        
-    }
+    transition: all .1s linear;  
+       
+    background-color: $main-back-color;
+    color:$main-color;    
+    &:hover{                     
+        background-color: darken($main-back-color, 10%);;       
+    }    
+    
     .align-right &{
         margin-right:-1em;
     }
-    &:hover{
-        color:$highlight-color;
-        font-weight:900;   
-    }
+    
     &:active{
         transform: scale(.96);            
     }
-    
-}
-.button-more{
-    border-radius: 1em;
+    &-rounded{
+        border-radius: 1em;
+    }    
 }

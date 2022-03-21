@@ -27,48 +27,58 @@
         </a>
       </li>
       <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-button.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Button</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-decorative.html">
-          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Decorative</span>
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Decorative</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-event.html">
+          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Event</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-form.html">
-          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Form</span>
+          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Form</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-header.html">
-          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Header</span>
+          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Header</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-icons.html">
-          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Icons</span>
+          <span class="kss-nav__ref">6</span><span class="kss-nav__name">Icons</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-indicator.html">
-          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Indicator</span>
+          <span class="kss-nav__ref">7</span><span class="kss-nav__name">Indicator</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-logo.html">
-          <span class="kss-nav__ref">6</span><span class="kss-nav__name">Logo</span>
+          <span class="kss-nav__ref">8</span><span class="kss-nav__name">Logo</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-media.html">
-          <span class="kss-nav__ref">7</span><span class="kss-nav__name">Media</span>
+          <span class="kss-nav__ref">9</span><span class="kss-nav__name">Media</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-navigation.html">
-          <span class="kss-nav__ref">8</span><span class="kss-nav__name">Navigation</span>
+          <span class="kss-nav__ref">10</span><span class="kss-nav__name">Navigation</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-typography.html">
-          <span class="kss-nav__ref">9</span><span class="kss-nav__name">Typography</span>
+          <span class="kss-nav__ref">11</span><span class="kss-nav__name">Typography</span>
         </a>
       </li>
     </ul>
@@ -83,7 +93,7 @@
         <h2 class="kss-title kss-title--level-2">
           <a class="kss-title__permalink" href="#kssref-form-elements">
             <span class="kss-title__ref">
-              2.1
+              4.1
               <span class="kss-title__permalink-hash">
                   #Form.Elements
               </span>
@@ -135,8 +145,12 @@
 
           <div class="kss-modifier__example">
             <form>
-    <div class="text-field">
-        <input tabindex="6" placeholder="Text" class="text-field__text" type="text"/>
+    <div class="text-field form-field">
+        <input placeholder="Text" class="text-field__text" type="text"/>
+    </div>
+    <div class="text-field form-field">
+        <input placeholder="Search" class="text-field__text text-field__text_has-icon" type="text"/>
+        <button class="text-field__icon text-field__icon_search">Search</button>
     </div>
 </form>
             <div class="kss-modifier__example-footer"></div>
@@ -149,8 +163,12 @@
                 Markup
             </summary>
             <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-field"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-field__text"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-field form-field"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-field__text"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-field form-field"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Search"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-field__text text-field__text_has-icon"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-field__icon text-field__icon_search"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span></code></pre>
           </details>

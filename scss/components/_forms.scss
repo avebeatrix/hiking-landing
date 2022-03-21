@@ -3,13 +3,22 @@ Text Input
 
 Markup:
 <form>
-    <div class="text-field">
-        <input tabindex="6" placeholder="Text" class="text-field__text" type="text"/>       
+    <div class="text-field form-field">
+        <input placeholder="Text" class="text-field__text" type="text"/>              
+    </div>
+    <div class="text-field form-field">
+        <input placeholder="Search" class="text-field__text text-field__text_has-icon" type="text"/>
+        <button class="text-field__icon text-field__icon_search">Search</button>
     </div>
 </form>
 
 Styleguide Form.Elements
 */
+$search-url: '#{$images-path}/search.png'; /*to-do: replace svg*/
+$input-text-height: 3em;
+$field-interval: 2em;
+$text-field-paddings: 1em;
+
 .text-field{
     position:relative;
     &__text {
@@ -36,6 +45,14 @@ Styleguide Form.Elements
             background-image: url($search-url);
             background-repeat: no-repeat;
             background-position: center center;          
+        }
+    }
+    button{
+        &:hover{
+
+        }
+        &:active{
+            transform: scale(.96);            
         }
     }
 }

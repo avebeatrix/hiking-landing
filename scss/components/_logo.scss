@@ -50,4 +50,7 @@ $logo-url: '<svg fill="%23#{$main-color-val}" id="Layer_1" data-name="Layer 1" x
 }
 a.logo{
     text-decoration: none;
+    &:hover{
+        color:$main-color;
+    }
 }

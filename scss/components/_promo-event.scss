@@ -1,3 +1,30 @@
+/*
+Promo-Event
+
+Markup:
+<div class="promo-event back-image back-image_tinted-purple" style="background-image:url('/i/big-photo.jpg');">
+    <div class="container">
+    <div class="row">
+        <div class="promo-event__title">
+        <h1 class="title h1 back-image__title">
+            <span class="title__main corner corner-tr">BIG BEND NATIONAL<br/>PARK hiking guide</span>
+            <span class="title__subtitle corner corner-bl">this hike is the next<br/>best option.</span>
+        </h1>
+        </div>         
+        <div class="promo-event__date back-image__event">
+        <div class="h3 title title_underlined">
+            <time datetime="2020-05-21">21.05.20</time>
+        </div>
+        <div>
+            <a href="#" class="button button-more button_color-back">see more</a>
+        </div>            
+        </div>          
+    </div>
+    </div>
+</div>
+
+Styleguide Event.Promo-Event
+*/
 .promo-event{
     &__title{
         flex:1;

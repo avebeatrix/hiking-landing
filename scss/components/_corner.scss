@@ -2,7 +2,12 @@
 Corner
 
 Markup:
-<div class="corner-bl">Edge of the world</div> 
+<div>
+    <div class="corner corner-tr">Edge of the world</div> 
+</div>
+<div>
+    <div class="corner corner-bl">Edge of the world</div>
+</div>
 
 Styleguide Decorative.Corner
 */
