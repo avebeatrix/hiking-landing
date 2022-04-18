@@ -3,7 +3,7 @@
     max-width: 1600px;
     margin:0 auto;
     position:relative;
-    padding:0 1em;
+    padding:0 1.5em;
     @include forLargeScreens(768) {       
         padding:0 2em;
     }
@@ -11,10 +11,13 @@
 .row{    
     display: flex;    
     position:relative;
+    &-center{
+        justify-content: center;
+    }
 }
 .wrap-row{
     flex-wrap: wrap;
 }
 .col{
-    
+    flex:1;
 }

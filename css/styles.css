@@ -488,10 +488,17 @@ template {
 body {
   background-color: #fbfbf5;
   overflow-x: hidden;
+  color: #32455f;
+  font-family: 'Raleway';
 }
 
 a {
   color: #32455f;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -515,7 +522,8 @@ button {
     margin-top: -10vw;
     padding-top: 10vw;
   }
-  .promo-main.back-image_wavy-gray {
+  .promo-main.back-image_wavy {
+    min-height: calc((53vw));
     padding-top: calc(10vw);
   }
 }
@@ -530,12 +538,16 @@ button {
   }
 }
 
+.tint {
+  color: #564b67;
+}
+
 .container {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
   position: relative;
-  padding: 0 1em;
+  padding: 0 1.5em;
 }
 
 @media (min-width: 48em) {
@@ -551,9 +563,21 @@ button {
   position: relative;
 }
 
+.row-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .wrap-row {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 /*
@@ -793,6 +817,7 @@ Markup:
 <a href="#" class="button {{modifier_class}}">see more</a>
 
 .button-rounded - rounded
+.button-tint - tint
 
 Styleguide Button
 */
@@ -826,6 +851,15 @@ Styleguide Button
 
 .button-rounded {
   border-radius: 1em;
+}
+
+.button-tint {
+  background-color: #564b67;
+  color: #fbfbf5;
+}
+
+.button-tint:hover {
+  background-color: #3d3649;
 }
 
 /*
@@ -1004,19 +1038,32 @@ Styleguide Navigation.Main Menu
 }
 
 /*
-Back Image
+Back Image Wavy
 
 Markup:
-<div class="back-image {{modifier_class}}" style="background-image:url('/i/main.jpg');min-height:600px">Text...</div>
+<div class="back-image_wavy back-image {{modifier_class}}" style="background-image:url('/i/main.jpg');min-height:800px">
+    Text...
+</div>
 
 .back-image_wavy-gray - gray wavy
 .back-image_wavy-gray-diagonal - gray diagonal wavy
 .back-image_wavy-green - green wavy
 .back-image_dual-green - green with two corner waves
+
+Styleguide Media.Back Image Wavy
+*/
+/*
+Back Image Tinted
+
+Markup:
+<div class="back-image {{modifier_class}}" style="background-image:url('/i/main.jpg');min-height:300px">
+    Text...
+</div>
+
 .back-image_tinted-purple - purple tinted
 .back-image_tinted-blue - blue tinted
 
-Styleguide Media.Back Image
+Styleguide Media.Back Image Tinted
 */
 .back-image {
   background-position: center bottom;
@@ -1054,19 +1101,27 @@ Styleguide Media.Back Image
 
 .back-image__title {
   position: relative;
-  margin: 0.25em 0;
+  margin: 0 0 0.25em;
 }
 
-.back-image_wavy-gray {
+.back-image_centered {
+  background-position: 40% bottom;
+}
+
+.back-image_wavy {
   min-height: calc(100vw + 2em);
 }
 
-.back-image_wavy-gray .back-image__title::before {
+.back-image_wavy::before, .back-image_wavy::after {
+  background-repeat: no-repeat;
+}
+
+.back-image_wavy .back-image__title::before {
   background-color: rgba(251, 251, 245, 0.9);
   z-index: -1;
 }
 
-.back-image_wavy-gray .back-image__title::before {
+.back-image_wavy .back-image__title::before {
   content: '';
   position: absolute;
   left: -0.5em;
@@ -1076,22 +1131,27 @@ Styleguide Media.Back Image
   height: calc(100% + 1em);
 }
 
-.back-image_wavy-gray-diagonal::before {
-  background-image: url("/i/shape-diagonal.png");
-  background-repeat: no-repeat;
-  background-position: left top;
-}
-
-.back-image_wavy-gray-diagonal::after {
-  background-image: url("/i/shape-diagonal.png");
-  background-repeat: no-repeat;
-  background-position: left top;
-}
-
 .back-image_wavy-green::before {
   background-image: url("/i/shape3.png"), url("/i/shape-green.png");
-  background-repeat: no-repeat, no-repeat;
   background-position: center top, center 25px;
+}
+
+.back-image_wavy-gray-diagonal {
+  background-size: cover;
+  padding: 3em 0;
+}
+
+.back-image_wavy-gray-diagonal::before {
+  z-index: -1;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.back-image_wavy-gray-diagonal .back-image__title::before {
+  display: none;
 }
 
 .back-image_dual-green {
@@ -1101,21 +1161,14 @@ Styleguide Media.Back Image
 
 .back-image_dual-green::before {
   background-image: url("/i/top-right-shape.png");
-  background-repeat: no-repeat;
   background-position: right top;
 }
 
 .back-image_dual-green::after {
   background-image: url("/i/top-right-shape.png");
-  background-repeat: no-repeat;
   background-position: right top;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-}
-
-.back-image_tinted-purple {
-  color: #fbfbf5;
-  padding: 2em 0;
 }
 
 .back-image_tinted-purple::before {
@@ -1128,31 +1181,65 @@ Styleguide Media.Back Image
   opacity: 74%;
 }
 
+.back-image_tinted-purple, .back-image_tinted-blue {
+  color: #fbfbf5;
+  padding: 2em 0;
+}
+
 @media (min-width: 48em) {
-  .back-image_wavy-gray {
-    min-height: calc((53vw));
+  .back-image_wavy {
+    /*to-do: this size is only for wide screens, in other ratio don't use min-height*/
+    max-height: 53vw;
+    min-height: 100vh;
     background-size: 100% auto;
   }
-  .back-image_wavy-gray::before, .back-image_wavy-gray::after {
-    background-image: url("/i/shape.svg");
-    background-repeat: no-repeat;
+  .back-image_wavy::before, .back-image_wavy::after {
     background-size: 130%;
   }
-  .back-image_wavy-gray::before, .back-image_wavy-gray::after {
+  .back-image_wavy::before, .back-image_wavy::after {
     -webkit-filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.1));
             filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.1));
   }
-  .back-image_wavy-gray::before {
+  .back-image_wavy::before {
     background-position: center 40px;
   }
-  .back-image_wavy-gray::after {
+  .back-image_wavy::after {
     background-position: center top;
   }
-  .back-image_wavy-gray .back-image__title::before {
+  .back-image_wavy .back-image__title::before {
     display: none;
   }
-  .back-image_tinted-purple {
+  .back-image_wavy-gray::before, .back-image_wavy-gray::after {
+    background-image: url("/i/shape.svg");
+  }
+  .back-image_wavy-gray-diagonal {
+    background-size: cover;
+    min-height: calc(42vw + 6em);
+  }
+  .back-image_wavy-gray-diagonal .promo-event__main {
+    width: 60%;
+  }
+  .back-image_tinted-purple, .back-image_tinted-blue {
+    color: #fbfbf5;
     padding: 8em 0;
+  }
+}
+
+@media (min-width: 61.25em) {
+  .back-image_wavy-gray-diagonal::before, .back-image_wavy-gray-diagonal::after {
+    background-size: 100%;
+    background-image: url("/i/shape-diagonal.svg");
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 100em) {
+  .back-image_wavy-gray-diagonal {
+    min-height: calc(42vw + 11em);
+    padding: 5em 0;
+  }
+  .back-image_wavy-gray-diagonal .promo-event__main {
+    width: 35%;
   }
 }
 
@@ -1172,6 +1259,7 @@ Styleguide Typography.H1-6
 .h1 {
   font-size: 3.25rem;
   letter-spacing: 6px;
+  text-transform: uppercase;
 }
 
 @media (min-width: 64em) {
@@ -1188,6 +1276,7 @@ Styleguide Typography.H1-6
 
 .h2 {
   font-size: 3rem;
+  text-transform: uppercase;
 }
 
 @media (min-width: 64em) {
@@ -1205,6 +1294,7 @@ Styleguide Typography.H1-6
 .h3 {
   font-size: 2rem;
   letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 @media (min-width: 48em) {
@@ -1227,13 +1317,21 @@ Styleguide Typography.H1-6
 
 .h4 {
   font-size: 1.75rem;
+  font-weight: 700;
   letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 @media (min-width: 100em) {
   .h4 {
     font-size: 2.5rem;
   }
+}
+
+.h5 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-transform: uppercase;
 }
 
 /*
@@ -1253,7 +1351,6 @@ Styleguide Typography.Titles
   font-family: 'Bebas Neue';
   line-height: 1;
   position: relative;
-  display: inline-block;
 }
 
 .title__subtitle {
@@ -1303,7 +1400,7 @@ Markup:
     <div class="corner corner-bl">Edge of the world</div>
 </div>
 
-Styleguide Decorative.Corner
+Styleguide Corner
 */
 .corner {
   display: inline-block;
@@ -1320,8 +1417,8 @@ Styleguide Decorative.Corner
 .corner-bl::before {
   border-left: solid 2px currentColor;
   border-bottom: solid 2px currentColor;
-  left: -0.5rem;
-  bottom: -0.5rem;
+  left: -0.75rem;
+  bottom: -0.75rem;
 }
 
 .corner-tr::before {
@@ -1334,8 +1431,8 @@ Styleguide Decorative.Corner
 .corner-tr::before {
   border-right: solid 2px currentColor;
   border-top: solid 2px currentColor;
-  right: -0.5rem;
-  top: -1.5rem;
+  right: -0.75rem;
+  top: -0.75rem;
 }
 
 @media (min-width: 48em) {
@@ -1345,6 +1442,60 @@ Styleguide Decorative.Corner
   .corner-tr::before {
     right: -1.25rem;
   }
+}
+
+.text {
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.text .h1, .text .h2, .text .h3, .text .h4 {
+  margin: 1em 0 0.5em;
+}
+
+.text .h1:first-child, .text .h2:first-child, .text .h3:first-child, .text .h4:first-child {
+  margin-top: 0;
+}
+
+.text p {
+  line-height: 1.5em;
+  margin: 1em 0;
+}
+
+.text p:first-child {
+  margin-top: 0;
+}
+
+.text ul li {
+  margin: 0.5em 0;
+}
+
+@media (min-width: 100em) {
+  .text .h4 {
+    margin: 1em 0 0.5em;
+  }
+  .text p {
+    line-height: 2em;
+    margin: 1.5em 0;
+  }
+  .text ul li {
+    margin: 1em 0;
+  }
+}
+
+.vertical-nav ul {
+  list-style-type: none;
+}
+
+.vertical-nav ul li {
+  display: block;
+  margin: 0.5em 0;
+}
+
+.box-underlined-above {
+  padding: 2em 0 0 0;
+  border-top: solid 1px #564b67;
+  margin: 2em 0 0 0;
 }
 
 /*
@@ -1420,71 +1571,202 @@ Styleguide Icons
 }
 
 /*
-Promo-Event
+Event
 
 Markup:
 <div class="promo-event back-image back-image_tinted-purple" style="background-image:url('/i/big-photo.jpg');">
     <div class="container">
-    <div class="row">
-        <div class="promo-event__title">
-        <h1 class="title h1 back-image__title">
-            <span class="title__main corner corner-tr">BIG BEND NATIONAL<br/>PARK hiking guide</span>
-            <span class="title__subtitle corner corner-bl">this hike is the next<br/>best option.</span>
-        </h1>
-        </div>         
-        <div class="promo-event__date back-image__event">
-        <div class="h3 title title_underlined">
-            <time datetime="2020-05-21">21.05.20</time>
+        <div class="row">
+            <div class="promo-event__title">
+                <h1 class="title h1 back-image__title">
+                    <span class="title__main corner corner-tr">BIG BEND NATIONAL<br/>PARK hiking guide</span>
+                    <span class="title__subtitle corner corner-bl">this hike is the next<br/>best option.</span>
+                </h1>
+            </div>         
+            <div class="promo-event__date back-image__event">
+                <div class="h3 title title_underlined">
+                    <time datetime="2020-05-21">21.05.20</time>
+                </div>
+                <div>
+                    <a href="#" class="button button-more button_color-back">see more</a>
+                </div>            
+            </div>          
         </div>
-        <div>
-            <a href="#" class="button button-more button_color-back">see more</a>
-        </div>            
-        </div>          
-    </div>
     </div>
 </div>
+ <div class="promo-event back-image back-image_wavy back-image_wavy-gray-diagonal"
+      style="background-image:url('/i/group.jpg');">
+      <div class="container">
+        <div class="row">
+          <div class="promo-event__main">
+            <div class="title title_main-color h2 back-image__title promo-event__title">
+                <h2 class="title__main"><span class="corner corner-bl"><span
+                    class="corner corner-tr">Rock</span><br />Climbing</span>
+                </h2>
+              </div>
+            <div class="text">
+              <h3 class="h4 title">1. Classes & Events</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+              </p>
+              <div class="box-underlined-above">
+                <p>
+                  <strong>10 modules <br />
+                    divided into 7 weekends</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="promo-event__more">
+            <div class="row">
+              <div class="corner corner-bl">
+                <h4 class="h4 title">
+                  <time datetime="2020-09-28">28.09.20</time>
+                </h4>
+                <time class="promo-event__time" datetime="15:30">15.30 hs.</time>
+              </div>
+              <div class="promo-event__price">
+                Price<br />
+                $900
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-Styleguide Event.Promo-Event
+Styleguide Promo Event
 */
-.promo-event__title {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
 .promo-event .row {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.promo-event__date {
+.promo-event__more {
   padding: 2em 0;
 }
 
+.promo-event__more .row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.promo-event__more .promo-event__time {
+  font-size: 1.5em;
+  font-family: 'Bebas Neue';
+  display: block;
+}
+
+.promo-event__title {
+  margin-bottom: 0.5em;
+}
+
+.promo-event__price {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+* + .promo-event__price {
+  margin-left: 2em;
+}
+
+.promo-event_inversed .promo-event__main,
+.promo-event_inversed .promo-event__more {
+  text-align: right;
+}
+
+.promo-event_inversed .promo-event__main .title_underlined::after,
+.promo-event_inversed .promo-event__more .title_underlined::after {
+  right: 5px;
+  left: auto;
+}
+
 @media (min-width: 48em) {
-  .promo-event__date {
+  .promo-event__more {
     padding: 0;
+  }
+  .promo-event__more .title_underlined::after {
+    left: 0px;
+    right: auto;
+  }
+  .promo-event__more .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .promo-event__more .button {
+    margin-right: -0.5em;
+  }
+  .promo-event__more_right {
     text-align: right;
   }
-  .promo-event__date .title_underlined::after {
+  .promo-event__more_right .title_underlined::after {
     right: 5px;
-  }
-  .promo-event__date .button {
-    margin-right: -0.5em;
+    left: auto;
   }
   .promo-event .row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .promo-event_inversed .promo-event__more {
+    text-align: left;
+  }
+  .promo-event_inversed .promo-event__more .title_underlined::after {
+    left: 0px;
+    right: auto;
+  }
+  .promo-event_inversed .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .promo-event_flex-end .row {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
   }
 }
 
+/*
+Day Card
+
+Markup:
+<div class="day-card">
+    <h3 class="h4 title">Day 2.</h3>
+    <div class="row wrap-row">
+        <div class="day-card__description text">
+        <ul class="dashed-ul">
+            <li>Dolor sit amet consectetur</li>
+            <li>Adipiscing elit aptent </li>
+            <li>Torquent, interdum</li>
+        </ul>
+        </div>
+        <span class="icon day-card__icon icon_rounded icon_backpack">mountains</span>              
+    </div>
+    <div class="box-underlined-above">
+        <h4 class="h4 title">Lorem Consec Ipsum<br/>
+        <time datetime="2020-09-28">28.09.20</time></h4>
+        <time class="day-card__day-time" datetime="16:00">16.00 hs.</time>
+        <div class="indicator indicator_fill-60">3/5</div>
+    </div>
+</div>
+
+Styleguide Day Card
+*/
 .day-card {
   padding: 2em;
   -webkit-box-shadow: 0 5px 10px #aaa;
@@ -1504,23 +1786,15 @@ Styleguide Event.Promo-Event
 }
 
 .day-card__description {
-  letter-spacing: 2px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   width: auto;
   padding-right: 1em;
-  font-weight: bold;
 }
 
 .day-card__icon {
   margin: 0 auto;
-}
-
-.day-card__meta {
-  padding: 2em 0 0 0;
-  border-top: solid 1px #32455f;
-  margin: 2em 0 0 0;
 }
 
 .day-card__day-time {
@@ -1556,7 +1830,6 @@ Styleguide Event.Promo-Event
 
 .dashed-ul li {
   position: relative;
-  margin: 1em 0;
 }
 
 .dashed-ul li::before {
@@ -1623,4 +1896,137 @@ Styleguide Indicator
 
 .indicator_fill-100::after {
   width: 100%;
+}
+
+/*
+Places
+
+Markup:
+<div class="places">
+    <div class="container">      
+        <div class="row places__container">
+            <div class="place">
+                <img alt="place 1" src="/i/place1.jpg" width="270" height="270" />
+                <h3 class="h4 title place__title">Mountain Loop</h3>
+                <div class="text">
+                    <p>Lorem ipsum sit amet, 
+                    consectetur  adipisicing...</p>
+                    <div class="box-underlined-above">
+                        <p>
+                        <strong>Location 0.3 miles.</strong>
+                        </p>
+                    </div> 
+                </div>                      
+            </div>
+            <div class="place">
+                <img alt="place 1" src="/i/place2.jpg" width="270" height="270" />
+                <h3 class="h4 title place__title">National Park</h3>
+                <div class="text">              
+                    <p>Lorem ipsum sit amet, 
+                    consectetur  adipisicing...</p>
+                    <div class="box-underlined-above">
+                        <p>
+                        <strong>Location 0.3 miles.</strong>
+                        </p>
+                    </div>   
+                </div>                     
+            </div>
+            <div class="place">
+                <img alt="place 1" src="/i/place3.jpg" width="270" height="270" />
+                <h3 class="h4 title place__title">Canyon Trail</h3>
+                <div class="text">              
+                    <p>Lorem ipsum sit amet, 
+                    consectetur  adipisicing...</p>
+                    <div class="box-underlined-above">
+                        <p>
+                        <strong>Location 0.3 miles.</strong>
+                        </p>
+                    </div>  
+                </div>                      
+            </div>
+        </div>      
+    </div>
+</div>
+
+Styleguide Places
+*/
+.places__container {
+  margin: 2em -2em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.place {
+  padding: 0 2em;
+  max-width: 300px;
+  margin: 1.5em 0;
+}
+
+.place img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.place__title {
+  margin: 1em 0;
+}
+
+/*
+Footer
+
+Markup:
+ <footer class="info-tile footer">
+    <div class="container">
+      <div class="row">
+        <div class="col text">          
+          <p>
+            Lorem ipsum dolor sit amet, consec
+            tetur adipisicing elit, sed do eiusmod tempor incididunt ultimam quantum Lorem ipsum dolor sit amet, consec
+            tetur adipisicing elit, sed do eiusmod tempor incididunt ultimam quantum Lorem ipsum dolor sit amet, consec          
+          </p>
+        </div>
+        <div class="col row">
+          <div class="col">
+            Lorem ipsum 
+          </div>
+          <div class="col">
+            Lorem ipsum 
+          </div>
+          <div class="col">
+            Lorem ipsum 
+          </div>
+        </div>
+      </div>
+      <div>
+        <a class="logo" href="#" alt="Hiking Life Logo">Hiking <span>Life</span></a>
+      </div>
+    </div>
+  </footer>
+
+Styleguide Footer
+*/
+.footer {
+  border-bottom: 1em solid #5f6551;
+}
+
+.footer .row {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -2em;
+}
+
+.footer .row .col {
+  padding: 0 2em;
+}
+
+.footer, .footer a {
+  color: #5f6551;
+}
+
+.footer .logo {
+  color: #32455f;
+  margin: 2em 0 0;
 }

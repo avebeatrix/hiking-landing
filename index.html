@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> 
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hello World! Site Title</title>
@@ -16,8 +16,8 @@
           <a class="logo" href="#" alt="Hiking Life Logo">Hiking <span>Life</span></a>
         </div>
         <div class="col">
-          <nav class="main-nav" >
-            <input class="main-nav__toogle" type="checkbox" aria-label="Main navigation switcher"/>
+          <nav class="main-nav">
+            <input class="main-nav__toogle" type="checkbox" aria-label="Main navigation switcher" />
             <span></span>
             <span></span>
             <span></span>
@@ -31,17 +31,19 @@
           <div class="search-form header__search-form">
             <form role="search">
               <div class="text-field">
-                <input aria-label="Search" placeholder="Search" class="text-field__text text-field__text_has-icon" type="text" />
+                <input aria-label="Search" placeholder="Search" class="text-field__text text-field__text_has-icon"
+                  type="text" />
                 <button class="text-field__icon text-field__icon_search" type="submit">Search</button>
               </div>
             </form>
-          </div>          
+          </div>
         </div>
       </div>
     </div>
   </header>
   <main>
-    <div class="promo-main back-image back-image_wavy-gray" style="background-image:url('/i/main.jpg');">
+    <div class="promo-main back-image back-image_centered back-image_wavy back-image_wavy-gray"
+      style="background-image:url('/i/main.jpg');">
       <div class="container">
         <div class="row">
           <h1 class="title title_main-color h2 back-image__title">
@@ -63,69 +65,237 @@
           <div class="day-card">
             <h3 class="h4 title">Day 1.</h3>
             <div class="row wrap-row">
-              <div class="day-card__description">
+              <div class="day-card__description text">
                 <ul class="dashed-ul">
                   <li>Dolor sit amet consectetur</li>
                   <li>Adipiscing elit aptent </li>
                   <li>Torquent, interdum</li>
                 </ul>
               </div>
-              
-              <span class="icon day-card__icon icon_rounded icon_mountains">mountains</span>              
+
+              <span class="icon day-card__icon icon_rounded icon_mountains">mountains</span>
             </div>
-            <div class="day-card__meta">
-              <h4 class="h4 title">Lorem Ipsum Consectetur<br/>
-                <time datetime="2020-09-21">21.09.20</time></h4>
+            <div class="box-underlined-above">
+              <h4 class="h4 title">Lorem Ipsum Consectetur<br />
+                <time datetime="2020-09-21">21.09.20</time>
+              </h4>
               <time class="day-card__day-time" datetime="15:30">15.30 hs.</time>
               <div class="indicator indicator_fill-100">5/5</div>
             </div>
-            
+
           </div>
           <div class="day-card">
             <h3 class="h4 title">Day 2.</h3>
             <div class="row wrap-row">
-              <div class="day-card__description">
+              <div class="day-card__description text">
                 <ul class="dashed-ul">
                   <li>Dolor sit amet consectetur</li>
                   <li>Adipiscing elit aptent </li>
                   <li>Torquent, interdum</li>
                 </ul>
               </div>
-              <span class="icon day-card__icon icon_rounded icon_backpack">mountains</span>              
+              <span class="icon day-card__icon icon_rounded icon_backpack">mountains</span>
             </div>
-            <div class="day-card__meta">
-              <h4 class="h4 title">Lorem Consec Ipsum<br/>
-                <time datetime="2020-09-28">28.09.20</time></h4>
+            <div class="box-underlined-above">
+              <h4 class="h4 title">Lorem Consec Ipsum<br />
+                <time datetime="2020-09-28">28.09.20</time>
+              </h4>
               <time class="day-card__day-time" datetime="16:00">16.00 hs.</time>
               <div class="indicator indicator_fill-60">3/5</div>
             </div>
-            
+
           </div>
         </div>
       </div>
     </div>
-    <div class="promo-event back-image back-image_tinted-purple" style="background-image:url('/i/big-photo.jpg');">
+    <div class="promo-event promo-event_flex-end back-image back-image_tinted-purple"
+      style="background-image:url('/i/big-photo.jpg');">
       <div class="container">
         <div class="row">
-          <div class="promo-event__title">
-            <h1 class="title h1 back-image__title">
-              <span class="title__main corner corner-tr">BIG BEND NATIONAL<br/>PARK hiking guide</span>
-              <span class="title__subtitle corner corner-bl">this hike is the next<br/>best option.</span>
-            </h1>
-          </div>         
-          <div class="promo-event__date back-image__event">
+          <div class="promo-event__main">
+            <h2 class="title h1 back-image__title">
+              <span class="title__main">
+                <div class="corner corner-tr">BIG BEND NATIONAL</div><br />PARK hiking guide
+              </span>
+              <span class="title__subtitle corner corner-bl">this hike is the next<br />best option.</span>
+            </h2>
+          </div>
+          <div class="promo-event__more promo-event__more_right back-image__event">
             <div class="h3 title title_underlined">
               <time datetime="2020-05-21">21.05.20</time>
             </div>
             <div>
               <a href="#" class="button button-rounded">see more</a>
-            </div>            
-          </div>          
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="promo-event back-image back-image_wavy back-image_wavy-gray-diagonal"
+      style="background-image:url('/i/group.jpg');">
+      <div class="container">
+        <div class="row">
+          <div class="promo-event__main">
+            <div class="title title_main-color h2 back-image__title promo-event__title">
+                <h2 class="title__main"><span class="corner corner-bl"><span
+                    class="corner corner-tr">Rock</span><br />Climbing</span>
+                </h2>
+              </div>
+            <div class="text">
+              <h3 class="h4 title">1. Classes & Events</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+              </p>
+              <div class="box-underlined-above">
+                <p>
+                  <strong>10 modules <br />
+                    divided into 7 weekends</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="promo-event__more">
+            <div class="row">
+              <div class="corner corner-bl">
+                <h4 class="h4 title">
+                  <time datetime="2020-09-28">28.09.20</time>
+                </h4>
+                <time class="promo-event__time" datetime="15:30">15.30 hs.</time>
+              </div>
+              <div class="promo-event__price">
+                Price<br />
+                $900
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info-tile places">
+      <div class="container">
+        <div class="row">
+          <h2 class="title title_main-color h2 back-image__title">
+            <div class="title__main tint"><span class="corner corner-bl"><span class="corner corner-tr">places to visit
+                </span><br />in autumn </span>
+              <div>
+          </h2>
+        </div>
+        <div class="row places__container">
+          <div class="place">
+            <img alt="place 1" src="/i/place1.jpg" width="270" height="270" />
+            <h3 class="h4 title place__title">Mountain Loop</h3>
+            <div class="text">
+              <p>Lorem ipsum sit amet, 
+                consectetur  adipisicing...</p>
+                <div class="box-underlined-above">
+                  <p>
+                    <strong>Location 0.3 miles.</strong>
+                  </p>
+                </div> 
+            </div>                      
+          </div>
+          <div class="place">
+            <img alt="place 1" src="/i/place2.jpg" width="270" height="270" />
+            <h3 class="h4 title place__title">National Park</h3>
+            <div class="text">              
+              <p>Lorem ipsum sit amet, 
+                consectetur  adipisicing...</p>
+                <div class="box-underlined-above">
+                  <p>
+                    <strong>Location 0.3 miles.</strong>
+                  </p>
+                </div>   
+            </div>                     
+          </div>
+          <div class="place">
+            <img alt="place 1" src="/i/place3.jpg" width="270" height="270" />
+            <h3 class="h4 title place__title">Canyon Trail</h3>
+            <div class="text">              
+              <p>Lorem ipsum sit amet, 
+                consectetur  adipisicing...</p>
+                <div class="box-underlined-above">
+                  <p>
+                    <strong>Location 0.3 miles.</strong>
+                  </p>
+                </div>  
+            </div>                      
+          </div>
+        </div>
+        <div class="row row-center">
+          <a href="#" class="button button-rounded button-tint">see more</a>
+        </div>
+      </div>
+    </div>
+    <div class="promo-event promo-event_flex-end promo-event_inversed back-image back-image_tinted-blue"
+      style="background-image:url('/i/view.jpg');">
+      <div class="container">
+        <div class="row">
+          <div class="promo-event__main">
+            <h2 class="title h1 back-image__title">
+              <span class="title__main corner corner-tr">Hiking & <br />
+                Backpacking</span>
+              <span class="title__subtitle">this hike is the<br />
+                <div class="corner corner-bl">next best</div>
+              </span>
+            </h2>
+          </div>
+          <div class="promo-event__more back-image__event">
+            <div class="h3 title title_underlined">
+              <time datetime="2020-05-21">21.05.20</time>
+            </div>
+            <div>
+              <a href="#" class="button button-rounded">see more</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </main>
-
+  <footer class="info-tile footer">
+    <div class="container">
+      <div class="row">
+        <div class="col text">
+          <h4 class="h4">about</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consec
+            tetur adipisicing elit, sed do eiusmod tempor incididunt ultimam quantum
+          </p>
+        </div>
+        <div class="col row">
+          <nav class="vertical-nav col">
+            <h5 class="h5">about</h5>
+            <ul>
+              <li><a href="#">TeamTeamTeamTeam</a></li>
+              <li><a href="#">Join us</a></li>
+              <li><a href="#">Ethic</a></li>
+              <li><a href="#">Goals</a></li>
+            </ul>
+          </nav>
+          <nav class="vertical-nav col">
+            <h5 class="h5">about</h5>
+            <ul>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Join us</a></li>
+              <li><a href="#">Ethic</a></li>
+              <li><a href="#">Goals</a></li>
+            </ul>
+          </nav>
+          <nav class="vertical-nav col">
+            <h5 class="h5">about</h5>
+            <ul>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Join us</a></li>
+              <li><a href="#">Ethic</a></li>
+              <li><a href="#">Goals</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div>
+        <a class="logo" href="#" alt="Hiking Life Logo">Hiking <span>Life</span></a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

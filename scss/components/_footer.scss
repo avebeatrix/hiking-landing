@@ -1,8 +1,51 @@
-.footer{
-    .footer__about{
+/*
+Footer
 
+Markup:
+ <footer class="info-tile footer">
+    <div class="container">
+      <div class="row">
+        <div class="col text">          
+          <p>
+            Lorem ipsum dolor sit amet, consec
+            tetur adipisicing elit, sed do eiusmod tempor incididunt ultimam quantum Lorem ipsum dolor sit amet, consec
+            tetur adipisicing elit, sed do eiusmod tempor incididunt ultimam quantum Lorem ipsum dolor sit amet, consec          
+          </p>
+        </div>
+        <div class="col row">
+          <div class="col">
+            Lorem ipsum 
+          </div>
+          <div class="col">
+            Lorem ipsum 
+          </div>
+          <div class="col">
+            Lorem ipsum 
+          </div>
+        </div>
+      </div>
+      <div>
+        <a class="logo" href="#" alt="Hiking Life Logo">Hiking <span>Life</span></a>
+      </div>
+    </div>
+  </footer>
+
+Styleguide Footer
+*/
+.footer{
+    border-bottom: 1em solid $dark-green-color;        
+    & .row{
+        flex-wrap: wrap;
+        margin: 0 -2em;
+            & .col{
+                padding:0 2em;
+            }
     }
-    .footer__menu{
-        
+    &, & a{
+        color:$dark-green-color;
     }
+    & .logo{
+        color:$main-color;
+        margin: 2em 0 0;
+    }    
 }

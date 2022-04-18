@@ -1,0 +1,72 @@
+/*
+Places
+
+Markup:
+<div class="places">
+    <div class="container">      
+        <div class="row places__container">
+            <div class="place">
+                <img alt="place 1" src="/i/place1.jpg" width="270" height="270" />
+                <h3 class="h4 title place__title">Mountain Loop</h3>
+                <div class="text">
+                    <p>Lorem ipsum sit amet, 
+                    consectetur  adipisicing...</p>
+                    <div class="box-underlined-above">
+                        <p>
+                        <strong>Location 0.3 miles.</strong>
+                        </p>
+                    </div> 
+                </div>                      
+            </div>
+            <div class="place">
+                <img alt="place 1" src="/i/place2.jpg" width="270" height="270" />
+                <h3 class="h4 title place__title">National Park</h3>
+                <div class="text">              
+                    <p>Lorem ipsum sit amet, 
+                    consectetur  adipisicing...</p>
+                    <div class="box-underlined-above">
+                        <p>
+                        <strong>Location 0.3 miles.</strong>
+                        </p>
+                    </div>   
+                </div>                     
+            </div>
+            <div class="place">
+                <img alt="place 1" src="/i/place3.jpg" width="270" height="270" />
+                <h3 class="h4 title place__title">Canyon Trail</h3>
+                <div class="text">              
+                    <p>Lorem ipsum sit amet, 
+                    consectetur  adipisicing...</p>
+                    <div class="box-underlined-above">
+                        <p>
+                        <strong>Location 0.3 miles.</strong>
+                        </p>
+                    </div>  
+                </div>                      
+            </div>
+        </div>      
+    </div>
+</div>
+
+Styleguide Places
+*/
+.places{    
+    &__container{
+        margin:2em -2em;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }    
+}
+.place{           
+    padding:0 2em;
+    max-width:300px;  
+    margin:1.5em 0;      
+    img{
+        width:100%;
+        height:auto;
+        border-radius: 50%;
+    }
+    &__title{
+        margin:1em 0;
+    }
+}

@@ -9,7 +9,7 @@ Markup:
     <div class="corner corner-bl">Edge of the world</div>
 </div>
 
-Styleguide Decorative.Corner
+Styleguide Corner
 */
 $corner-line-width: 2px;
 .corner{
@@ -21,8 +21,8 @@ $corner-line-width: 2px;
         &::before{            
             border-left:solid $corner-line-width currentColor;
             border-bottom:solid $corner-line-width currentColor;
-            left: -0.5rem;
-            bottom: -0.5rem;
+            left: -0.75rem;
+            bottom: -0.75rem;
         }
     }
     &-tr{
@@ -30,8 +30,8 @@ $corner-line-width: 2px;
         &::before{            
             border-right:solid $corner-line-width currentColor;
             border-top:solid $corner-line-width currentColor;
-            right: -0.5rem;
-            top: -1.5rem;
+            right: -0.75rem;
+            top: -0.75rem;
         }
     }
     @include forLargeScreens(768) {  

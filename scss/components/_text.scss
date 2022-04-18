@@ -1,0 +1,50 @@
+.text{
+    letter-spacing: 0.05em;
+    font-weight: 600;   
+    .h1,.h2,.h3,.h4{
+        margin: 1em 0 0.5em;
+        &:first-child{
+            margin-top:0;
+        }
+    }
+    p{
+        line-height: 1.5em;
+        margin: 1em 0;        
+        &:first-child{
+            margin-top:0;
+        }
+    }
+    ul{
+        li{
+            margin: 0.5em 0;
+        }        
+    }    
+    @include forLargeScreens(1600) {
+        .h4{
+            margin: 1em 0 0.5em;
+        }
+        p{
+            line-height: 2em;
+            margin: 1.5em 0;
+        }
+        ul{
+            li{
+                margin: 1em 0;
+            }        
+        }
+    } 
+}
+.vertical-nav{
+    ul{
+        list-style-type: none;
+        li{
+            display: block;
+            margin:0.5em 0;
+        }
+    }
+}
+.box-underlined-above{
+    padding:2em 0 0 0;
+    border-top:solid 1px $tint-color;
+    margin:2em 0 0 0;
+}

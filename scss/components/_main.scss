@@ -1,10 +1,15 @@
 body{
     background-color: #fbfbf5;
     overflow-x:hidden;
+    color:#32455f;
+    font-family: 'Raleway';
 }
 a{
     color:$main-color;
-    
+    text-decoration: underline;
+    &:hover{
+        text-decoration: none;
+    }    
 }
 h1, h2, h3, h4, h5, h6{
     font-weight: normal;
@@ -22,7 +27,8 @@ button{
     @include forLargeScreens(768) {      
         margin-top:-10vw;
         padding-top:10vw;
-        &.back-image_wavy-gray{
+        &.back-image_wavy{
+            min-height: calc((53vw));
             padding-top: calc(10vw);    
         }
     }            
@@ -32,4 +38,7 @@ button{
     @include forLargeScreens(768) {      
         padding:5em 0;
     }
+}
+.tint{
+    color:$tint-color;
 }

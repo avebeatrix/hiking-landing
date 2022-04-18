@@ -32,8 +32,8 @@
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-decorative.html">
-          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Decorative</span>
+        <a class="kss-nav__menu-link" href="section-corner.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Corner</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
@@ -98,7 +98,7 @@
                   #Media.Back Image
               </span>
             </span>
-            Back Image
+            Back Image Tinted
           </a>
         </h2>
 
@@ -147,50 +147,12 @@
             </div>
 
           <div class="kss-modifier__example">
-            <div class="back-image " style="background-image:url('/i/main.jpg');min-height:600px">Text...</div>
+            <div class="back-image " style="background-image:url('/i/main.jpg');min-height:600px">
+    Text...
+</div>
             <div class="kss-modifier__example-footer"></div>
           </div>
 
-            <div class="kss-modifier__name kss-style">
-              .back-image_wavy-gray
-            </div>
-            <div class="kss-modifier__description kss-style">
-              gray wavy
-            </div>
-            <div class="kss-modifier__example">
-              <div class="back-image back-image_wavy-gray" style="background-image:url('/i/main.jpg');min-height:600px">Text...</div>
-              <div class="kss-modifier__example-footer"></div>
-            </div>
-            <div class="kss-modifier__name kss-style">
-              .back-image_wavy-gray-diagonal
-            </div>
-            <div class="kss-modifier__description kss-style">
-              gray diagonal wavy
-            </div>
-            <div class="kss-modifier__example">
-              <div class="back-image back-image_wavy-gray-diagonal" style="background-image:url('/i/main.jpg');min-height:600px">Text...</div>
-              <div class="kss-modifier__example-footer"></div>
-            </div>
-            <div class="kss-modifier__name kss-style">
-              .back-image_wavy-green
-            </div>
-            <div class="kss-modifier__description kss-style">
-              green wavy
-            </div>
-            <div class="kss-modifier__example">
-              <div class="back-image back-image_wavy-green" style="background-image:url('/i/main.jpg');min-height:600px">Text...</div>
-              <div class="kss-modifier__example-footer"></div>
-            </div>
-            <div class="kss-modifier__name kss-style">
-              .back-image_dual-green
-            </div>
-            <div class="kss-modifier__description kss-style">
-              green with two corner waves
-            </div>
-            <div class="kss-modifier__example">
-              <div class="back-image back-image_dual-green" style="background-image:url('/i/main.jpg');min-height:600px">Text...</div>
-              <div class="kss-modifier__example-footer"></div>
-            </div>
             <div class="kss-modifier__name kss-style">
               .back-image_tinted-purple
             </div>
@@ -198,7 +160,9 @@
               purple tinted
             </div>
             <div class="kss-modifier__example">
-              <div class="back-image back-image_tinted-purple" style="background-image:url('/i/main.jpg');min-height:600px">Text...</div>
+              <div class="back-image back-image_tinted-purple" style="background-image:url('/i/main.jpg');min-height:600px">
+    Text...
+</div>
               <div class="kss-modifier__example-footer"></div>
             </div>
             <div class="kss-modifier__name kss-style">
@@ -208,7 +172,9 @@
               blue tinted
             </div>
             <div class="kss-modifier__example">
-              <div class="back-image back-image_tinted-blue" style="background-image:url('/i/main.jpg');min-height:600px">Text...</div>
+              <div class="back-image back-image_tinted-blue" style="background-image:url('/i/main.jpg');min-height:600px">
+    Text...
+</div>
               <div class="kss-modifier__example-footer"></div>
             </div>
         </div>
@@ -217,10 +183,51 @@
             <summary>
                 Markup
             </summary>
-            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"back-image [modifier class]"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-image:url('/i/main.jpg');min-height:600px"</span>&gt;</span>Text...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"back-image [modifier class]"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-image:url('/i/main.jpg');min-height:600px"</span>&gt;</span>
+    Text...
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
+          Source: <code>scss/components/_media.scss</code>, line 144
+        </div>
+
+    </div>
+</article>
+</main>
+
+<!-- SCRIPTS -->
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/kss-fullscreen.js"></script>
+<script src="kss-assets/kss-guides.js"></script>
+<script src="kss-assets/kss-markup.js"></script>
+<script>
+  var spy = new ScrollSpy('#kss-node', {
+    nav: '.kss-nav__menu-child > li > a',
+    className: 'is-in-viewport'
+  });
+  var kssFullScreen = new KssFullScreen({
+    idPrefix: 'kss-fullscreen-',
+    bodyClass: 'kss-fullscreen-mode',
+    elementClass: 'is-fullscreen'
+  });
+  var kssGuides = new KssGuides({
+    bodyClass: 'kss-guides-mode'
+  });
+  var kssMarkup = new KssMarkup({
+    bodyClass: 'kss-markup-mode',
+    detailsClass: 'kss-markup'
+  });
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>
+e">
           Source: <code>scss/components/_media.scss</code>, line 1
         </div>
 

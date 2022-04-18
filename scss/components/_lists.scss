@@ -4,8 +4,7 @@
     font-family: 'Raleway';
     font-size:1rem;
     li{
-        position:relative;
-        margin:1em 0;
+        position:relative;        
         &::before{
             content:"-";
             position:absolute;

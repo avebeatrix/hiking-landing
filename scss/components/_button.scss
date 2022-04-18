@@ -5,6 +5,7 @@ Markup:
 <a href="#" class="button {{modifier_class}}">see more</a>
 
 .button-rounded - rounded
+.button-tint - tint
 
 Styleguide Button
 */
@@ -20,10 +21,11 @@ Styleguide Button
     transition: all .1s linear;  
        
     background-color: $main-back-color;
-    color:$main-color;    
+    color:$main-color;     
+    
     &:hover{                     
         background-color: darken($main-back-color, 10%);;       
-    }    
+    } 
     
     .align-right &{
         margin-right:-1em;
@@ -35,4 +37,12 @@ Styleguide Button
     &-rounded{
         border-radius: 1em;
     }    
+    &-tint{
+        background-color: $tint-color;
+        color:$main-back-color;
+        &:hover{                     
+            background-color: darken($tint-color, 10%);;       
+        }
+    }
+   
 }
