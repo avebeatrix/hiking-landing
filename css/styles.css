@@ -796,7 +796,7 @@ Styleguide Form.Elements
 .text-field__icon_search {
   text-indent: -9999px;
   width: 2em;
-  background-image: url("/i/search.png");
+  background-image: url("../i/search.png");
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -1132,7 +1132,7 @@ Styleguide Media.Back Image Tinted
 }
 
 .back-image_wavy-green::before {
-  background-image: url("/i/shape3.png"), url("/i/shape-green.png");
+  background-image: url("../i/shape3.png"), url("../i/shape-green.png");
   background-position: center top, center 25px;
 }
 
@@ -1160,12 +1160,12 @@ Styleguide Media.Back Image Tinted
 }
 
 .back-image_dual-green::before {
-  background-image: url("/i/top-right-shape.png");
+  background-image: url("../i/top-right-shape.png");
   background-position: right top;
 }
 
 .back-image_dual-green::after {
-  background-image: url("/i/top-right-shape.png");
+  background-image: url("../i/top-right-shape.png");
   background-position: right top;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -1210,7 +1210,7 @@ Styleguide Media.Back Image Tinted
     display: none;
   }
   .back-image_wavy-gray::before, .back-image_wavy-gray::after {
-    background-image: url("/i/shape.svg");
+    background-image: url("../i/shape.svg");
   }
   .back-image_wavy-gray-diagonal {
     background-size: cover;
@@ -1228,7 +1228,7 @@ Styleguide Media.Back Image Tinted
 @media (min-width: 61.25em) {
   .back-image_wavy-gray-diagonal::before, .back-image_wavy-gray-diagonal::after {
     background-size: 100%;
-    background-image: url("/i/shape-diagonal.svg");
+    background-image: url("../i/shape-diagonal.svg");
     background-color: transparent;
   }
 }
@@ -1556,18 +1556,18 @@ Styleguide Icons
 }
 
 .icon_mountains::after {
-  -webkit-mask-image: url("/i/icon-mountains.svg");
-          mask-image: url("/i/icon-mountains.svg");
+  -webkit-mask-image: url("../i/icon-mountains.svg");
+          mask-image: url("../i/icon-mountains.svg");
 }
 
 .icon_backpack::after {
-  -webkit-mask-image: url("/i/icon-backpack.svg");
-          mask-image: url("/i/icon-backpack.svg");
+  -webkit-mask-image: url("../i/icon-backpack.svg");
+          mask-image: url("../i/icon-backpack.svg");
 }
 
 .icon_man::after {
-  -webkit-mask-image: url("/i/icon-man.svg");
-          mask-image: url("/i/icon-man.svg");
+  -webkit-mask-image: url("../i/icon-man.svg");
+          mask-image: url("../i/icon-man.svg");
 }
 
 /*
