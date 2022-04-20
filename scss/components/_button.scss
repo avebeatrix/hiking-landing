@@ -33,7 +33,8 @@ Styleguide Button
     }
     
     &:active{
-        transform: scale(.96);            
+        transform: scale(.96);  
+        user-select: none;          
     }
     &_rounded{
         border-radius: 1em;
