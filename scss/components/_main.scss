@@ -1,9 +1,12 @@
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
 body{
     background-color: #fbfbf5;
     overflow-x:hidden;
     color:#32455f;
-    font-family: 'Raleway';
-    overflow-x:hidden; 
+    font-family: 'Raleway';   
 }
 a{
     color:$main-color;

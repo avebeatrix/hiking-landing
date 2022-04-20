@@ -485,12 +485,16 @@ template {
   src: url("../fonts/raleway/files/raleway-latin-900-normal.woff2") format("woff2"), url("../fonts/raleway/files/raleway-latin-900-normal.woff") format("woff");
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   background-color: #fbfbf5;
   overflow-x: hidden;
   color: #32455f;
   font-family: 'Raleway';
-  overflow-x: hidden;
 }
 
 a {
@@ -1016,7 +1020,7 @@ Styleguide Navigation.Main Menu
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    margin: 0 4em;
+    margin: 0 1em;
   }
   .main-nav span {
     display: none;
@@ -1048,6 +1052,9 @@ Styleguide Navigation.Main Menu
 }
 
 @media (min-width: 61.25em) {
+  .main-nav {
+    margin: 0 4em;
+  }
   .main-nav__list li {
     margin: 0 4vw;
   }

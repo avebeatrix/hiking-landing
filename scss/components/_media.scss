@@ -133,8 +133,7 @@ $wave-distance-desktop: 40;
     &_tinted-blue{
         color:$main-back-color;
         padding:2em 0;     
-    }
-  
+    }  
     @include forLargeScreens(768) {                               
         &_wavy{            
             /*to-do: this size is only for wide screens, in other ratio don't use min-height*/
@@ -173,8 +172,7 @@ $wave-distance-desktop: 40;
         &_tinted-blue{
             color:$main-back-color;
             padding:8em 0;     
-        }
-        
+        }        
     }       
     @include forLargeScreens(980) { 
         &_wavy{ 

@@ -126,7 +126,7 @@ Styleguide Navigation.Main Menu
 
     @include forLargeScreens(768) {   
         flex:1;
-        margin:0 4em;
+        margin:0 1em;
         
         span{
           display:none;
@@ -152,7 +152,8 @@ Styleguide Navigation.Main Menu
           }       
         }
     }   
-    @include forLargeScreens(980) {       
+    @include forLargeScreens(980) {  
+      margin:0 4em;     
       &__list {
         li{
           margin:0 4vw;
