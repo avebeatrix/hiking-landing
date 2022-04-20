@@ -49,7 +49,6 @@ Markup:
     </div>
 
 .mini-card_center - center
-.mini-card_color-green - green
 
 Styleguide Mini Card
 */
@@ -74,8 +73,5 @@ Styleguide Mini Card
     }
     &_center{
         text-align: center;        
-    }
-    &_color-green{
-        color:$dark-green-color;
-    }
+    }   
 }

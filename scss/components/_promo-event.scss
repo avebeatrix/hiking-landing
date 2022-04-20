@@ -84,7 +84,7 @@ Styleguide Promo Event
         }        
     }
     &__title{
-        margin-bottom:0.5em;
+        margin-bottom:1em;
     }
     &__price{
         font-size:1.5em;
@@ -96,7 +96,7 @@ Styleguide Promo Event
     &_inversed{       
         #{$p}__main,
         #{$p}__more{
-            text-align: right;
+            text-align: right;            
             .title{
                 &_underlined{
                     &::after{
@@ -105,8 +105,11 @@ Styleguide Promo Event
                     }  
                 }
             }
+            .row{
+                justify-content: flex-end;
+            }
         }
-    }
+    }    
     @include forLargeScreens(768) {
         &__more{
             padding:0; 
@@ -151,10 +154,13 @@ Styleguide Promo Event
                         }  
                     }
                 }
+                .row{
+                    flex-direction: row;
+                }
             }    
             .row{
                 flex-direction: row-reverse;
-            }
+            }           
         }
         &_flex-end{
             .row {                

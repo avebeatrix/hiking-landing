@@ -3,6 +3,7 @@ body{
     overflow-x:hidden;
     color:#32455f;
     font-family: 'Raleway';
+    overflow-x:hidden; 
 }
 a{
     color:$main-color;
@@ -41,4 +42,7 @@ button{
 }
 .tint{
     color:$tint-color;
+}
+.green{
+    color:$dark-green-color;
 }
