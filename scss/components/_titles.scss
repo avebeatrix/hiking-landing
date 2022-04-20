@@ -69,7 +69,10 @@ Markup:
     <div class="title__subtitle">Edge of the world</div>     
 </div>
 
+.title_center - center
 .title_underlined - underlined
+.title_color-main - color main
+.title_color-green - color green
 
 Styleguide Typography.Titles
 */
@@ -90,9 +93,15 @@ Styleguide Typography.Titles
         margin:0.25em 0;
         display: block;
     }
-    &_main-color{
+    &_center{
+        text-align: center;        
+    }
+    &_color-main{
         color:$main-color;        
-    }         
+    }     
+    &_color-green{
+        color:$dark-green-color;        
+    }      
     &_underlined{
         margin-bottom:1.5em;
         &::after{

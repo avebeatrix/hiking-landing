@@ -2,6 +2,7 @@
 Icons
 
 Markup:
+<span class="icon {{modifier_class}}">icon rounded</span>
 <span class="icon icon_rounded {{modifier_class}}">icon rounded</span>  
 
 .icon_mountains - mountains
@@ -57,5 +58,8 @@ $icon-big-size: 140px;
         &::after{                            
             mask-image:url($icon-man-url);                                 
         }                 
+    }
+    &_center{
+        margin:0 auto;
     }
 }

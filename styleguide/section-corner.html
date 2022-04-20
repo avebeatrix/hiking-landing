@@ -67,33 +67,38 @@
         </a>
       </li>
       <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-lists.html">
+          <span class="kss-nav__ref">9</span><span class="kss-nav__name">Lists</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-logo.html">
-          <span class="kss-nav__ref">9</span><span class="kss-nav__name">Logo</span>
+          <span class="kss-nav__ref">10</span><span class="kss-nav__name">Logo</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-media.html">
-          <span class="kss-nav__ref">10</span><span class="kss-nav__name">Media</span>
+          <span class="kss-nav__ref">11</span><span class="kss-nav__name">Media</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-mini-card.html">
+          <span class="kss-nav__ref">12</span><span class="kss-nav__name">Mini Cards</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-navigation.html">
-          <span class="kss-nav__ref">11</span><span class="kss-nav__name">Navigation</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-places.html">
-          <span class="kss-nav__ref">12</span><span class="kss-nav__name">Places</span>
+          <span class="kss-nav__ref">13</span><span class="kss-nav__name">Navigation</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-promo-event.html">
-          <span class="kss-nav__ref">13</span><span class="kss-nav__name">Event</span>
+          <span class="kss-nav__ref">14</span><span class="kss-nav__name">Event</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-typography.html">
-          <span class="kss-nav__ref">14</span><span class="kss-nav__name">Typography</span>
+          <span class="kss-nav__ref">15</span><span class="kss-nav__name">Typography</span>
         </a>
       </li>
     </ul>
@@ -174,20 +179,44 @@
 
         <div class="kss-modifier__wrapper">
           <div class="kss-modifier__heading kss-style">
-            Example
+            Examples
           </div>
 
+            <div class="kss-modifier__default-name kss-style">
+              Default styling
+            </div>
 
           <div class="kss-modifier__example">
             <div>
-    <div class="corner corner-tr">Edge of the world</div>
-</div>
-<div>
-    <div class="corner corner-bl">Edge of the world</div>
+    <div class="corner ">Edge of the world</div>
 </div>
             <div class="kss-modifier__example-footer"></div>
           </div>
 
+            <div class="kss-modifier__name kss-style">
+              .corner_type-bl
+            </div>
+            <div class="kss-modifier__description kss-style">
+              bottom left corner
+            </div>
+            <div class="kss-modifier__example">
+              <div>
+    <div class="corner corner_type-bl">Edge of the world</div>
+</div>
+              <div class="kss-modifier__example-footer"></div>
+            </div>
+            <div class="kss-modifier__name kss-style">
+              .corner_type-tr
+            </div>
+            <div class="kss-modifier__description kss-style">
+              top right corner
+            </div>
+            <div class="kss-modifier__example">
+              <div>
+    <div class="corner corner_type-tr">Edge of the world</div>
+</div>
+              <div class="kss-modifier__example-footer"></div>
+            </div>
         </div>
 
           <details class="kss-markup kss-style">
@@ -195,10 +224,7 @@
                 Markup
             </summary>
             <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"corner corner-tr"</span>&gt;</span>Edge of the world<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"corner corner-bl"</span>&gt;</span>Edge of the world<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"corner [modifier class]"</span>&gt;</span>Edge of the world<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
           </details>
 

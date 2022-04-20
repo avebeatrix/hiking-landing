@@ -1,4 +1,19 @@
-.dashed-ul{
+/*
+Lists
+
+Markup:
+<ul class="{{modifier_class}}">
+    <li>Dolor sit amet consectetur</li>
+    <li>Adipiscing elit aptent </li>
+    <li>Torquent, interdum</li>
+</ul>
+
+.list-dashed - dashed list
+.list-vertical-nav - vertical nav list
+
+Styleguide Lists
+*/
+.list-dashed{
     margin-left:1em;
     list-style-type: none;
     font-family: 'Raleway';
@@ -11,10 +26,14 @@
             left:-1em;         
         }
     }      
-    @include forLargeScreens(1024) {        
-        
-    }
     @include forLargeScreens(1600) { 
         font-size:1.25rem;
+    } 
+}
+.list-vertical-nav{   
+    list-style-type: none;
+    li{
+        display: block;
+        margin:0.5em 0;
     } 
 }

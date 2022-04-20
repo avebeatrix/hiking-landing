@@ -563,13 +563,13 @@ button {
   position: relative;
 }
 
-.row-center {
+.row_center {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.wrap-row {
+.row_wrap {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -585,35 +585,36 @@ Header
 
 Markup:
 <header class="header">
-      <div class="container">
-          <div class="row">
-              <div class="col">
-                  <a class="logo" href="#">Hiking <strong>Life</strong></a>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <a class="logo" href="#" alt="Hiking Life Logo">Hiking <span>Life</span></a>
+        </div>
+        <div class="col">
+          <nav class="main-nav">
+            <input class="main-nav__toogle" type="checkbox" aria-label="Main navigation switcher" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="main-nav__list" aria-label="Main Navigation">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Info</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="search-form header__search-form">
+            <form role="search">
+              <div class="text-field">
+                <input aria-label="Search" mini-cardholder="Search" class="text-field__text text-field__text_has-icon"
+                  type="text" />
+                <button class="text-field__icon text-field__icon_search" type="submit">Search</button>
               </div>
-              <div class="col">
-                  <div class="search-form header__search-form">
-                      <form>
-                          <div class="text-field">
-                              <input tabindex="6" placeholder="Search" class="text-field__text text-field__text_has-icon" type="text"/>
-                              <button tabindex="7" class="text-field__icon text-field__icon_search" type="submit">Search</button>
-                          </div>
-                      </form>
-                  </div>
-                  <div class="main-nav">
-                      <input class="main-nav__toogle" type="checkbox" />   
-                      <span></span>
-                      <span></span>
-                      <span></span>        
-                      <ul class="main-nav__list">
-                        <li><a href="#" data-title="Home">Home</a></li>
-                        <li><a href="#" data-title="About">About</a></li>
-                        <li><a href="#" data-title="Info">Info</a></li>
-                        <li><a href="#" data-title="Contact">Contact</a></li> 
-                      </ul>    
-                  </div>
-              </div>                        
+            </form>
           </div>
+        </div>
       </div>
+    </div>
   </header>
 
 Styleguide Header
@@ -816,8 +817,9 @@ Button
 Markup:
 <a href="#" class="button {{modifier_class}}">see more</a>
 
-.button-rounded - rounded
-.button-tint - tint
+.button_rounded - rounded
+.button_color-tint - tint
+.button_color-green - green
 
 Styleguide Button
 */
@@ -849,17 +851,26 @@ Styleguide Button
           transform: scale(0.96);
 }
 
-.button-rounded {
+.button_rounded {
   border-radius: 1em;
 }
 
-.button-tint {
+.button_color-tint {
   background-color: #564b67;
   color: #fbfbf5;
 }
 
-.button-tint:hover {
+.button_color-tint:hover {
   background-color: #3d3649;
+}
+
+.button_color-green {
+  background-color: #5f6551;
+  color: #fbfbf5;
+}
+
+.button_color-green:hover {
+  background-color: #44493a;
 }
 
 /*
@@ -1041,7 +1052,7 @@ Styleguide Navigation.Main Menu
 Back Image Wavy
 
 Markup:
-<div class="back-image_wavy back-image {{modifier_class}}" style="background-image:url('/i/main.jpg');min-height:800px">
+<div class="back-image_wavy back-image {{modifier_class}}" style="background-image:url('../i/main.jpg');min-height:800px">
     Text...
 </div>
 
@@ -1056,7 +1067,7 @@ Styleguide Media.Back Image Wavy
 Back Image Tinted
 
 Markup:
-<div class="back-image {{modifier_class}}" style="background-image:url('/i/main.jpg');min-height:300px">
+<div class="back-image {{modifier_class}}" style="background-image:url('../i/main.jpg');min-height:300px">
     Text...
 </div>
 
@@ -1343,7 +1354,10 @@ Markup:
     <div class="title__subtitle">Edge of the world</div>     
 </div>
 
+.title_center - center
 .title_underlined - underlined
+.title_color-main - color main
+.title_color-green - color green
 
 Styleguide Typography.Titles
 */
@@ -1368,8 +1382,16 @@ Styleguide Typography.Titles
   display: block;
 }
 
-.title_main-color {
+.title_center {
+  text-align: center;
+}
+
+.title_color-main {
   color: #32455f;
+}
+
+.title_color-green {
+  color: #5f6551;
 }
 
 .title_underlined {
@@ -1394,11 +1416,11 @@ Corner
 
 Markup:
 <div>
-    <div class="corner corner-tr">Edge of the world</div> 
+    <div class="corner {{modifier_class}}">Edge of the world</div> 
 </div>
-<div>
-    <div class="corner corner-bl">Edge of the world</div>
-</div>
+
+.corner_type-bl - bottom left corner
+.corner_type-tr - top right corner
 
 Styleguide Corner
 */
@@ -1407,28 +1429,28 @@ Styleguide Corner
   position: relative;
 }
 
-.corner-bl::before {
+.corner_type-bl::before {
   position: absolute;
   content: "";
   width: 2rem;
   height: 2rem;
 }
 
-.corner-bl::before {
+.corner_type-bl::before {
   border-left: solid 2px currentColor;
   border-bottom: solid 2px currentColor;
   left: -0.75rem;
   bottom: -0.75rem;
 }
 
-.corner-tr::before {
+.corner_type-tr::before {
   position: absolute;
   content: "";
   width: 2rem;
   height: 2rem;
 }
 
-.corner-tr::before {
+.corner_type-tr::before {
   border-right: solid 2px currentColor;
   border-top: solid 2px currentColor;
   right: -0.75rem;
@@ -1436,10 +1458,10 @@ Styleguide Corner
 }
 
 @media (min-width: 48em) {
-  .corner-bl::before {
+  .corner_type-bl::before {
     left: -1.25rem;
   }
-  .corner-tr::before {
+  .corner_type-tr::before {
     right: -1.25rem;
   }
 }
@@ -1483,15 +1505,6 @@ Styleguide Corner
   }
 }
 
-.vertical-nav ul {
-  list-style-type: none;
-}
-
-.vertical-nav ul li {
-  display: block;
-  margin: 0.5em 0;
-}
-
 .box-underlined-above {
   padding: 2em 0 0 0;
   border-top: solid 1px #564b67;
@@ -1502,6 +1515,7 @@ Styleguide Corner
 Icons
 
 Markup:
+<span class="icon {{modifier_class}}">icon rounded</span>
 <span class="icon icon_rounded {{modifier_class}}">icon rounded</span>  
 
 .icon_mountains - mountains
@@ -1568,6 +1582,10 @@ Styleguide Icons
 .icon_man::after {
   -webkit-mask-image: url("../i/icon-man.svg");
           mask-image: url("../i/icon-man.svg");
+}
+
+.icon_center {
+  margin: 0 auto;
 }
 
 /*
@@ -1821,34 +1839,58 @@ Styleguide Day Card
   }
 }
 
-.dashed-ul {
+/*
+Lists
+
+Markup:
+<ul class="{{modifier_class}}">
+    <li>Dolor sit amet consectetur</li>
+    <li>Adipiscing elit aptent </li>
+    <li>Torquent, interdum</li>
+</ul>
+
+.list-dashed - dashed list
+.list-vertical-nav - vertical nav list
+
+Styleguide Lists
+*/
+.list-dashed {
   margin-left: 1em;
   list-style-type: none;
   font-family: 'Raleway';
   font-size: 1rem;
 }
 
-.dashed-ul li {
+.list-dashed li {
   position: relative;
 }
 
-.dashed-ul li::before {
+.list-dashed li::before {
   content: "-";
   position: absolute;
   left: -1em;
 }
 
 @media (min-width: 100em) {
-  .dashed-ul {
+  .list-dashed {
     font-size: 1.25rem;
   }
+}
+
+.list-vertical-nav {
+  list-style-type: none;
+}
+
+.list-vertical-nav li {
+  display: block;
+  margin: 0.5em 0;
 }
 
 /*
 Indicator
 
 Markup:
-<div class="indicator {{modifier_class}}">hardness: n/5</div>
+<div class="indicator {{modifier_class}}">n/5</div>
 
 .indicator_fill-20 - man
 .indicator_fill-40 - backpack
@@ -1899,58 +1941,61 @@ Styleguide Indicator
 }
 
 /*
-Places
+Mini Cards
 
 Markup:
-<div class="places">
-    <div class="container">      
-        <div class="row places__container">
-            <div class="place">
-                <img alt="place 1" src="/i/place1.jpg" width="270" height="270" />
-                <h3 class="h4 title place__title">Mountain Loop</h3>
-                <div class="text">
-                    <p>Lorem ipsum sit amet, 
-                    consectetur  adipisicing...</p>
-                    <div class="box-underlined-above">
-                        <p>
-                        <strong>Location 0.3 miles.</strong>
-                        </p>
-                    </div> 
-                </div>                      
-            </div>
-            <div class="place">
-                <img alt="place 1" src="/i/place2.jpg" width="270" height="270" />
-                <h3 class="h4 title place__title">National Park</h3>
-                <div class="text">              
-                    <p>Lorem ipsum sit amet, 
-                    consectetur  adipisicing...</p>
-                    <div class="box-underlined-above">
-                        <p>
-                        <strong>Location 0.3 miles.</strong>
-                        </p>
-                    </div>   
-                </div>                     
-            </div>
-            <div class="place">
-                <img alt="place 1" src="/i/place3.jpg" width="270" height="270" />
-                <h3 class="h4 title place__title">Canyon Trail</h3>
-                <div class="text">              
-                    <p>Lorem ipsum sit amet, 
-                    consectetur  adipisicing...</p>
-                    <div class="box-underlined-above">
-                        <p>
-                        <strong>Location 0.3 miles.</strong>
-                        </p>
-                    </div>  
-                </div>                      
-            </div>
-        </div>      
+<div class="mini-cards">
+      <div class="container">       
+        <div class="row mini-cards__container">
+          <div class="mini-card {{modifier_class}}">
+            <img alt="mini-card 1" src="../i/place1.jpg" width="270" height="270" />
+            <h3 class="h4 title mini-card__title">Mountain Loop</h3>
+            <div class="text">
+              <p>Lorem ipsum sit amet, 
+                consectetur  adipisicing...</p>
+                <div class="box-underlined-above">
+                  <p>
+                    <strong>Location 0.3 miles.</strong>
+                  </p>
+                </div> 
+            </div>                      
+          </div>
+          <div class="mini-card {{modifier_class}}">
+            <img alt="mini-card 1" src="../i/place2.jpg" width="270" height="270" />
+            <h3 class="h4 title mini-card__title">National Park</h3>
+            <div class="text">              
+              <p>Lorem ipsum sit amet, 
+                consectetur  adipisicing...</p>
+                <div class="box-underlined-above">
+                  <p>
+                    <strong>Location 0.3 miles.</strong>
+                  </p>
+                </div>   
+            </div>                     
+          </div>
+          <div class="mini-card {{modifier_class}}">
+            <img alt="mini-card 1" src="../i/place3.jpg" width="270" height="270" />
+            <h3 class="h4 title mini-card__title">Canyon Trail</h3>
+            <div class="text">              
+              <p>Lorem ipsum sit amet, 
+                consectetur  adipisicing...</p>
+                <div class="box-underlined-above">
+                  <p>
+                    <strong>Location 0.3 miles.</strong>
+                  </p>
+                </div>  
+            </div>                      
+          </div>
+        </div>        
+      </div>
     </div>
-</div>
 
-Styleguide Places
+.mini-card_center - center
+.mini-card_color-green - green
+
+Styleguide Mini Card
 */
-.places__container {
+.mini-cards__container {
   margin: 2em -2em;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -1958,20 +2003,28 @@ Styleguide Places
       flex-wrap: wrap;
 }
 
-.place {
+.mini-card {
   padding: 0 2em;
   max-width: 300px;
   margin: 1.5em 0;
 }
 
-.place img {
+.mini-card img {
   width: 100%;
   height: auto;
   border-radius: 50%;
 }
 
-.place__title {
+.mini-card__title {
   margin: 1em 0;
+}
+
+.mini-card_center {
+  text-align: center;
+}
+
+.mini-card_color-green {
+  color: #5f6551;
 }
 
 /*

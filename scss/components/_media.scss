@@ -2,7 +2,7 @@
 Back Image Wavy
 
 Markup:
-<div class="back-image_wavy back-image {{modifier_class}}" style="background-image:url('/i/main.jpg');min-height:800px">
+<div class="back-image_wavy back-image {{modifier_class}}" style="background-image:url('../i/main.jpg');min-height:800px">
     Text...
 </div>
 
@@ -17,7 +17,7 @@ Styleguide Media.Back Image Wavy
 Back Image Tinted
 
 Markup:
-<div class="back-image {{modifier_class}}" style="background-image:url('/i/main.jpg');min-height:300px">
+<div class="back-image {{modifier_class}}" style="background-image:url('../i/main.jpg');min-height:300px">
     Text...
 </div>
 

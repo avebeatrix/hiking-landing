@@ -3,35 +3,36 @@ Header
 
 Markup:
 <header class="header">
-      <div class="container">
-          <div class="row">
-              <div class="col">
-                  <a class="logo" href="#">Hiking <strong>Life</strong></a>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <a class="logo" href="#" alt="Hiking Life Logo">Hiking <span>Life</span></a>
+        </div>
+        <div class="col">
+          <nav class="main-nav">
+            <input class="main-nav__toogle" type="checkbox" aria-label="Main navigation switcher" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="main-nav__list" aria-label="Main Navigation">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Info</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="search-form header__search-form">
+            <form role="search">
+              <div class="text-field">
+                <input aria-label="Search" mini-cardholder="Search" class="text-field__text text-field__text_has-icon"
+                  type="text" />
+                <button class="text-field__icon text-field__icon_search" type="submit">Search</button>
               </div>
-              <div class="col">
-                  <div class="search-form header__search-form">
-                      <form>
-                          <div class="text-field">
-                              <input tabindex="6" placeholder="Search" class="text-field__text text-field__text_has-icon" type="text"/>
-                              <button tabindex="7" class="text-field__icon text-field__icon_search" type="submit">Search</button>
-                          </div>
-                      </form>
-                  </div>
-                  <div class="main-nav">
-                      <input class="main-nav__toogle" type="checkbox" />   
-                      <span></span>
-                      <span></span>
-                      <span></span>        
-                      <ul class="main-nav__list">
-                        <li><a href="#" data-title="Home">Home</a></li>
-                        <li><a href="#" data-title="About">About</a></li>
-                        <li><a href="#" data-title="Info">Info</a></li>
-                        <li><a href="#" data-title="Contact">Contact</a></li> 
-                      </ul>    
-                  </div>
-              </div>                        
+            </form>
           </div>
+        </div>
       </div>
+    </div>
   </header>
 
 Styleguide Header

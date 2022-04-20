@@ -4,8 +4,9 @@ Button
 Markup:
 <a href="#" class="button {{modifier_class}}">see more</a>
 
-.button-rounded - rounded
-.button-tint - tint
+.button_rounded - rounded
+.button_color-tint - tint
+.button_color-green - green
 
 Styleguide Button
 */
@@ -34,14 +35,21 @@ Styleguide Button
     &:active{
         transform: scale(.96);            
     }
-    &-rounded{
+    &_rounded{
         border-radius: 1em;
     }    
-    &-tint{
+    &_color-tint{
         background-color: $tint-color;
         color:$main-back-color;
         &:hover{                     
             background-color: darken($tint-color, 10%);;       
+        }
+    }
+    &_color-green{
+        background-color: $dark-green-color;
+        color:$main-back-color;
+        &:hover{                     
+            background-color: darken($dark-green-color, 10%);;       
         }
     }
    

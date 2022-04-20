@@ -1,0 +1,81 @@
+/*
+Mini Cards
+
+Markup:
+<div class="mini-cards">
+      <div class="container">       
+        <div class="row mini-cards__container">
+          <div class="mini-card {{modifier_class}}">
+            <img alt="mini-card 1" src="../i/place1.jpg" width="270" height="270" />
+            <h3 class="h4 title mini-card__title">Mountain Loop</h3>
+            <div class="text">
+              <p>Lorem ipsum sit amet, 
+                consectetur  adipisicing...</p>
+                <div class="box-underlined-above">
+                  <p>
+                    <strong>Location 0.3 miles.</strong>
+                  </p>
+                </div> 
+            </div>                      
+          </div>
+          <div class="mini-card {{modifier_class}}">
+            <img alt="mini-card 1" src="../i/place2.jpg" width="270" height="270" />
+            <h3 class="h4 title mini-card__title">National Park</h3>
+            <div class="text">              
+              <p>Lorem ipsum sit amet, 
+                consectetur  adipisicing...</p>
+                <div class="box-underlined-above">
+                  <p>
+                    <strong>Location 0.3 miles.</strong>
+                  </p>
+                </div>   
+            </div>                     
+          </div>
+          <div class="mini-card {{modifier_class}}">
+            <img alt="mini-card 1" src="../i/place3.jpg" width="270" height="270" />
+            <h3 class="h4 title mini-card__title">Canyon Trail</h3>
+            <div class="text">              
+              <p>Lorem ipsum sit amet, 
+                consectetur  adipisicing...</p>
+                <div class="box-underlined-above">
+                  <p>
+                    <strong>Location 0.3 miles.</strong>
+                  </p>
+                </div>  
+            </div>                      
+          </div>
+        </div>        
+      </div>
+    </div>
+
+.mini-card_center - center
+.mini-card_color-green - green
+
+Styleguide Mini Card
+*/
+.mini-cards{    
+    &__container{
+        margin:2em -2em;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }    
+}
+.mini-card{           
+    padding:0 2em;
+    max-width:300px;  
+    margin:1.5em 0;      
+    img{
+        width:100%;
+        height:auto;
+        border-radius: 50%;
+    }
+    &__title{
+        margin:1em 0;
+    }
+    &_center{
+        text-align: center;        
+    }
+    &_color-green{
+        color:$dark-green-color;
+    }
+}

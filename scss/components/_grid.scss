@@ -11,12 +11,12 @@
 .row{    
     display: flex;    
     position:relative;
-    &-center{
+    &_center{
         justify-content: center;
     }
-}
-.wrap-row{
-    flex-wrap: wrap;
+    &_wrap{
+        flex-wrap: wrap;
+    }
 }
 .col{
     flex:1;
