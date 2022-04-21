@@ -5,7 +5,7 @@
     ],
     "destination": "styleguide/",
     "css": [
-        "/css/styles.css"
+        "../css/styles.css"
     ],
     "js": [
         "/js/main.js"
