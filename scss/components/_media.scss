@@ -9,7 +9,6 @@ Markup:
 .back-image_wavy-gray - gray wavy
 .back-image_wavy-gray-diagonal - gray diagonal wavy
 .back-image_wavy-gray-diagonal_bicolor - bicolor diagonal wavy 
-.back-image_wavy-green - green wavy
 .back-image_dual-green - green with two corner waves
 
 Styleguide Media.Back Image Wavy
@@ -30,8 +29,7 @@ Styleguide Media.Back Image Tinted
 
 $wave-gray-url: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2023.172 535.44"><path d="M.087 311.101Q.087 157.63 0 4.158C-.003.86.488.001 4.029.001Q1011.592.157 2019.155 0c3.56 0 4.02.892 4.017 4.168q-.152 177.467-.085 354.933c-1.436 4.932-5.711 7.564-8.936 11.054a31.755 31.755 0 0 1-5.872 3.76c-11.686 5.627-23.091 11.8-34.56 17.846-8.708 4.591-17.777 7.39-27.731 6.677-5.35-.153-10.551-1.43-15.813-2.205-8.344-1.229-16.676-1.444-24.82.584-14.58 3.63-29.019 2.02-43.613.201-14.65-1.826-28.855-4.953-42.414-10.882a57.875 57.875 0 0 0-23.906-4.552c-26.604.29-51.841-6.269-76.48-15.171-13.1-4.733-26.228-8.804-40.016-10.396-14.644-1.692-27.93-7.418-41.344-12.895a53.106 53.106 0 0 0-20.52-3.692c-4.998.02-10.005-.177-14.994.045a48.484 48.484 0 0 1-23.358-4.427c-15.697-7.532-32.587-11.726-48.668-18.118-15.227-6.054-31.239-9.458-46.752-14.522a152.285 152.285 0 0 1-19.862-8.14c-29.167-14.312-57.904-29.471-86.916-44.087-29.795-15.01-57.715-33.22-86.097-50.636-14.644-8.986-29.921-16.804-45.318-24.36-11.334-5.561-23.82-7.359-36.117-9.566-7.545-1.355-15.05-2.888-22.54-4.514-20.502-4.45-41.046-3.515-61.529.024-6.475 1.12-12.159 4.71-17.674 8.026-10.808 6.499-22.584 8.54-34.832 9.297-8.59.53-17.083 2.1-23.997 7.493-13.869 10.816-29.178 19.19-44.522 27.584-16.259 8.894-30.587 20.76-46.297 30.514a67.097 67.097 0 0 1-9.28 4.886 77.357 77.357 0 0 0-29.05 21.551c-8.286 9.74-18.79 16.896-28.078 25.45-9.98 9.191-21.67 15.848-33.07 23.076-19.254 12.21-37.575 25.855-54.148 41.656-7.29 8.014-16.385 13.623-25.765 18.688a124.368 124.368 0 0 0-29.281 21.53c-12.851 12.906-27.16 24.053-40.994 35.791-15.623 13.256-31.134 26.671-47.792 38.594-13.408 9.595-26.008 20.428-40.054 28.966-19.985 12.147-42.229 18.548-65.339 22.158-23.03 3.598-46.127 6.38-69.37 8.143-10.315.782-20.554 1.86-30.764-.692a40.987 40.987 0 0 1-7.554-2.588 121.642 121.642 0 0 0-40.842-10.699c-20.302-1.92-39.113-9.337-57.956-16.487-12.058-4.575-22.506-12.255-33.957-17.999-27.418-13.753-53.802-29.333-80.218-44.87-4.288-2.522-9.018-4.291-13.554-6.375a117.9 117.9 0 0 1-30.656-20.336c-12.992-11.884-28.498-20.256-43.547-29.09-24.985-14.665-50.637-28.162-76.147-41.905-20.866-11.241-42.198-21.328-64.624-29.043a11.365 11.365 0 0 1-5.462-3.347Z" style="fill:#fbfbf5" data-name="Layer 2"/></svg>';
 $wave-gray-diagonal-url: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1740 786.6" style="enable-background:new 0 0 1740 786.6" xml:space="preserve"><path d="M0 648.4V3.9C0 1.8 1.8 0 3.9 0h1732.2c2.2 0 3.9 1.8 3.9 3.9v302.7c0 2.8-3 4.8-5.5 3.5h-.1c-15.4-8.1-31.9-12.9-48.8-16.2-12.3-2.4-24.8-4.2-37.1-6.8-14.7-3.1-29.1-7.1-44.4-6.3-11.2.6-22.5-.2-33.7.2-7.6.3-15.2 1.2-22.6 2.6-15.4 2.8-27.7 12.7-41.7 18.7-7.3 3.2-15.1 5.8-22.9 7.3-6.8 1.4-14 .8-21 1.2-14.3.9-27.5 5.2-38.7 14.2-15.5 12.4-32.5 22.3-49.9 31.8-15.1 8.2-29.5 17.8-44.1 27.1-16.7 10.6-31.5 23.9-50 31.8-16.3 7-30.3 17.1-42.2 30.3-6.9 7.6-14.4 14.8-22.1 21.7-9.4 8.4-19.1 14.4-28.9 22.3-7.4 6.1-47.9 16.4-56 21.5-16.3 10.2-63.7 28.3-68.8 30.9-12.7 6.5-78.1 19.5-90.9 25.8-17 8.4-30.9 21.1-46 32.3-7.2 5.4-14.3 10.8-21.7 15.8-16.1 11.1-32.3 22-48.6 32.9-14.4 9.7-28.7 19.7-43.5 28.9-16.2 10.1-31.7 9.8-48 19.6-15.6 9.4-63.2 30.6-80.8 36.7-19.7 6.8-136.4 28.9-156.6 34.2-15.8 4.1-32.2 5.9-48.4 8.1-15.4 2.1-30.9 3.5-46.3 5.1-4.9.5-9.9.7-14.9 1.2-12.7 1.2-25.3 3-38 3.6s-93.2-3.5-104.9-8.7c-13.2-5.9-89.1-21.3-103.6-22.9-19-2.1-74.6-31.6-104.4-49.8-44.6-27.2-53.5-46.5-63.3-53.6-1-.6-1.6-1.9-1.6-3.2z" style="fill:COLOR"/></svg>';
-$wave-green-url: '#{$images-path}/shape-green.png';
-$wave-green-gray-url: '#{$images-path}/shape3.png';
+$wave-corner-url: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 879 420.1" style="enable-background:new 0 0 879 420.1" xml:space="preserve"><path d="M879 420.1H0v-381c1.3-.3 2.6-.4 3.8-.9C51.7 19.2 101.1 6.3 152.6 2c38.3-3.3 76.6-2.4 114.7 2.6 59.7 7.9 114.1 29.5 163.9 63.1 35.6 24 67.9 52.1 100.1 80.4 35.9 31.6 71.7 63.3 110.6 91.3 28.7 20.6 58.1 40.2 86.1 61.7 50.1 38.4 99.4 77.9 149 117 .8.4 1.3 1.3 2 2z" style="fill:COLOR"/></svg>';
 
 $wave-distance: 25;
 $wave-distance-desktop: 40;
@@ -41,21 +39,19 @@ $wave-distance-desktop: 40;
     $p: &;  
     background-position: center bottom;
     background-repeat: no-repeat;  
-    
     position:relative;
     background-size: cover;      
     z-index:0; 
-    &::before{
-        @include absolute;
-        z-index:-1;
-    }
+
+    &::before,
     &::after{
         @include absolute;
         z-index:-1;
-    }   
+    }
+    
     &__title{
         position:relative;
-        margin:0 0 0.25em;                  
+        margin:0 0 1em;                  
     }   
 
     &_centered{
@@ -73,13 +69,7 @@ $wave-distance-desktop: 40;
                 background-color: transparentize($main-back-color, .1);
                 z-index:-1;        
             } 
-        }  
-        &-green{        
-            &::before{          
-                background-image: url($wave-green-gray-url), url($wave-green-url);            
-                background-position: center top, center $wave-distance+px;       
-            }
-        }   
+        }                  
         &-gray-diagonal{ 
             background-size: cover; 
             padding:3em 0;   
@@ -105,17 +95,13 @@ $wave-distance-desktop: 40;
     }    
                
     &_dual-green{
-        background: $dark-green-color;
-        background-image: none !important;        
-        &::before{            
-            background-image: url($green-corner-url);           
-            background-position: right top;             
-        }
-        &::after{           
-            background-image: url($green-corner-url);           
-            background-position: right top;     
-            transform: rotate(180deg);       
-        }
+        color:$main-back-color;
+        background: $back-green-color;
+        background-image: none !important; 
+        border-top: $back-green-color 5px solid;
+        border-bottom: $back-green-color 5px solid;
+        box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+        z-index: 1;        
     }          
     &_tinted-purple{            
         &::before{           
@@ -135,9 +121,7 @@ $wave-distance-desktop: 40;
         padding:2em 0;     
     }  
     @include forLargeScreens(768) {                               
-        &_wavy{            
-            /*to-do: this size is only for wide screens, in other ratio don't use min-height*/
-            max-height: 53vw;
+        &_wavy{                        
             min-height:100vh;
             background-size: 100% auto;
             &::before,  &::after{                                                 
@@ -167,7 +151,30 @@ $wave-distance-desktop: 40;
                     width:60%;
                 }      
             }
-        }               
+        }  
+        &_dual-green{               
+            &::before,
+            &::after{
+                @include wave-shadow-dual;
+                background-repeat: no-repeat;
+                background-size: auto 80%;
+                background-image: inline-svg(str-replace($wave-corner-url, 'COLOR', $dark-green-color));     
+                background-position: left bottom;        
+            }   
+            &::after{            
+                transform: rotate(180deg);       
+            }          
+            .row{
+                justify-content: space-around;
+                flex-wrap: wrap;
+                align-items: center;
+                margin:0 -2em;        
+                > div{
+                    width:50%;
+                    padding:0 2em;
+                }
+            }
+        }                
         &_tinted-purple,
         &_tinted-blue{
             color:$main-back-color;
@@ -188,7 +195,13 @@ $wave-distance-desktop: 40;
                     }
                 }                  
             }
-        }         
+        } 
+        &_dual-green{               
+            &::before,
+            &::after{              
+                background-size: auto 95%;                   
+            }              
+        }            
     }
     @include forLargeScreens(1600) {
         &_wavy{  

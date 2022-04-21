@@ -39,9 +39,15 @@
 }
 @mixin wave-shadow{
     &{
-        filter: drop-shadow( 0 20px 10px rgba(0, 0, 0, .1));
+        filter: drop-shadow(0 20px 10px rgba(0, 0, 0, .1));
     }
 }
+@mixin wave-shadow-dual{
+    &{
+        filter: drop-shadow(20px 0 10px rgba(0, 0, 0, .1));
+    }
+}
+
 @mixin corner{
     &::before{
         position:absolute;

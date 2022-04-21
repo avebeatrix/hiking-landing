@@ -551,6 +551,10 @@ button {
   color: #5f6551;
 }
 
+.line {
+  border-bottom: 1px solid #5f6551;
+}
+
 .container {
   width: 100%;
   max-width: 1600px;
@@ -1075,7 +1079,6 @@ Markup:
 .back-image_wavy-gray - gray wavy
 .back-image_wavy-gray-diagonal - gray diagonal wavy
 .back-image_wavy-gray-diagonal_bicolor - bicolor diagonal wavy 
-.back-image_wavy-green - green wavy
 .back-image_dual-green - green with two corner waves
 
 Styleguide Media.Back Image Wavy
@@ -1101,24 +1104,11 @@ Styleguide Media.Back Image Tinted
   z-index: 0;
 }
 
-.back-image::before {
+.back-image::before, .back-image::after {
   z-index: -1;
 }
 
-.back-image::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 100%;
-}
-
-.back-image::after {
-  z-index: -1;
-}
-
-.back-image::after {
+.back-image::before, .back-image::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1129,7 +1119,7 @@ Styleguide Media.Back Image Tinted
 
 .back-image__title {
   position: relative;
-  margin: 0 0 0.25em;
+  margin: 0 0 1em;
 }
 
 .back-image_centered {
@@ -1159,11 +1149,6 @@ Styleguide Media.Back Image Tinted
   height: calc(100% + 1em);
 }
 
-.back-image_wavy-green::before {
-  background-image: url("../i/shape3.png"), url("../i/shape-green.png");
-  background-position: center top, center 25px;
-}
-
 .back-image_wavy-gray-diagonal {
   background-size: cover;
   padding: 3em 0;
@@ -1188,20 +1173,14 @@ Styleguide Media.Back Image Tinted
 }
 
 .back-image_dual-green {
-  background: #5f6551;
+  color: #fbfbf5;
+  background: #4a4e3f;
   background-image: none !important;
-}
-
-.back-image_dual-green::before {
-  background-image: url("../i/top-right-shape.png");
-  background-position: right top;
-}
-
-.back-image_dual-green::after {
-  background-image: url("../i/top-right-shape.png");
-  background-position: right top;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  border-top: #4a4e3f 5px solid;
+  border-bottom: #4a4e3f 5px solid;
+  -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .back-image_tinted-purple::before {
@@ -1221,8 +1200,6 @@ Styleguide Media.Back Image Tinted
 
 @media (min-width: 48em) {
   .back-image_wavy {
-    /*to-do: this size is only for wide screens, in other ratio don't use min-height*/
-    max-height: 53vw;
     min-height: 100vh;
     background-size: 100% auto;
   }
@@ -1252,6 +1229,34 @@ Styleguide Media.Back Image Tinted
   .back-image_wavy-gray-diagonal .promo-event__main {
     width: 60%;
   }
+  .back-image_dual-green::before, .back-image_dual-green::after {
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20879%20420.1%22%20style%3D%22enable-background%3Anew%200%200%20879%20420.1%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20d%3D%22M879%20420.1H0v-381c1.3-.3%202.6-.4%203.8-.9C51.7%2019.2%20101.1%206.3%20152.6%202c38.3-3.3%2076.6-2.4%20114.7%202.6%2059.7%207.9%20114.1%2029.5%20163.9%2063.1%2035.6%2024%2067.9%2052.1%20100.1%2080.4%2035.9%2031.6%2071.7%2063.3%20110.6%2091.3%2028.7%2020.6%2058.1%2040.2%2086.1%2061.7%2050.1%2038.4%2099.4%2077.9%20149%20117%20.8.4%201.3%201.3%202%202z%22%20style%3D%22fill%3A%235f6551%22%2F%3E%3C%2Fsvg%3E");
+    background-position: left bottom;
+  }
+  .back-image_dual-green::before, .back-image_dual-green::after {
+    -webkit-filter: drop-shadow(20px 0 10px rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(20px 0 10px rgba(0, 0, 0, 0.1));
+  }
+  .back-image_dual-green::after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .back-image_dual-green .row {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 -2em;
+  }
+  .back-image_dual-green .row > div {
+    width: 50%;
+    padding: 0 2em;
+  }
   .back-image_tinted-purple, .back-image_tinted-blue {
     color: #fbfbf5;
     padding: 8em 0;
@@ -1266,6 +1271,9 @@ Styleguide Media.Back Image Tinted
   }
   .back-image_wavy-gray-diagonal_bicolor::before {
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201740%20786.6%22%20style%3D%22enable-background%3Anew%200%200%201740%20786.6%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20d%3D%22M0%20648.4V3.9C0%201.8%201.8%200%203.9%200h1732.2c2.2%200%203.9%201.8%203.9%203.9v302.7c0%202.8-3%204.8-5.5%203.5h-.1c-15.4-8.1-31.9-12.9-48.8-16.2-12.3-2.4-24.8-4.2-37.1-6.8-14.7-3.1-29.1-7.1-44.4-6.3-11.2.6-22.5-.2-33.7.2-7.6.3-15.2%201.2-22.6%202.6-15.4%202.8-27.7%2012.7-41.7%2018.7-7.3%203.2-15.1%205.8-22.9%207.3-6.8%201.4-14%20.8-21%201.2-14.3.9-27.5%205.2-38.7%2014.2-15.5%2012.4-32.5%2022.3-49.9%2031.8-15.1%208.2-29.5%2017.8-44.1%2027.1-16.7%2010.6-31.5%2023.9-50%2031.8-16.3%207-30.3%2017.1-42.2%2030.3-6.9%207.6-14.4%2014.8-22.1%2021.7-9.4%208.4-19.1%2014.4-28.9%2022.3-7.4%206.1-47.9%2016.4-56%2021.5-16.3%2010.2-63.7%2028.3-68.8%2030.9-12.7%206.5-78.1%2019.5-90.9%2025.8-17%208.4-30.9%2021.1-46%2032.3-7.2%205.4-14.3%2010.8-21.7%2015.8-16.1%2011.1-32.3%2022-48.6%2032.9-14.4%209.7-28.7%2019.7-43.5%2028.9-16.2%2010.1-31.7%209.8-48%2019.6-15.6%209.4-63.2%2030.6-80.8%2036.7-19.7%206.8-136.4%2028.9-156.6%2034.2-15.8%204.1-32.2%205.9-48.4%208.1-15.4%202.1-30.9%203.5-46.3%205.1-4.9.5-9.9.7-14.9%201.2-12.7%201.2-25.3%203-38%203.6s-93.2-3.5-104.9-8.7c-13.2-5.9-89.1-21.3-103.6-22.9-19-2.1-74.6-31.6-104.4-49.8-44.6-27.2-53.5-46.5-63.3-53.6-1-.6-1.6-1.9-1.6-3.2z%22%20style%3D%22fill%3A%235f6551%22%2F%3E%3C%2Fsvg%3E");
+  }
+  .back-image_dual-green::before, .back-image_dual-green::after {
+    background-size: auto 95%;
   }
 }
 
@@ -2033,7 +2041,7 @@ Markup:
 Styleguide Mini Card
 */
 .mini-cards__container {
-  margin: 2em -2em;
+  margin: 0 -2em;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -ms-flex-wrap: wrap;
@@ -2058,6 +2066,27 @@ Styleguide Mini Card
 
 .mini-card_center {
   text-align: center;
+}
+
+/*
+Decrease
+
+Markup:
+<div class="decrease">
+    A<span>B<span>C<span>D</span></span></span>
+</div>
+
+Styleguide Decrease
+*/
+.decrease {
+  font-family: 'Bebas Neue';
+  font-size: 6em;
+}
+
+.decrease span {
+  display: inline-block;
+  font-size: 0.6em;
+  margin-left: calc(2rem - 0.5em);
 }
 
 /*

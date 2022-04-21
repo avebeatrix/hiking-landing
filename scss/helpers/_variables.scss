@@ -6,6 +6,7 @@ $main-color-val: str-slice(#{$main-color}, 2);
 $main-back-color:#fbfbf5;
 
 $dark-green-color: #5f6551;
+$back-green-color:#4a4e3f;
 
 $main-color-darker:mix(black,$main-back-color, 3%);
 

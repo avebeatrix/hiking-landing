@@ -1,0 +1,19 @@
+/*
+Decrease
+
+Markup:
+<div class="decrease">
+    A<span>B<span>C<span>D</span></span></span>
+</div>
+
+Styleguide Decrease
+*/
+.decrease{
+    font-family: 'Bebas Neue';
+    font-size: 6em;
+    span{
+        display: inline-block;
+        font-size: 0.6em;      
+        margin-left: calc(2rem - 0.5em);  
+    }
+}
