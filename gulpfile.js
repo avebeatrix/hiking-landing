@@ -1,17 +1,25 @@
 var gulp = require('gulp');
-var gulpless = require('gulp-less');
-var gulpkss = require('gulp-kss');
-var gulpconcat = require('gulp-concat');
  
-// Generate styleguide with templates
-gulp.src(['css/*.css'])
-    .pipe(gulpkss({
-        overview: __dirname + '/styles/styleguide.md'
-    }))
-    .pipe(gulp.dest('styleguide/'));
- 
-// Concat and compile all your styles for correct rendering of the styleguide.
-gulp.src('styles/main.less')
-    .pipe(gulpless())
-    .pipe(gulpconcat('public/style.css'))
-    .pipe(gulp.dest('styleguide/'));
+const webp = require('gulp-webp');
+
+const gulpAvif = require('gulp-avif');
+
+const svgo = require('gulp-svgo');
+
+gulp.task('avif', ()=>{
+    return gulp.src('i/*.{png,jpg}')
+        .pipe(gulpAvif())
+        .pipe(gulp.dest('i'));
+});
+
+gulp.task('webp', function () {
+    return gulp.src('i/*.jpg')    
+        .pipe(webp())
+        .pipe(gulp.dest('i'))   
+});
+
+gulp.task('svgo', () => { 
+    return gulp.src('i/*.svg')
+        .pipe(svgo())
+        .pipe(gulp.dest('i'));
+});

@@ -12,9 +12,13 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-avif": "^1.1.0",
+    "gulp-svgo": "^2.2.1",
+    "gulp-webp": "^4.0.1",
     "kss": "^3.0.1"
   },
-  "dependencies": {  
+  "dependencies": {
+    "gulp-svgmin": "^4.1.0",
     "npm-font-open-sans": "^1.1.0",
     "reseter.css": "^2.0.0"
   }

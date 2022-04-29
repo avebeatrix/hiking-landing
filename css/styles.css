@@ -310,32 +310,6 @@ template {
   src: url("../fonts/open-sans/BoldItalic/OpenSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/BoldItalic/OpenSans-BoldItalic.woff2") format("woff2"), url("../fonts/open-sans/BoldItalic/OpenSans-BoldItalic.woff") format("woff"), url("../fonts/open-sans/BoldItalic/OpenSans-BoldItalic.ttf") format("truetype"), url("../fonts/open-sans/BoldItalic/OpenSans-BoldItalic.svg#OpenSansBoldItalic") format("svg");
 }
 
-@font-face {
-  font-family: 'Open Sans';
-  font-weight: 800;
-  font-style: normal;
-  src: url("../fonts/open-sans/ExtraBold/OpenSans-ExtraBold.eot");
-  src: url("../fonts/open-sans/ExtraBold/OpenSans-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/ExtraBold/OpenSans-ExtraBold.woff2") format("woff2"), url("../fonts/open-sans/ExtraBold/OpenSans-ExtraBold.woff") format("woff"), url("../fonts/open-sans/ExtraBold/OpenSans-ExtraBold.ttf") format("truetype"), url("../fonts/open-sans/ExtraBold/OpenSans-ExtraBold.svg#OpenSansExtrabold") format("svg");
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-weight: 800;
-  font-style: italic;
-  src: url("../fonts/open-sans/ExtraBoldItalic/OpenSans-ExtraBoldItalic.eot");
-  src: url("../fonts/open-sans/ExtraBoldItalic/OpenSans-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/ExtraBoldItalic/OpenSans-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/open-sans/ExtraBoldItalic/OpenSans-ExtraBoldItalic.woff") format("woff"), url("../fonts/open-sans/ExtraBoldItalic/OpenSans-ExtraBoldItalic.ttf") format("truetype"), url("../fonts/open-sans/ExtraBoldItalic/OpenSans-ExtraBoldItalic.svg#OpenSansExtraboldItalic") format("svg");
-}
-
-/* nunito-cyrillic-ext-400-normal*/
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src: url("../fonts/nunito/files/nunito-cyrillic-ext-400-normal.woff2") format("woff2"), url("../fonts/nunito/files/nunito-all-400-normal.woff") format("woff");
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-
 /* nunito-cyrillic-400-normal*/
 @font-face {
   font-family: 'Nunito';
@@ -344,16 +318,6 @@ template {
   font-weight: 400;
   src: url("../fonts/nunito/files/nunito-cyrillic-400-normal.woff2") format("woff2"), url("../fonts/nunito/files/nunito-all-400-normal.woff") format("woff");
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-
-/* nunito-latin-ext-400-normal*/
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src: url("../fonts/nunito/files/nunito-latin-ext-400-normal.woff2") format("woff2"), url("../fonts/nunito/files/nunito-all-400-normal.woff") format("woff");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
 /* nunito-latin-400-normal*/
@@ -375,25 +339,6 @@ template {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 900;
-  src: url("../fonts/nunito/files/nunito-latin-900-normal.woff2") format("woff2"), url("../fonts/nunito/files/nunito-all-900-normal.woff") format("woff");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* bebas-neue-latin-ext-400-normal*/
-@font-face {
-  font-family: 'Bebas Neue';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src: url("../fonts/bebas-neue/files/bebas-neue-latin-ext-400-normal.woff2") format("woff2"), url("../fonts/bebas-neue/files/bebas-neue-all-400-normal.woff") format("woff");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
 /* bebas-neue-latin-400-normal*/
 @font-face {
   font-family: 'Bebas Neue';
@@ -402,24 +347,6 @@ template {
   font-weight: 400;
   src: url("../fonts/bebas-neue/files/bebas-neue-latin-400-normal.woff2") format("woff2"), url("../fonts/bebas-neue/files/bebas-neue-all-400-normal.woff") format("woff");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* raleway-latin-100-normal*/
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 100;
-  src: url("../fonts/raleway/files/raleway-latin-100-normal.woff2") format("woff2"), url("../fonts/raleway/files/raleway-latin-100-normal.woff") format("woff");
-}
-
-/* raleway-latin-200-normal*/
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 200;
-  src: url("../fonts/raleway/files/raleway-latin-200-normal.woff2") format("woff2"), url("../fonts/raleway/files/raleway-latin-200-normal.woff") format("woff");
 }
 
 /* raleway-latin-300-normal*/
@@ -440,15 +367,6 @@ template {
   src: url("../fonts/raleway/files/raleway-latin-400-normal.woff2") format("woff2"), url("../fonts/raleway/files/raleway-latin-400-normal.woff") format("woff");
 }
 
-/* raleway-latin-500-normal*/
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 500;
-  src: url("../fonts/raleway/files/raleway-latin-500-normal.woff2") format("woff2"), url("../fonts/raleway/files/raleway-latin-500-normal.woff") format("woff");
-}
-
 /* raleway-latin-600-normal*/
 @font-face {
   font-family: 'Raleway';
@@ -465,24 +383,6 @@ template {
   font-display: swap;
   font-weight: 700;
   src: url("../fonts/raleway/files/raleway-latin-700-normal.woff2") format("woff2"), url("../fonts/raleway/files/raleway-latin-700-normal.woff") format("woff");
-}
-
-/* raleway-latin-800-normal*/
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 800;
-  src: url("../fonts/raleway/files/raleway-latin-800-normal.woff2") format("woff2"), url("../fonts/raleway/files/raleway-latin-800-normal.woff") format("woff");
-}
-
-/* raleway-latin-900-normal*/
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 900;
-  src: url("../fonts/raleway/files/raleway-latin-900-normal.woff2") format("woff2"), url("../fonts/raleway/files/raleway-latin-900-normal.woff") format("woff");
 }
 
 html, body {
@@ -780,7 +680,6 @@ Markup:
 
 Styleguide Form.Elements
 */
-/*to-do: replace svg*/
 .text-field {
   position: relative;
 }
@@ -810,9 +709,13 @@ Styleguide Form.Elements
 .text-field__icon_search {
   text-indent: -9999px;
   width: 2em;
-  background-image: url("../i/search.png");
+  background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20style%3D%22fill%3A%2332455f%22%20d%3D%22M503.847%20432.949l-89.897-89.897-.006-.006-.006-.006-32.135-32.135c-10.855-10.856-28.522-10.86-39.381%200l-3.939%203.939-13.571-13.571c26.587-31.878%2042.607-72.861%2042.607-117.519C367.517%2082.432%20285.085%200%20183.762%200S.009%2082.432.009%20183.754s82.43%20183.754%20183.753%20183.754c44.658%200%2085.641-16.02%20117.519-42.606l13.571%2013.57-3.94%203.94c-10.854%2010.857-10.854%2028.523.002%2039.381l122.043%20122.043c10.881%2010.883%2028.499%2010.886%2039.383.001l31.506-31.506c10.859-10.857%2010.859-28.523.001-39.382zm-320.085-98.858c-82.896%200-150.337-67.441-150.337-150.337S100.866%2033.417%20183.762%2033.417%20334.1%20100.858%20334.1%20183.754s-67.442%20150.337-150.338%20150.337zm154.72%2028.012l23.629-23.629%2016.388%2016.388-23.629%2023.629-16.388-16.388zm114.167%20114.166l-74.15-74.15%2023.629-23.629%2074.15%2074.15-23.629%2023.629z%22%2F%3E%3Cpath%20style%3D%22fill%3A%2332455f%22%20d%3D%22M183.76%2066.835c-9.228%200-16.709%207.481-16.709%2016.709s7.481%2016.709%2016.709%2016.709c46.045%200%2083.505%2037.457%2083.505%2083.5%200%209.228%207.481%2016.709%2016.709%2016.709s16.709-7.481%2016.709-16.709c0-64.469-52.452-116.918-116.923-116.918z%22%2F%3E%3C%2Fsvg%3E");
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.text-field__icon_search:active {
+  background-size: 93%;
 }
 
 .text-field button:active {
@@ -1059,12 +962,9 @@ Styleguide Navigation.Main Menu
   }
 }
 
-@media (min-width: 61.25em) {
+@media (min-width: 80em) {
   .main-nav {
     margin: 0 4em;
-  }
-  .main-nav__list li {
-    margin: 0 4vw;
   }
 }
 
