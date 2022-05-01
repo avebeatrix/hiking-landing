@@ -12,7 +12,7 @@
 
 @media (min-width: 768px) and (prefers-color-scheme: dark) {
   .promo-main::before {
-    background: transparent;
+    background-color: transparent;
   }
 }
 

@@ -60,7 +60,7 @@ button {
 
         @media (prefers-color-scheme: dark) {
             &::before {
-                background: transparent;
+                background-color: transparent;
             }
         }
     }
