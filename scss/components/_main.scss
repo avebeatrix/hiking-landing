@@ -1,54 +1,88 @@
-html, body {
+html,
+body {
     overflow-x: hidden;
     width: 100%;
 }
-body{
-    background-color: #fbfbf5;
-    overflow-x:hidden;
-    color:#32455f;
-    font-family: 'Raleway';   
+
+body {
+    background-color: var(--main-background-color);
+    overflow-x: hidden;
+    color: var(--main-color);
+    font-family: 'Raleway';
 }
-a{
-    color:$main-color;
+
+a {
+    color: var(--main-color);
     text-decoration: underline;
-    &:hover{
+
+    &:hover {
         text-decoration: none;
-    }    
-}
-h1, h2, h3, h4, h5, h6{
-    font-weight: normal;
-}
-button{
-    padding:0;
-    border:none;
-    background-color: transparent;
-    cursor:pointer;
-}
-.promo-main{
-    margin-top: -7em;
-    padding-top: 9em;
-   
-    @include forLargeScreens(768) {      
-        margin-top:-10vw;
-        padding-top:10vw;
-        &.back-image_wavy{
-            min-height: calc((53vw));
-            padding-top: calc(10vw);    
-        }
-    }            
-}
-.info-tile{
-    padding:2em 0;
-    @include forLargeScreens(768) {      
-        padding:5em 0;
     }
 }
-.tint{
-    color:$tint-color;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
 }
-.green{
-    color:$dark-green-color;
+
+button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
-.line{
-    border-bottom:1px solid $dark-green-color;
+
+.promo-main {
+    margin-top: -7em;
+    padding-top: 9em; 
+    
+}
+@media (prefers-color-scheme: dark) {
+    .promo-main {
+        &::before {
+            background: rgba($main-color, 0.5);
+        }
+    }
+}
+@include forLargeScreens(768) {
+    .promo-main {
+        margin-top: -10vw;
+        padding-top: 10vw;
+
+        &.back-image_wavy {
+            min-height: calc((53vw));
+            padding-top: calc(10vw);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            &::before {
+                background: transparent;
+            }
+        }
+    }
+}    
+
+.info-tile {
+    padding: 2em 0;   
+}
+@include forLargeScreens(768) {
+    .info-tile {
+        padding: 5em 0;
+    }    
+}
+
+.tint {
+    color: var(--tint-color-text);
+}
+
+.green {
+    color: var(--green-color);
+}
+
+.line {
+    border-bottom: 1px solid $dark-green-color;
 }

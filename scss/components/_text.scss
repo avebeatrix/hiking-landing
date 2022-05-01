@@ -18,8 +18,10 @@
         li{
             margin: 0.5em 0;
         }        
-    }    
-    @include forLargeScreens(1600) {
+    }        
+}
+@include forLargeScreens(1600) {
+    .text{
         .h4{
             margin: 1em 0 0.5em;
         }
@@ -32,10 +34,10 @@
                 margin: 1em 0;
             }        
         }
-    } 
-}
+    }   
+} 
 .box-underlined-above{
     padding:2em 0 0 0;
-    border-top:solid 1px $tint-color;
+    border-top:solid 1px var(--tint-color-text);
     margin:2em 0 0 0;
 }

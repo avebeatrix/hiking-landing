@@ -40,10 +40,10 @@ Styleguide Button
         border-radius: 1em;
     }    
     &_color-tint{
-        background-color: $tint-color;
+        background-color: var(--tint-color-text);
         color:$main-back-color;
         &:hover{                     
-            background-color: darken($tint-color, 10%);;       
+            background-color: var(--tint-color-text-hover);       
         }
     }
     &_color-green{

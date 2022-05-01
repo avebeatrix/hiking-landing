@@ -97,11 +97,13 @@ Styleguide Typography.Titles
         text-align: center;        
     }
     &_color-main{
-        color:$main-color;        
-    }     
-    &_color-green{
-        color:$dark-green-color;        
-    }      
+        color: var(--main-color);     
+        @media (prefers-color-scheme: dark) {
+            &::before{
+                background: transparent;
+            }
+        } 
+    }        
     &_underlined{
         margin-bottom:1.5em;
         &::after{

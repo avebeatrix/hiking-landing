@@ -1,17 +1,23 @@
 $images-path:'../i';
 
 $main-color: #32455f;
-$main-color-val: str-slice(#{$main-color}, 2);
-
 $main-back-color:#fbfbf5;
 
 $dark-green-color: #5f6551;
+$light-green-color: lighten($dark-green-color, 30%);
 $back-green-color:#4a4e3f;
 
-$main-color-darker:mix(black,$main-back-color, 3%);
+$main-color-darker: mix(black,$main-back-color, 3%);
+$main-color-lighter: mix(white, $main-color, 50%);
+
+$box-shadow-color-light: #aaa;
+$box-shadow-color-dark: #333;
 
 $tint-color: #564b67;
-$highlight-color:#49AB94;
+$tint-color-text: $tint-color;
+$tint-color-text-lighter: lighten($tint-color, 30%);
+$tint-color-text-darken: darken($tint-color, 10%);
+
 $tint-opacity:74%;
 
 $grid-col-between: 1em;

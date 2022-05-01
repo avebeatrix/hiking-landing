@@ -18,7 +18,7 @@
     "kss": "^3.0.1"
   },
   "dependencies": {
-    "gulp-svgmin": "^4.1.0",
+    "gulp-media-queries-splitter": "^1.0.3",
     "npm-font-open-sans": "^1.1.0",
     "reseter.css": "^2.0.0"
   }

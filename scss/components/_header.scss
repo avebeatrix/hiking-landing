@@ -37,45 +37,56 @@ Markup:
 
 Styleguide Header
 */
-.header {   
-    padding:2em 0;
-    z-index:100;
-    position:relative;      
-    .row{
-        justify-content: space-between;
-        align-items:center;  
-        gap: 1em;      
-        .col{
-            display:flex;   
-            &:last-child{
-                flex-direction: row-reverse;
-            }        
-        }
-    }  
-    &__search-form{
-        max-width: 10em;        
-    } 
-    @include forLargeScreens(768) {   
-        padding:3em 0;  
-        .row{
-            .col{
-                &:first-child{
-                    flex:0 0 120px;
-                }
-                &:last-child{
-                    flex:1;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    display:flex;
-                    align-items: center;
-                }               
-            }
-        }
+.header {
+  padding: 2em 0;
+  z-index: 100;
+  position: relative;
+
+  .row {
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+
+    .col {
+      display: flex;
+
+      &:last-child {
+        flex-direction: row-reverse;
+      }
     }
-    @include forLargeScreens(980) {  
-        &__search-form{
-            max-width: 20em;
+  }
+  
+  &__search-form {
+    max-width: 10em;
+  }
+}
+
+@include forLargeScreens(768) {
+  .header {
+    padding: 3em 0;
+
+    .row {
+      .col {
+        &:first-child {
+          flex: 0 0 120px;
         }
-    } 
-    
+
+        &:last-child {
+          flex: 1;
+          flex-direction: row;
+          justify-content: space-between;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+@include forLargeScreens(980) {
+  .header {
+    &__search-form {
+      max-width: 20em;
+    }
+  }
 }

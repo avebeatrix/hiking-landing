@@ -1,0 +1,10 @@
+@import './helpers/_variables.scss';
+:root {
+    --main-color: #{$main-color};
+    --main-background-color: #{$main-back-color};
+    --box-shadow-color: #{$box-shadow-color-light};
+
+    --green-color: #{$dark-green-color};
+    --tint-color-text: #{$tint-color-text};
+    --tint-color-text-hover: #{$tint-color-text-darken};
+}

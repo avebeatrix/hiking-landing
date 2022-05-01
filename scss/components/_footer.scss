@@ -33,7 +33,8 @@ Markup:
 Styleguide Footer
 */
 .footer{
-    border-bottom: 1em solid $dark-green-color;        
+    border-top: 5px solid $main-color-lighter;
+    border-bottom: 1em solid var(--green-color);
     & .row{
         flex-wrap: wrap;
         margin: 0 -2em;
@@ -42,10 +43,10 @@ Styleguide Footer
             }
     }
     &, & a{
-        color:$dark-green-color;
+        color: var(--green-color);
     }
     & .logo{
-        color:$main-color;
+        color: var(--main-color);
         margin: 2em 0 0;
     }    
 }

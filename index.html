@@ -5,7 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hello World! Site Title</title>
-  <link href="./css/styles.css" type="text/css" rel="stylesheet" />
+  <script>   
+    if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {      
+      document.documentElement.style.display = 'none';
+      document.head.insertAdjacentHTML(
+        'beforeend',
+        '<link rel="stylesheet" href="./css/light.css" onload="document.documentElement.style.display = \'\'">',
+      );
+    }
+  </script>
+  
+  <link rel="stylesheet" href="./css/dark.css" media="(prefers-color-scheme: dark)" />
+  <link rel="stylesheet" href="./css/light.css" media="(prefers-color-scheme: light)"/>
+  
+  <link href="./css/mobile.css" type="text/css" rel="stylesheet" />
+  <link href="./css/desktop.css" rel="stylesheet" media="(min-width: 768px)">
 </head>
 
 <body>
@@ -265,7 +279,7 @@
     <div class="info-tile mini-cards green">
       <div class="container">
         <div class="row">
-          <h2 class="title title_color-green title_underlined h2 back-image__title">
+          <h2 class="title title_underlined h2 back-image__title">
             <div class="title__main">
               Hiking And <br/>
               Camping Classes

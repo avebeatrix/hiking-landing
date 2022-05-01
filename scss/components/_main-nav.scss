@@ -17,143 +17,154 @@ Markup:
 
 Styleguide Navigation.Main Menu
 */
-.main-nav{
-    margin-left:$grid-col-between;
+.main-nav {
+  margin-left: $grid-col-between;
+  display: block;
+  position: relative;
+
+  z-index: 2;
+
+  user-select: none;
+
+  font-family: 'Nunito';
+  margin-top: 7px;
+
+  span {
     display: block;
-    position: relative;    
-    
+    width: 42px;
+    height: 4px;
+    margin-bottom: 8px;
+    position: relative;
+
+    background: var(--main-color);
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      opacity 0.55s ease;
+
+    &:first-child {
+      transform-origin: 0% 0%;
+    }
+
+    &:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+  }
+
+  &__toogle {
+    display: block;
+    width: 52px;
+    height: 42px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    /* hide this */
     z-index: 2;
-       
-    user-select: none;
+    /* and place it over the hamburger */
 
-    font-family: 'Nunito';
-    margin-top: 7px;
-    
-    span{
-        display: block;
-        width: 42px;
-        height: 4px;
-        margin-bottom: 8px;
-        position: relative;
-        
-        background: $main-color;
-        border-radius: 3px;
-        
-        z-index: 1;
-        
-        transform-origin: 4px 0px;
-        
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                    opacity 0.55s ease;
+    -webkit-touch-callout: none;
 
-        &:first-child{
-            transform-origin: 0% 0%;
-        }
-        &:nth-last-child(2)
-        {
-          transform-origin: 0% 100%;
-        }
+    &:checked~span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+
+      &:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+      }
+
+      &:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+      }
     }
 
-    &__toogle {        
-        display: block;
-        width: 52px;
-        height: 42px;
-        position: absolute;
-        top: -7px;
-        left: -5px;
-        
-        cursor: pointer;
-        
-        opacity: 0; /* hide this */
-        z-index: 2; /* and place it over the hamburger */
-        
-        -webkit-touch-callout: none;
-
-        &:checked ~ span{
-            opacity: 1;
-            transform: rotate(45deg) translate(-2px, -1px);            
-            &:nth-last-child(3)
-            {
-              opacity: 0;
-              transform: rotate(0deg) scale(0.2, 0.2);
-            }
-            &:nth-last-child(2)
-            {
-              transform: rotate(-45deg) translate(0, -1px);
-            }
-        }
-        &:checked ~ ul
-        {
-          transform: none;
-        }
-        
+    &:checked~ul {
+      transform: none;
     }
-  
+
+  }
+
+  &__list {
+    position: absolute;
+    width: $main-nav-list-width;
+    margin: -50px 0 0 calc(-#{$main-nav-list-width} + 60px);
+    padding: 2em;
+    padding-top: 4em;
+
+    background-color: var(--main-background-color);
+
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+
+    transform-origin: 0% 0%;
+    transform: translate(calc(100% + 40px), 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+    li {
+      padding: 10px 0;
+      font-size: 1.5em;
+      flex: 1;
+
+      a {
+        text-decoration: none;
+        font-weight: 300;
+
+        &:hover {
+          font-weight: bold;
+          text-decoration: underline;
+        }
+
+      }
+    }
+  }
+}
+
+@include forLargeScreens(768) {
+  .main-nav {
+    flex: 1;
+    margin: 0 1em;
+
+    span {
+      display: none;
+    }
+
+    &__toogle {
+      display: none;
+    }
+
     &__list {
-        position: absolute;       
-        width: $main-nav-list-width;        
-        margin: -50px 0 0 calc(-#{$main-nav-list-width} + 60px);
-        padding: 2em;
-        padding-top: 4em;
-        
-        background-color: $main-color-darker;
+      background: none;
+      position: relative;
+      width: auto;
+      margin: 0;
 
-        list-style-type: none;
-        -webkit-font-smoothing: antialiased;      
-        
-        transform-origin: 0% 0%;
-        transform: translate(calc(100% + 40px), 0);
-        
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      transform: none;
 
-        li{
-            padding: 10px 0;
-            font-size: 1.5em;
-            flex:1;            
-            a{
-                text-decoration: none;                                                                          
-                font-weight: 300;               
-                &:hover{                   
-                    font-weight:bold;
-                    text-decoration: underline;
-                }
-
-            }
-        }        
+      li {
+        padding: 0;
+        line-height: 1.75;
+        margin: 0 0.25em;
+        text-align: center;
+      }
     }
+  }
+}
 
-    @include forLargeScreens(768) {   
-        flex:1;
-        margin:0 1em;
-        
-        span{
-          display:none;
-        }  
-        &__toogle {       
-          display: none;
-        }
-        &__list {
-          background:none;
-          position:relative;
-          width:auto;
-          margin:0;
-          
-          display:flex;
-          justify-content: center;
-          padding:0;      
-          transform: none;  
-          li{
-            padding:0;
-            line-height: 1.75;
-            margin:0 0.25em;
-            text-align:center;           
-          }       
-        }
-    }   
-    @include forLargeScreens(1280) {  
-      margin:0 4em;     
-     
-    }
+@include forLargeScreens(1280) {
+  .main-nav {
+    margin: 0 4em;
+  }
 }

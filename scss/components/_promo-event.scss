@@ -65,107 +65,133 @@ Markup:
 
 Styleguide Promo Event
 */
-.promo-event{   
-    $p: &;  
+.promo-event {
+    $p: &;
+
     .row {
-        flex-direction: column;   
-        justify-content: space-between;     
-    }      
-    &__more{
-        padding:2em 0;
-        .row{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__more {
+        padding: 2em 0;
+
+        .row {
             flex-direction: row;
             justify-content: flex-start;
         }
-        #{$p}__time{
-            font-size:1.5em;    
+
+        #{$p}__time {
+            font-size: 1.5em;
             font-family: 'Bebas Neue';
-            display: block;       
-        }        
+            display: block;
+        }
     }
-    &__title{
-        margin-bottom:1em;
+
+    &__title {
+        margin-bottom: 1em;
     }
-    &__price{
-        font-size:1.5em;
+
+    &__price {
+        font-size: 1.5em;
         font-weight: bold;
-         * + &{
-             margin-left:2em;
-         }
+
+        *+& {
+            margin-left: 2em;
+        }
     }
-    &_inversed{       
+
+    &_inversed {
+
         #{$p}__main,
-        #{$p}__more{
-            text-align: right;            
-            .title{
-                &_underlined{
-                    &::after{
-                        right:5px;
-                        left:auto;
-                    }  
+        #{$p}__more {
+            text-align: right;
+
+            .title {
+                &_underlined {
+                    &::after {
+                        right: 5px;
+                        left: auto;
+                    }
                 }
             }
-            .row{
+
+            .row {
                 justify-content: flex-end;
             }
         }
-    }    
-    @include forLargeScreens(768) {
-        &__more{
-            padding:0; 
-            .title{
-                &_underlined{
-                    &::after{
-                        left:0px;
-                        right:auto;
-                    }  
+    }
+}
+
+@include forLargeScreens(768) {
+    .promo-event {
+        $p: &;
+
+        &__more {
+            padding: 0;
+
+            .title {
+                &_underlined {
+                    &::after {
+                        left: 0px;
+                        right: auto;
+                    }
                 }
-            }     
-            .row{
+            }
+
+            .row {
                 flex-direction: column;
             }
-            
-            .button{
-                margin-right:-0.5em;
-            }      
-            &_right{
+
+            .button {
+                margin-right: -0.5em;
+            }
+
+            &_right {
                 text-align: right;
-                .title{
-                    &_underlined{
-                        &::after{
-                            right:5px;
-                            left:auto;
-                        }  
+
+                .title {
+                    &_underlined {
+                        &::after {
+                            right: 5px;
+                            left: auto;
+                        }
                     }
                 }
-            }           
-        } 
+            }
+        }
+
         .row {
-            flex-direction: row;                                          
-        }  
-        &_inversed{   
-            #{$p}__more{
+            flex-direction: row;
+        }
+
+        &_inversed {
+            #{$p}__more {
                 text-align: left;
-                .title{
-                    &_underlined{
-                        &::after{
-                            left:0px;
-                            right:auto;
-                        }  
+
+                .title {
+                    &_underlined {
+                        &::after {
+                            left: 0px;
+                            right: auto;
+                        }
                     }
                 }
-                .row{
+
+                .row {
                     flex-direction: row;
                 }
-            }    
-            .row{
+            }
+
+            .row {
                 flex-direction: row-reverse;
-            }           
+            }
         }
-        &_flex-end{
-            .row {                
-                align-items: flex-end;  
-            } 
-        }       
+
+        &_flex-end {
+            .row {
+                align-items: flex-end;
+            }
+        }
     }
 }
